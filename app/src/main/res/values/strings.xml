@@ -1,0 +1,14 @@
+<!--
+    Kevin Santizo n01382533
+    (Alex) Narendre Ramdhan n01240746
+    Samad Agha n01364908
+    Henry To n01365792   -->
+<resources>
+    <string name="app_name">SmartProstheticArm</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="Dialog_Exit">Are you sure you want to exit?</string>
+    <string name="OnBack_Close">Yes</string>
+    <string name="onBack_No">No</string>
+</resources>
