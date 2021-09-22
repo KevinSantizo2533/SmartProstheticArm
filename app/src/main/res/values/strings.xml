@@ -11,4 +11,5 @@
     <string name="Dialog_Exit">Are you sure you want to exit?</string>
     <string name="OnBack_Close">Yes</string>
     <string name="onBack_No">No</string>
+    <string name="About">About</string>
 </resources>
