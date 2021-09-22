@@ -1,0 +1,15 @@
+<!--
+    Kevin Santizo n01382533 Section B
+    (Alex) Narendre Ramdhan n01240746 Section B
+    Samad Agha n01364908 Section B
+    Henry To n01365792 Section B -->
+<resources>
+    <string name="app_name">BrasProthétiqueIntelligent</string>
+    <string name="title_home">Statut</string>
+    <string name="title_temp">Température</string>
+    <string name="title_bt">Bluetooth</string>
+    <string name="Dialog_Exit">Êtes-vous sûr de vouloir quitter?</string>
+    <string name="OnBack_Close">Oui</string>
+    <string name="onBack_No">Nous</string>
+    <string name="About">Sur</string>
+</resources>
