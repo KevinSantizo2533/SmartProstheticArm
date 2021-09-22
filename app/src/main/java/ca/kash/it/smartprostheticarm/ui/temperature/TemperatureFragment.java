@@ -4,7 +4,7 @@
     Samad Agha n01364908 Section B
     Henry To n01365792 Section B
 */
-package ca.kash.it.smartprostheticarm.ui.home;
+package ca.kash.it.smartprostheticarm.ui.temperature;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -20,17 +20,17 @@ import androidx.lifecycle.ViewModelProvider;
 
 import ca.kash.it.smartprostheticarm.R;
 
-public class HomeFragment extends Fragment {
+public class TemperatureFragment extends Fragment {
 
-    private HomeViewModel homeViewModel;
+    private TemperatureViewModel temperatureViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        homeViewModel =
-                new ViewModelProvider(this).get(HomeViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_home, container, false);
-        final TextView textView = root.findViewById(R.id.text_home);
-        homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        temperatureViewModel =
+                new ViewModelProvider(this).get(TemperatureViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_temp, container, false);
+        final TextView textView = root.findViewById(R.id.text_dashboard);
+        temperatureViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);

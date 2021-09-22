@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E33434"
-    tools:context=".ui.home.HomeFragment">
+    android:background="@color/light_red"
+    tools:context=".ui.status.StatusFragment">
 
     <TextView
         android:id="@+id/text_home"

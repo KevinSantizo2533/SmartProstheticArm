@@ -5,7 +5,7 @@
     Henry To n01365792 Section B -->
 <resources>
     <string name="app_name">SmartProstheticArm</string>
-    <string name="title_home">Home</string>
+    <string name="title_home">Status</string>
     <string name="title_temp">Temperature</string>
     <string name="title_bt">Bluetooth</string>
     <string name="Dialog_Exit">Are you sure you want to exit?</string>

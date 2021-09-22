@@ -4,19 +4,19 @@
     Samad Agha n01364908 Section B
     Henry To n01365792 Section B
 */
-package ca.kash.it.smartprostheticarm.ui.notifications;
+package ca.kash.it.smartprostheticarm.ui.status;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class NotificationsViewModel extends ViewModel {
+public class StatusViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public NotificationsViewModel() {
+    public StatusViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is notifications fragment");
+        mText.setValue("Status placeholder text");
     }
 
     public LiveData<String> getText() {

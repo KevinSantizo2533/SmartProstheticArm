@@ -4,19 +4,19 @@
     Samad Agha n01364908 Section B
     Henry To n01365792 Section B
 */
-package ca.kash.it.smartprostheticarm.ui.home;
+package ca.kash.it.smartprostheticarm.ui.bluetooth;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class HomeViewModel extends ViewModel {
+public class BluetoothViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public HomeViewModel() {
+    public BluetoothViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is home fragment");
+        mText.setValue("Bluetooth placeholder text");
     }
 
     public LiveData<String> getText() {

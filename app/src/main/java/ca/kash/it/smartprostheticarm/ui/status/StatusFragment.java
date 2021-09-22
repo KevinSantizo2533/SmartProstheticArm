@@ -4,7 +4,7 @@
     Samad Agha n01364908 Section B
     Henry To n01365792 Section B
 */
-package ca.kash.it.smartprostheticarm.ui.dashboard;
+package ca.kash.it.smartprostheticarm.ui.status;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -20,17 +20,17 @@ import androidx.lifecycle.ViewModelProvider;
 
 import ca.kash.it.smartprostheticarm.R;
 
-public class DashboardFragment extends Fragment {
+public class StatusFragment extends Fragment {
 
-    private DashboardViewModel dashboardViewModel;
+    private StatusViewModel statusViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        dashboardViewModel =
-                new ViewModelProvider(this).get(DashboardViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_dashboard, container, false);
-        final TextView textView = root.findViewById(R.id.text_dashboard);
-        dashboardViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        statusViewModel =
+                new ViewModelProvider(this).get(StatusViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_home, container, false);
+        final TextView textView = root.findViewById(R.id.text_home);
+        statusViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
