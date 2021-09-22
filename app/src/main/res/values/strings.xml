@@ -6,8 +6,8 @@
 <resources>
     <string name="app_name">SmartProstheticArm</string>
     <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_temp">Temperature</string>
+    <string name="title_bt">Bluetooth</string>
     <string name="Dialog_Exit">Are you sure you want to exit?</string>
     <string name="OnBack_Close">Yes</string>
     <string name="onBack_No">No</string>
