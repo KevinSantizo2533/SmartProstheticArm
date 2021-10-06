@@ -15,5 +15,9 @@
         android:id="@+id/navigation_notifications"
         android:icon="@drawable/ic_baseline_bluetooth_24"
         android:title="@string/title_bt" />
+    <item
+        android:id="@+id/navigation_controls"
+        android:icon="@drawable/ic_baseline_settings_remote_24"
+        android:title="Controls" />
 
 </menu>

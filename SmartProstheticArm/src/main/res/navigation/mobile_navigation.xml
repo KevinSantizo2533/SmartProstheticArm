@@ -22,4 +22,9 @@
         android:name="ca.kash.it.smartprostheticarm.ui.bluetooth.BluetoothFragment"
         android:label="@string/title_bt"
         tools:layout="@layout/fragment_bluetooth"/>
+    <fragment
+        android:id="@+id/navigation_controls"
+        android:name="ca.kash.it.smartprostheticarm.ui.screen4.ControlsFragment"
+        android:label="Controls"
+        tools:layout="@layout/fragment_controls"/>
 </navigation>
