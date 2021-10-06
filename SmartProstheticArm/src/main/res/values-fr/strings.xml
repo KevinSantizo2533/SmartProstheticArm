@@ -12,4 +12,5 @@
     <string name="OnBack_Close">Oui</string>
     <string name="onBack_No">Nous</string>
     <string name="About">Sur</string>
+    <string name="title_settings">Les paramètres</string>
 </resources>

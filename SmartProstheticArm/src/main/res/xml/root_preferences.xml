@@ -1,0 +1,16 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory app:title="Screen Orientation " app:icon="@drawable/screen_rotation">
+
+        <ListPreference
+            android:key="ORIENTATION"
+            android:title="Orientation"
+            android:entries="@array/orientation_name"
+            android:entryValues="@array/orientation_val"
+
+            />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

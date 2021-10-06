@@ -27,4 +27,9 @@
         android:name="ca.kash.it.smartprostheticarm.ui.screen4.ControlsFragment"
         android:label="Controls"
         tools:layout="@layout/fragment_controls"/>
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="ca.kash.it.smartprostheticarm.ui.settings.SettingsFragment"
+        android:label="@string/title_settings"
+        tools:layout="@xml/root_preferences"/>
 </navigation>

@@ -12,5 +12,8 @@
     <string name="OnBack_Close">Yes</string>
     <string name="onBack_No">No</string>
     <string name="About">About</string>
+    <string name="title_settings">Settings</string>
+    <!-- Preference Titles -->
+
     <!-- TODO: Remove or change this placeholder text -->
 </resources>

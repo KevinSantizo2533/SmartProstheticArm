@@ -19,5 +19,9 @@
         android:id="@+id/navigation_controls"
         android:icon="@drawable/ic_baseline_settings_remote_24"
         android:title="Controls" />
+    <item
+        android:id="@+id/navigation_settings"
+        android:icon="@drawable/ic_settings_black"
+        android:title="@string/title_settings" />
 
 </menu>
