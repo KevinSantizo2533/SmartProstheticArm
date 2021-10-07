@@ -6,11 +6,14 @@
 <resources>
     <string name="app_name">BrasProthétiqueIntelligent</string>
     <string name="title_home">Statut</string>
-    <string name="title_temp">Température</string>
+    <string name="title_sensors">Capteurs</string>
     <string name="title_bt">Bluetooth</string>
     <string name="Dialog_Exit">Êtes-vous sûr de vouloir quitter?</string>
     <string name="OnBack_Close">Oui</string>
     <string name="onBack_No">Nous</string>
     <string name="About">Sur</string>
     <string name="title_settings">Les paramètres</string>
+    <string name="ultrasonic_readings">Informations ultrasoniques</string>
+    <string name="servos_information">Informations sur les servos</string>
+    <string name="temperature_readings">informations sur la température</string>
 </resources>

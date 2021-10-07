@@ -13,20 +13,15 @@
 
     <fragment
         android:id="@+id/navigation_dashboard"
-        android:name="ca.kash.it.smartprostheticarm.ui.temperature.TemperatureFragment"
-        android:label="@string/title_temp"
-        tools:layout="@layout/fragment_temp" />
+        android:name="ca.kash.it.smartprostheticarm.ui.sensors.SensorFragment"
+        android:label="@string/title_sensors"
+        tools:layout="@layout/fragment_sensors" />
 
     <fragment
         android:id="@+id/navigation_notifications"
         android:name="ca.kash.it.smartprostheticarm.ui.bluetooth.BluetoothFragment"
         android:label="@string/title_bt"
         tools:layout="@layout/fragment_bluetooth"/>
-    <fragment
-        android:id="@+id/navigation_controls"
-        android:name="ca.kash.it.smartprostheticarm.ui.screen4.ControlsFragment"
-        android:label="Controls"
-        tools:layout="@layout/fragment_controls"/>
     <fragment
         android:id="@+id/navigation_settings"
         android:name="ca.kash.it.smartprostheticarm.ui.settings.SettingsFragment"

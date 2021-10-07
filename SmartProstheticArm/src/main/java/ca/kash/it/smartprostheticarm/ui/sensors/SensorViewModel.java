@@ -4,19 +4,19 @@
     Samad Agha n01364908 Section B
     Henry To n01365792 Section B
 */
-package ca.kash.it.smartprostheticarm.ui.temperature;
+package ca.kash.it.smartprostheticarm.ui.sensors;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class TemperatureViewModel extends ViewModel {
+public class SensorViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public TemperatureViewModel() {
+    public SensorViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("Temperature placeholder text");
+        mText.setValue("Sensor placeholder text");
     }
 
     public LiveData<String> getText() {
