@@ -15,6 +15,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private TextView register1;
     private TextView forgotpass;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
