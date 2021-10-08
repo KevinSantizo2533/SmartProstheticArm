@@ -69,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         final AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+        builder.setIcon(R.drawable.ic_baseline_warning_24);
         builder.setMessage(R.string.Dialog_Exit);
         builder.setCancelable(true);
         builder.setNegativeButton(R.string.onBack_No, new DialogInterface.OnClickListener() {
@@ -84,6 +85,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         AlertDialog alertDialog = builder.create();
+        alertDialog.setIcon(R.drawable.ic_baseline_warning_24);
         alertDialog.show();
     }
     @Override

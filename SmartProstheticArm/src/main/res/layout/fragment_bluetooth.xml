@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="92dp"
-        android:text="Unleash"
+        android:text="Release Object"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
@@ -78,7 +78,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="39dp"
-        android:text="Firmly Grasp"
+        android:text="Grab"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
@@ -86,8 +86,8 @@
         android:id="@+id/seekBar"
         android:layout_width="164dp"
         android:layout_height="23dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="74dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="84dp"
         app:layout_constraintStart_toEndOf="@+id/textView8"
         app:layout_constraintTop_toBottomOf="@+id/text_notifications" />
 
