@@ -7,6 +7,7 @@
 package ca.kash.it.smartprostheticarm;
 
 import android.Manifest;
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.pm.PackageManager;
@@ -19,14 +20,20 @@ import android.view.View;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.snackbar.Snackbar;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
-public class MainActivity extends AppCompatActivity {
+import java.util.List;
 
+public class MainActivity extends AppCompatActivity {
+    private static final int PERMISSIONS_REQUEST_BLUETOOTH = 100;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +47,16 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
+
+        if (ContextCompat.checkSelfPermission(this,
+                Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this,
+                    new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, PERMISSIONS_REQUEST_BLUETOOTH);
+        }
+        else {
+            Snackbar snackbar = Snackbar.make(findViewById(android.R.id.content), R.string.BTGranted, Snackbar.LENGTH_LONG);
+            snackbar.show();
+        }
     }
 
     @Override
@@ -69,16 +86,21 @@ public class MainActivity extends AppCompatActivity {
         AlertDialog alertDialog = builder.create();
         alertDialog.show();
     }
-
-    public void BTPermission(MenuItem menuItem) {
-        final int REQUEST_BLUETOOTH = 200;
-        if (checkSelfPermission(Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_DENIED) {
-            Snackbar snackbar = Snackbar.make(findViewById(android.R.id.content), R.string.BTDenied, Snackbar.LENGTH_LONG);
-            snackbar.show();
-        } else {
-            Snackbar snackbar = Snackbar.make(findViewById(android.R.id.content), R.string.BTGranted, Snackbar.LENGTH_LONG);
-            snackbar.show();
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        switch (requestCode) {
+            case PERMISSIONS_REQUEST_BLUETOOTH: {
+                // If request is cancelled, the result arrays are empty.
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    Snackbar snackbar = Snackbar.make(findViewById(android.R.id.content), R.string.BTGranted, Snackbar.LENGTH_LONG);
+                    snackbar.show();
+                } else {
+                    Snackbar snackbar = Snackbar.make(findViewById(android.R.id.content), R.string.BTDenied, Snackbar.LENGTH_LONG);
+                    snackbar.show();
+                }
+                return;
+            }
         }
-        requestPermissions(new String[]{Manifest.permission.ACCESS_COARSE_LOCATION}, REQUEST_BLUETOOTH);
     }
 }
