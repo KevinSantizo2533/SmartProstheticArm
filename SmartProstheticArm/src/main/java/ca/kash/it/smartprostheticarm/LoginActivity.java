@@ -12,7 +12,8 @@ import android.widget.TextView;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private TextView register;
+    private TextView register1;
+    private TextView forgotpass;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,8 +21,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         setContentView(R.layout.activity_login);
 
 
-        register = (TextView) findViewById(R.id.register);
-        register.setOnClickListener(this);
+        register1 = (TextView) findViewById(R.id.register);
+        register1.setOnClickListener(this);
+        forgotpass = (TextView) findViewById(R.id.forgotpass);
+        forgotpass.setOnClickListener(this);
 
         Button btn = (Button)findViewById(R.id.button);
         btn.setOnClickListener(new View.OnClickListener() {
@@ -38,7 +41,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             case R.id.register:
                 startActivity(new Intent(this, RegisterActivity.class));
                 break;
+            case R.id.forgotpass:
+                startActivity(new Intent(this, ForgotPasswordActivity.class));
+                break;
         }
+
     }
     @Override
     public void onBackPressed(){

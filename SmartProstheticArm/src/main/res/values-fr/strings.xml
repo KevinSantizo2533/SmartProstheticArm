@@ -16,4 +16,5 @@
     <string name="ultrasonic_readings">Informations ultrasoniques</string>
     <string name="servos_information">Informations sur les servos</string>
     <string name="temperature_readings">informations sur la température</string>
+    <string name="submitted">Password reset sent to email</string>
 </resources>

@@ -26,6 +26,7 @@
     <string name="create_an_account">Create an Account</string>
     <string name="register">Register</string>
     <string name="appicon">AppIcon</string>
+    <string name="submitted">Password reset sent to email</string>
     <!-- Preference Titles -->
 
     <!-- TODO: Remove or change this placeholder text -->
