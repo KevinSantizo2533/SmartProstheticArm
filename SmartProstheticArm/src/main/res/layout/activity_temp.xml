@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#C1D0DD"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tempTitle"
+        android:layout_width="235dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="52dp"
+        android:fontFamily="@font/tripleta_font"
+        android:text="@string/temp_readings"
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="142dp"
+        android:layout_height="170dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/temp_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="168dp"
+        android:layout_height="190dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="292dp"
+        android:text="@string/temp_reading"
+        android:textColor="@color/black"
+        android:textSize="150sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:layout_width="349dp"
+        android:layout_height="55dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="96dp"
+        android:text="@string/get_temperature_measurements"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -27,4 +27,10 @@
     <string name="create_an_account">Create an Account</string>
     <string name="register">Register</string>
     <string name="appicon">AppIcon</string>
+    <string name="object_distance">Object Distance</string>
+    <string name="get_distance_of_object">Get Distance of Object</string>
+    <string name="measurements">Measurements:</string>
+    <string name="temp_readings">Temperature Readings</string>
+    <string name="temp_reading">0°</string>
+    <string name="get_temperature_measurements">Get Temperature Measruements</string>
 </resources>
