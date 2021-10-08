@@ -6,13 +6,18 @@
 */
 package ca.kash.it.smartprostheticarm;
 
+import android.Manifest;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.View;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
@@ -36,14 +41,16 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu, menu);
         return true;
     }
+
     @Override
-    public void onBackPressed(){
+    public void onBackPressed() {
         final AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
         builder.setMessage(R.string.Dialog_Exit);
         builder.setCancelable(true);
@@ -63,7 +70,15 @@ public class MainActivity extends AppCompatActivity {
         alertDialog.show();
     }
 
-
-
-
+    public void BTPermission(MenuItem menuItem) {
+        final int REQUEST_BLUETOOTH = 200;
+        if (checkSelfPermission(Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_DENIED) {
+            Snackbar snackbar = Snackbar.make(findViewById(android.R.id.content), R.string.BTDenied, Snackbar.LENGTH_LONG);
+            snackbar.show();
+        } else {
+            Snackbar snackbar = Snackbar.make(findViewById(android.R.id.content), R.string.BTGranted, Snackbar.LENGTH_LONG);
+            snackbar.show();
+        }
+        requestPermissions(new String[]{Manifest.permission.ACCESS_COARSE_LOCATION}, REQUEST_BLUETOOTH);
+    }
 }
