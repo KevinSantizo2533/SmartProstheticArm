@@ -16,6 +16,8 @@
     <string name="ultrasonic_readings">Ultrasonic Readings</string>
     <string name="servos_information">Servos Information</string>
     <string name="temperature_readings">Temperature Readings</string>
+    <string name="BTGranted">Bluetooth granted!</string>
+    <string name="BTDenied">Bluetooth denied!</string>
     <string name="smart_prosthetic_arm">Smart Prosthetic Arm</string>
     <string name="full_name">Full Name</string>
     <string name="age">Age</string>
