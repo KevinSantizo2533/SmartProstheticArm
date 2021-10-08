@@ -1,7 +1,7 @@
 <PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <PreferenceCategory app:title="Screen Orientation " app:icon="@drawable/screen_rotation">
+    <PreferenceCategory app:title="SCREEN ORIENTATION" app:icon="@drawable/outline_screen_lock_portrait_black_24dp">
 
         <ListPreference
             android:key="ORIENTATION"
@@ -12,5 +12,37 @@
             />
 
     </PreferenceCategory>
+
+    <PreferenceCategory app:title="APP LANGUAGE" android:icon="@drawable/outline_language_black_24dp">
+
+        <ListPreference
+            android:key="LANGUAGE"
+            android:title="Language"
+            android:entries="@array/language_name"
+            android:entryValues="@array/language_val"
+            />
+    </PreferenceCategory>
+
+
+    <PreferenceCategory android:title="USER PROFILE" android:icon="@drawable/baseline_assignment_ind_24" >
+        <EditTextPreference
+            android:title="Set username"
+            android:summary="Set profile username"
+            android:key="userProfile"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="UPDATE SETTINGS" android:icon="@drawable/baseline_bug_report_24">
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="bugReport"
+        android:title="Report a bug"
+        android:summary="Helps to fix bugs"
+         >
+    </CheckBoxPreference>
+    </PreferenceCategory>
+
+
+
+
 
 </PreferenceScreen>

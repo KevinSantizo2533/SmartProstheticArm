@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/sensors_back"
+    android:background="@drawable/sensors_backgry"
     tools:context=".ui.sensors.SensorFragment">
 
     <TextView
@@ -61,18 +61,18 @@
         android:layout_height="124dp"
         android:layout_marginStart="44dp"
         android:layout_marginBottom="484dp"
-        android:backgroundTint="@color/purple_700"
-        android:src="@drawable/ultrasonic"
+        android:backgroundTint="@color/white"
+        android:src="@drawable/outline_sensors_black_24dp"
         android:tooltipText="@string/ultrasonic_readings"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
-        android:layout_width="117sp"
+        android:layout_width="118sp"
         android:layout_height="124dp"
         android:layout_marginBottom="224dp"
-        android:backgroundTint="@color/purple_700"
-        android:src="@drawable/ultrasonic"
+        android:backgroundTint="@color/white"
+        android:src="@drawable/servosicon_1_50x50"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -82,8 +82,8 @@
         android:layout_height="124sp"
         android:layout_marginEnd="44dp"
         android:layout_marginBottom="484dp"
-        android:backgroundTint="@color/purple_700"
-        android:src="@drawable/ultrasonic"
+        android:backgroundTint="@color/white"
+        android:src="@drawable/outline_thermostat_black_24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

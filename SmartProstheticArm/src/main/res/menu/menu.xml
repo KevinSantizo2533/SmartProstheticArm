@@ -1,35 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <item
-        android:id="@+id/action"
-        android:title="search"
-        app:showAsAction="ifRoom"
-        android:icon="@drawable/menu">
-
-    <menu>
-
     <item android:id="@+id/about"
         android:title="@string/About"
-        app:showAsAction="always"
-        android:icon="@drawable/about"/>
+        app:showAsAction="never"
+       />
 
     <item android:id="@+id/help"
         android:title="Help"
-        app:showAsAction="always"
-        android:icon="@drawable/help"/>
+        app:showAsAction="never"
+        />
 
-    <item android:id="@drawable/feedback"
-        android:title="Send Feedback"
-        app:showAsAction="always"
-        android:icon="@drawable/feedback"/>
+    <item android:id="@+id/feedback"
+        android:title="Feedback"
+        app:showAsAction="never"
+        />
 
     <item android:id="@+id/signout"
         android:title="Signout"
         app:showAsAction="always"
         android:icon="@drawable/signout"/>
-</menu>
-</item>
-
 </menu>
