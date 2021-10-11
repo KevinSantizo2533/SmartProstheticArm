@@ -13,10 +13,10 @@
         android:layout_height="116dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="52dp"
-        android:fontFamily="@font/tripleta_font"
-        android:text="Sensor Information"
+        style="@style/SensorStyle"
+        android:text="@string/sensor_information"
         android:textColor="@color/white"
-        android:textSize="34sp"
+        android:textSize="40sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

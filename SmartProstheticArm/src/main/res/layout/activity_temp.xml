@@ -45,6 +45,7 @@
         android:layout_height="55dp"
         android:layout_marginEnd="28dp"
         android:layout_marginBottom="96dp"
+        style="@style/kevBtnStyle2"
         android:text="@string/get_temperature_measurements"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

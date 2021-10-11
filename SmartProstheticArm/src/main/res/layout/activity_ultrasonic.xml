@@ -25,6 +25,7 @@
         android:layout_height="55dp"
         android:layout_marginEnd="28dp"
         android:layout_marginBottom="96dp"
+        style="@style/kevBtnStyle"
         android:text="@string/get_distance_of_object"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
