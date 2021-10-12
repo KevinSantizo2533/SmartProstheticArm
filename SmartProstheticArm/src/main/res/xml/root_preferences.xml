@@ -23,6 +23,9 @@
             />
     </PreferenceCategory>
 
+    <PreferenceCategory android:title="Notifications" android:icon="@drawable/outline_notifications_24">
+        <SwitchPreference android:title="New message notifications" />
+    </PreferenceCategory>
 
     <PreferenceCategory android:title="USER PROFILE" android:icon="@drawable/baseline_assignment_ind_24" >
         <EditTextPreference
@@ -30,19 +33,4 @@
             android:summary="Set profile username"
             android:key="userProfile"/>
     </PreferenceCategory>
-
-    <PreferenceCategory android:title="UPDATE SETTINGS" android:icon="@drawable/baseline_bug_report_24">
-    <CheckBoxPreference
-        android:defaultValue="false"
-        android:key="bugReport"
-        android:title="Report a bug"
-        android:summary="Helps to fix bugs"
-         >
-    </CheckBoxPreference>
-    </PreferenceCategory>
-
-
-
-
-
 </PreferenceScreen>
