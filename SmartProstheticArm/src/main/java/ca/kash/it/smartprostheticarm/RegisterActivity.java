@@ -60,19 +60,19 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         String age = editTextAge.getText().toString();
 
         if (name.isEmpty()){
-            editTextFullName.setError("Name is required");
+            editTextFullName.setError(getString(R.string.nameRequired));
         }
 
         if (age.isEmpty()){
-            editTextAge.setError("Age is required");
+            editTextAge.setError(getString(R.string.ageReq));
         }
 
         if (email.isEmpty()){
-            editTextEmail.setError("Email is required");
+            editTextEmail.setError(getString(R.string.emailReq));
         }
 
         if (password.isEmpty()){
-            editTextPassword.setError("Password is required");
+            editTextPassword.setError(getString(R.string.passReq));
         }
     }
 }
