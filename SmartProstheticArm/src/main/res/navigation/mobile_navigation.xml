@@ -9,7 +9,7 @@
         android:id="@+id/navigation_home"
         android:name="ca.kash.it.smartprostheticarm.ui.status.StatusFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_status" />
 
     <fragment
         android:id="@+id/navigation_dashboard"
