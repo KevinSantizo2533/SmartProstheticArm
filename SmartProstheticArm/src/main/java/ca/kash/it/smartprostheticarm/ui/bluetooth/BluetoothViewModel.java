@@ -16,7 +16,6 @@ public class BluetoothViewModel extends ViewModel {
 
     public BluetoothViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("Bluetooth placeholder text");
 
 
 

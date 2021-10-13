@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="kevBtnStyle" parent="android:Widget.Holo.Light.Button">
+        <item name="android:color">@color/cardview_light_background</item>
+    </style>
+
+    <style name="kevBtnStyle2" parent="android:Widget.Holo.ActionBar.Solid">
+        <item name="android:color">@color/design_default_color_background</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="SensorStyle" parent="@style/TextAppearance.AppCompat.Large">
+        <item name="android:fontFamily">@font/sensor_font</item>
+    </style>
+</resources>

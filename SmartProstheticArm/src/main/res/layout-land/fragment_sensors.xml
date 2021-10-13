@@ -7,88 +7,55 @@
     android:background="@drawable/sensors_backgry"
     tools:context=".ui.sensors.SensorFragment">
 
+
     <TextView
         android:id="@+id/sensorsTitle"
-        android:layout_width="201dp"
-        android:layout_height="116dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="52dp"
         style="@style/SensorStyle"
+        android:layout_width="466dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
         android:text="@string/sensor_information"
         android:textColor="@color/white"
         android:textSize="40sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
     <TextView
         android:id="@+id/text_dashboard"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:textAlignment="center"
         android:textSize="0sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.977" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="111dp"
-        android:layout_height="43dp"
-        android:text="@string/temperature_readings"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.506"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.524" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
         android:id="@+id/ultraBtn"
         android:layout_width="117sp"
         android:layout_height="124dp"
-        android:layout_marginBottom="140dp"
+        android:layout_marginTop="112dp"
         android:backgroundTint="@color/white"
         android:src="@drawable/outline_sensors_black_24dp"
         android:tooltipText="@string/ultrasonic_readings"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.652"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView6"
-        app:layout_constraintVertical_bias="0.967" />
-
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="129dp"
-        android:layout_height="31dp"
-        android:layout_marginEnd="140dp"
-        android:layout_marginBottom="96dp"
-        android:text="@string/ultrasonic_readings"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ultraBtn"
-        app:layout_constraintVertical_bias="0.687" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:id="@+id/tempBtn"
         android:layout_width="117sp"
         android:layout_height="124sp"
-        android:layout_marginTop="224dp"
+        android:layout_marginTop="112dp"
         android:backgroundTint="@color/white"
         android:src="@drawable/outline_thermostat_black_24dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintHorizontal_bias="0.307"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,10 +6,12 @@
 */
 package ca.kash.it.smartprostheticarm.ui.sensors;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -19,6 +21,8 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import ca.kash.it.smartprostheticarm.R;
+import ca.kash.it.smartprostheticarm.TemperatureActivity;
+import ca.kash.it.smartprostheticarm.UltrasonicActivity;
 
 public class SensorFragment extends Fragment {
 
@@ -30,6 +34,22 @@ public class SensorFragment extends Fragment {
                 new ViewModelProvider(this).get(SensorViewModel.class);
         View root = inflater.inflate(R.layout.fragment_sensors, container, false);
         final TextView textView = root.findViewById(R.id.text_dashboard);
+        ImageButton ultraButton = (ImageButton) root.findViewById(R.id.ultraBtn);
+        ultraButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(getActivity(), UltrasonicActivity.class);
+                startActivity(in);
+            }
+        });
+        ImageButton tempButton = (ImageButton) root.findViewById(R.id.tempBtn);
+        tempButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(getActivity(), TemperatureActivity.class);
+                startActivity(in);
+            }
+        });
         sensorViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
