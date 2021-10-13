@@ -10,6 +10,7 @@ import android.Manifest;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.Menu;
@@ -105,4 +106,34 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+            case R.id.signout:
+                final AlertDialog.Builder builder2 = new AlertDialog.Builder(MainActivity.this);
+                builder2.setIcon(R.drawable.ic_baseline_warning_24);
+                builder2.setMessage(R.string.Dialog_Exit2);
+                builder2.setCancelable(true);
+                builder2.setNegativeButton(R.string.onBack_No, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                    }
+                });
+                builder2.setPositiveButton(R.string.OnBack_Close, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        startActivity(new Intent(MainActivity.this, LoginActivity.class));
+                    }
+                });
+                AlertDialog alertDialog = builder2.create();
+                alertDialog.setIcon(R.drawable.ic_baseline_warning_24);
+                alertDialog.show();
+                return true;
+
+        }
+        return true;
+    }
+
 }

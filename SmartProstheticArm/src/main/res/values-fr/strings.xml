@@ -34,4 +34,8 @@
     <string name="temp_reading">0°</string>
     <string name="get_temperature_measurements">Get Temperature Measruements</string>
     <string name="sensor_information">Sensor Information</string>
+    <string name="nameRequired">Name is required</string>
+    <string name="ageReq">Age is required</string>
+    <string name="emailReq">Email is required</string>
+    <string name="passReq">Password is required</string>
 </resources>
