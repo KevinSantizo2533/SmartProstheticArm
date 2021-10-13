@@ -16,7 +16,6 @@ public class SensorViewModel extends ViewModel {
 
     public SensorViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("Sensor placeholder text");
     }
 
     public LiveData<String> getText() {

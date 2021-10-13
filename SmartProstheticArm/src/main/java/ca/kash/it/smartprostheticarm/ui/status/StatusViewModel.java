@@ -16,7 +16,6 @@ public class StatusViewModel extends ViewModel {
 
     public StatusViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("Status placeholder text");
     }
 
     public LiveData<String> getText() {
