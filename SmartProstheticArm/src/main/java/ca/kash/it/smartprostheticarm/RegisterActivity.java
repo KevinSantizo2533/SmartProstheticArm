@@ -10,9 +10,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -22,6 +24,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     private FirebaseAuth mAuth;
     private TextView registerUser;
     private EditText editTextFullName, editTextAge, editTextEmail, editTextPassword;
+    private ProgressBar progressbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +41,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         editTextAge = (EditText)  findViewById(R.id.age);
         editTextEmail = (EditText)  findViewById(R.id.email);
         editTextPassword = (EditText)  findViewById(R.id.password);
+        progressbar = (ProgressBar) findViewById(R.id.progressbar);
 
     }
 
@@ -71,8 +75,21 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             editTextEmail.setError(getString(R.string.emailReq));
         }
 
+        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+            editTextEmail.setError(getString(R.string.emailInvalid));
+
+        }
+
         if (password.isEmpty()){
             editTextPassword.setError(getString(R.string.passReq));
+            editTextPassword.requestFocus();
+            return;
+        }
+
+        if (password.length()<6){
+            editTextPassword.setError(getString(R.string.passMin));
+            editTextPassword.requestFocus();
+            return;
         }
     }
 }
