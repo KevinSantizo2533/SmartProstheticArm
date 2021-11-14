@@ -48,6 +48,8 @@
     <string name="login_logacc">Login to your Account</string>
     <string name="login_register">Register</string>
     <string name="login_forgorpass">Forgot Password</string>
+    <string name="help_title">Help</string>
+    <string name="help_msgbox">If you need assistance with your Smart Prosthetic Arm device, please contact us by tapping the telephone or email icon below. Our telephone is open 24/7 toll free with friendly agents willing to help you out.</string>
 
     <!-- Preference Titles -->
 

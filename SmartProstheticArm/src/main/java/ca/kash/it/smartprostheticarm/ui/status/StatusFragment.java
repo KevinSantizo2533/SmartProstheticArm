@@ -21,9 +21,12 @@ import androidx.lifecycle.ViewModelProvider;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 
+import org.w3c.dom.Text;
+
 import ca.kash.it.smartprostheticarm.R;
 
 public class StatusFragment extends Fragment {
+    TextView greeting;
 
     private StatusViewModel statusViewModel;
     public View onCreateView(@NonNull LayoutInflater inflater,
