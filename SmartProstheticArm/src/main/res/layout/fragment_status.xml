@@ -20,26 +20,27 @@
         android:textSize="40sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/greeting"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="238dp"
-        android:text="Welcome back Haki!"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="41dp"
+        android:text="Welcome back,"
         android:textSize="30sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/greetingName"
+        app:layout_constraintTop_toBottomOf="@+id/statusTitle" />
 
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="136dp"
+        android:layout_marginTop="236dp"
         android:src="@drawable/android"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+        app:layout_constraintTop_toBottomOf="@+id/greeting" />
 
     <TextView
         android:id="@+id/textView12"
@@ -50,7 +51,7 @@
         android:text="Status: "
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+        app:layout_constraintTop_toBottomOf="@+id/greeting" />
 
     <TextView
         android:id="@+id/textView13"
@@ -63,5 +64,17 @@
         android:textColor="#F11111"
         android:textSize="24sp"
         app:layout_constraintStart_toEndOf="@+id/textView12"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+        app:layout_constraintTop_toBottomOf="@+id/greeting" />
+
+    <TextView
+        android:id="@+id/greetingName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="42dp"
+        android:layout_marginBottom="70dp"
+        android:gravity="center|center_vertical"
+        android:text="TextView"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView13"
+        app:layout_constraintStart_toEndOf="@+id/greeting" />
 </androidx.constraintlayout.widget.ConstraintLayout>
