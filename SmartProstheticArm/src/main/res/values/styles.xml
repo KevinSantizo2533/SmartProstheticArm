@@ -13,4 +13,6 @@
     <style name="SensorStyle" parent="@style/TextAppearance.AppCompat.Large">
         <item name="android:fontFamily">@font/sensor_font</item>
     </style>
+
+
 </resources>

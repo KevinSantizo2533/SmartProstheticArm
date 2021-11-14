@@ -37,27 +37,23 @@ public class ReviewActivity extends AppCompatActivity {
         //getDeviceName()
         submit = (Button) findViewById(R.id.reviewsubmit);
 
-         editname = (EditText) findViewById(R.id.editName);
+        editname = (EditText) findViewById(R.id.editName);
         editphone = (EditText) findViewById(R.id.editPhone);
         editemail = (EditText) findViewById(R.id.editEmail);
         editcomment = (EditText) findViewById(R.id.editComment);
         ratingbar = findViewById(R.id.ratingBar);
-
         ref = FirebaseDatabase.getInstance().getReference().child("Feedback");
-
         submit = (Button)findViewById(R.id.reviewsubmit);
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String name = editname.getText().toString();
                 String email = editemail.getText().toString();
-
                 String comment = editcomment.getText().toString();
                 String phone = editphone.getText().toString();
                 int phone2 = Integer.parseInt(phone);
                 float rating = ratingbar.getRating();
                 String model = getModel();
-
                 Review review = new Review(name,email, phone2,comment,rating, model);
 
                 ref.push().setValue(review);
@@ -66,14 +62,9 @@ public class ReviewActivity extends AppCompatActivity {
 
             }
         });
-
     }
-
     public static String getModel() {
         String model = Build.MODEL;
-
             return model;
-
     }
-
 }

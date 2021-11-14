@@ -5,16 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#322929"
-    android:backgroundTint="#FFFFFF"
+    android:backgroundTint="@color/light_green"
     tools:context=".ReviewActivity">
+
 
     <RatingBar
         android:id="@+id/ratingBar"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="85dp"
-        android:layout_marginTop="125dp"
-        android:background="#FFFFFF"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="88dp"
+        android:background="#00000000"
         android:progressBackgroundTint="#F1F0ED"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -23,9 +24,9 @@
         android:id="@+id/Reviewtext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="112dp"
-        android:layout_marginTop="32dp"
-        android:text="Write a review"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="Feedback Form"
         android:textColor="#040303"
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,34 +34,24 @@
 
     <Button
         android:id="@+id/reviewsubmit"
-        android:layout_width="wrap_content"
+        android:layout_width="135dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="304dp"
 
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="136dp"
         android:text="Submit"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ratingBar" />
-
-    <ImageView
-        android:layout_width="651dp"
-        android:layout_height="136dp"
-        android:layout_marginTop="552dp"
-        android:src="@drawable/android_clipboard"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/editComment" />
 
     <EditText
         android:id="@+id/editName"
         android:layout_width="198dp"
         android:layout_height="39dp"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/text_border"
         android:ems="10"
-        android:hint="Full name"
+        android:hint=" Full name"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ratingBar" />
@@ -69,36 +60,43 @@
         android:id="@+id/editPhone"
         android:layout_width="198dp"
         android:layout_height="39dp"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/text_border"
         android:ems="10"
-        android:hint="Phone number"
+        android:hint=" Phone number"
         android:inputType="number"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editName" />
-
 
     <EditText
         android:id="@+id/editEmail"
         android:layout_width="198dp"
         android:layout_height="39dp"
-        android:layout_marginStart="84dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
+        android:background="@drawable/text_border"
         android:ems="10"
-        android:hint="Email"
+        android:hint=" Email"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editPhone" />
 
     <EditText
         android:id="@+id/editComment"
-        android:layout_width="249dp"
-        android:layout_height="73dp"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="17dp"
+        android:layout_width="334dp"
+        android:layout_height="152dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="60dp"
+        android:background="@drawable/text_border"
         android:ems="10"
-        android:hint="Comment"
+        android:gravity="top"
+        android:hint="@string/feedback_comment"
         android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editEmail" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -123,10 +123,10 @@
 
     <com.google.android.gms.common.SignInButton
         android:id="@+id/alternative_google"
-        android:layout_width="105dp"
-        android:layout_height="42dp"
-        android:layout_marginEnd="152dp"
-        android:layout_marginBottom="28dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="32dp"
         app:layout_constraintBottom_toTopOf="@+id/forgotpass"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -137,8 +137,8 @@
         android:text="Forgot Password"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.18"
+        app:layout_constraintHorizontal_bias="0.154"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginBtn"
-        app:layout_constraintVertical_bias="0.177" />
+        app:layout_constraintVertical_bias="0.4" />
 </androidx.constraintlayout.widget.ConstraintLayout>
