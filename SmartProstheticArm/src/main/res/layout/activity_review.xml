@@ -14,6 +14,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="85dp"
         android:layout_marginTop="125dp"
+        android:background="#FFFFFF"
+        android:progressBackgroundTint="#FFEB3B"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -21,10 +23,11 @@
         android:id="@+id/Reviewtext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="140dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="32dp"
         android:text="Write a review"
-        android:textSize="24sp"
+        android:textColor="#040303"
+        android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -38,6 +41,17 @@
         android:text="Submit"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ratingBar" />
+
+    <ImageView
+        android:layout_width="651dp"
+        android:layout_height="136dp"
+        android:layout_marginTop="552dp"
+        android:src="@drawable/android_clipboard"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/editName"
@@ -62,6 +76,7 @@
         android:inputType="number"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editName" />
+
 
     <EditText
         android:id="@+id/editEmail"
