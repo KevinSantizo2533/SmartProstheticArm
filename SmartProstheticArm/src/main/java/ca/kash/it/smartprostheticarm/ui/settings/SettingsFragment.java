@@ -29,9 +29,6 @@ public class SettingsFragment extends PreferenceFragmentCompat {
             }
         });
 
-    }
-
-    private void LoadPreferences() {
         SharedPreferences SP = PreferenceManager.getDefaultSharedPreferences(getContext());
         ListPreference LP = (ListPreference) findPreference("ORIENTATION");
         String usrOrient = SP.getString("ORIENTATION", "false");
@@ -42,11 +39,12 @@ public class SettingsFragment extends PreferenceFragmentCompat {
             getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         }
 
+
         LP.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
             @Override
-            public boolean onPreferenceChange(Preference preference, Object obj) {
+            public boolean onPreferenceChange(Preference pref, Object obj) {
                 String items = (String) obj;
-                if (preference.equals("ORIENTATION")) {
+                if (pref.getKey().equals("ORIENTATION")) {
                     switch (items) {
                         case "1":
                             getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_BEHIND);
@@ -59,15 +57,9 @@ public class SettingsFragment extends PreferenceFragmentCompat {
                 return true;
             }
         });
+
     }
 
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        // Set up a listener whenever a key changes
-        LoadPreferences();
-    }
 
 
 }
