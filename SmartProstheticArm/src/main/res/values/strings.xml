@@ -32,7 +32,7 @@
     <string name="measurements">Distance of object (in cm):</string>
     <string name="temp_readings">Temperature Readings</string>
     <string name="temp_reading">0°</string>
-    <string name="get_temperature_measurements">Get Temperature Measruements</string>
+    <string name="get_temperature_measurements">Get Temperature Measurements</string>
     <string name="sensor_information">Sensor Information</string>
     <string name="nameRequired">Name is required</string>
     <string name="ageReq">Age is required</string>
@@ -44,6 +44,10 @@
     <string name="phoneRequired">Phone is required</string>
     <string name="Reviewsent">Feedback sent</string>
     <string name="feedback_comment">How can we improve?</string>
+    <string name="log_loginbtn">Login</string>
+    <string name="login_logacc">Login to your Account</string>
+    <string name="login_register">Register</string>
+    <string name="login_forgorpass">Forgot Password</string>
 
     <!-- Preference Titles -->
 

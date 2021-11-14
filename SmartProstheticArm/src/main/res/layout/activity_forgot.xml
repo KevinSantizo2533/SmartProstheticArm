@@ -63,6 +63,7 @@
 
     <EditText
         android:id="@+id/loginEmail"
+        android:background="@drawable/text_border"
         android:layout_width="300dp"
         android:layout_height="52dp"
         android:ems="10"

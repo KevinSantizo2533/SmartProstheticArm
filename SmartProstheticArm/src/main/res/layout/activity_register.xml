@@ -39,6 +39,7 @@
 
     <EditText
         android:id="@+id/age"
+        android:background="@drawable/text_border"
         android:layout_width="300dp"
         android:layout_height="52dp"
         android:ems="10"
@@ -53,6 +54,7 @@
 
     <EditText
         android:id="@+id/email"
+        android:background="@drawable/text_border"
         android:layout_width="300dp"
         android:layout_height="52dp"
         android:ems="10"
@@ -69,6 +71,7 @@
 
     <EditText
         android:id="@+id/password"
+        android:background="@drawable/text_border"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -86,6 +89,7 @@
 
     <Button
         android:id="@+id/registerUser"
+        android:background="@drawable/text_border"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/companyblue"
@@ -99,6 +103,7 @@
 
     <TextView
         android:id="@+id/textView2"
+        android:background="@drawable/text_border"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/tripleta_font"
@@ -127,6 +132,7 @@
 
     <EditText
         android:id="@+id/name"
+        android:background="@drawable/text_border"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:ems="10"
