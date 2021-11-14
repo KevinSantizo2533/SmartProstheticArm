@@ -38,4 +38,10 @@
     <string name="ageReq">Age is required</string>
     <string name="emailReq">Email is required</string>
     <string name="passReq">Password is required</string>
+    <string name="passMin">"Le mot de passe doit comporter plus de 6 caractères "</string>
+    <string name="Dialog_Exit2">Êtes-vous certain de vouloir vous déconnecter?</string>
+    <string name="phoneRequired">Le téléphone est requis.</string>
+    <string name="Reviewsent">Commentaires envoyés</string>
+    <string name="feedback_comment">Comment pouvons nous nous améliorer?</string>
+    <string name="emailInvalid">"Le courriel est invalide "</string>
 </resources>

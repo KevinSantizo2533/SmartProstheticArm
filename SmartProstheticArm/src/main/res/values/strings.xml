@@ -43,7 +43,7 @@
     <string name="Dialog_Exit2">Are you sure you want to sign out?</string>
     <string name="phoneRequired">Phone is required</string>
     <string name="Reviewsent">Feedback sent</string>
-    <string name="feedback_comment">  How can we improve?</string>
+    <string name="feedback_comment">How can we improve?</string>
 
     <!-- Preference Titles -->
 
