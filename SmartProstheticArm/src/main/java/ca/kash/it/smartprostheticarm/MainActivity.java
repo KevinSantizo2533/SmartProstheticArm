@@ -125,6 +125,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.help:
                 startActivity(new Intent(MainActivity.this, HelpActivity.class));
                 return true;
+            case R.id.feedback:
+                startActivity(new Intent(MainActivity.this, ReviewActivity.class));
+                return true;
         }
         return true;
     }
