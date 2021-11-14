@@ -9,11 +9,11 @@
     tools:context=".ui.status.StatusFragment">
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/imageView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="416dp"
-        android:src="@drawable/mountains"
+        android:layout_marginBottom="220dp"
+        android:src="@drawable/mountains2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -22,13 +22,14 @@
     <TextView
         android:id="@+id/statusTitle"
         style="@style/SensorStyle"
-        android:layout_width="201dp"
-        android:layout_height="116dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="248dp"
-        android:text="Status Information"
-        android:textColor="@color/white"
-        android:textSize="40sp"
+        android:layout_width="326dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="280dp"
+        android:fontFamily="@font/glacialindifference_font"
+        android:text="Status Overview"
+        android:textColor="@color/darkgrey"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -36,7 +37,8 @@
         android:id="@+id/greeting"
         android:layout_width="245dp"
         android:layout_height="37dp"
-        android:text="Welcome back,"
+        android:fontFamily="@font/glacialindifference_font"
+        android:text="Welcome Back,"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -44,14 +46,14 @@
         app:layout_constraintHorizontal_bias="0.096"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.092" />
+        app:layout_constraintVertical_bias="0.113" />
 
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="304dp"
+        android:layout_marginTop="336dp"
         android:src="@drawable/android"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/greeting" />
@@ -60,10 +62,11 @@
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="320dp"
-        android:text="Status: "
-        android:textSize="24sp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="204dp"
+        android:fontFamily="@font/glacialindifference_font"
+        android:text="Bluetooth: "
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/greeting" />
 
@@ -71,12 +74,13 @@
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="320dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="204dp"
         android:backgroundTint="#C61414"
+        android:fontFamily="@font/glacialindifference_font"
         android:text="Disconnected"
-        android:textColor="#F11111"
-        android:textSize="24sp"
+        android:textColor="@color/red"
+        android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/textView12"
         app:layout_constraintTop_toBottomOf="@+id/greeting" />
 
@@ -85,12 +89,50 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginBottom="268dp"
+        android:layout_marginBottom="168dp"
+        android:fontFamily="@font/glacialindifference_font"
         android:gravity="center|center_vertical"
-        android:text="{USER}"
         android:textColor="#FFFFFF"
-        android:textSize="30sp"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/textView13"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/companyblue"
+        android:text="Logout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.66" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="72dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="@font/glacialindifference_font"
+        android:text="Battery:"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/textView14"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="240dp"
+        android:layout_marginEnd="168dp"
+        android:fontFamily="@font/glacialindifference_font"
+        android:text="Disconnected"
+        android:textColor="@color/red"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/greeting" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
