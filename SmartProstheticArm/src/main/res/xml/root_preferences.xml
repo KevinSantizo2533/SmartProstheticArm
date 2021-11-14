@@ -24,4 +24,15 @@
             android:summary="Set profile username"
             android:key="userProfile"/>
     </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Feedback"
+        android:icon="@drawable/ic_baseline_rate_review_24"
+
+        >
+        <Preference
+            android:key="review"
+            android:title="Write a review"
+            />
+    </PreferenceCategory>
 </PreferenceScreen>

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="ca.kash.it.smartprostheticarm">
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/> <!-- needed for bluetooth -->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/> <!-- needed for bluetooth -->
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- needed for bluetooth -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -11,6 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SmartProstheticArm">
+        <activity android:name=".ReviewActivity"></activity>
         <activity
             android:name=".LoginActivity"
             android:exported="true" />

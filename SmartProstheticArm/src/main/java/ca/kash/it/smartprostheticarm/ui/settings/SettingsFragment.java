@@ -1,5 +1,6 @@
 package ca.kash.it.smartprostheticarm.ui.settings;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
@@ -10,12 +11,24 @@ import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.PreferenceManager;
 
 import ca.kash.it.smartprostheticarm.R;
+import ca.kash.it.smartprostheticarm.ReviewActivity;
 
 public class SettingsFragment extends PreferenceFragmentCompat {
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         setPreferencesFromResource(R.xml.root_preferences, rootKey);
+
+        Preference p = (Preference) findPreference("review");
+        p.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+            public boolean onPreferenceClick(Preference preference) {
+
+                Intent intent = new Intent(getActivity(), ReviewActivity.class);
+                startActivity(intent);
+                return true;
+            }
+        });
+
     }
 
     private void LoadPreferences() {
