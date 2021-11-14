@@ -35,50 +35,31 @@
         app:layout_constraintVertical_bias="0.083" />
 
     <TextView
-        android:id="@+id/abouttitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="72dp"
-        android:text="Help"
-        android:textColor="#0B0A0A"
-        android:textSize="36sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
-    <TextView
         android:id="@+id/aboutustext"
         android:layout_width="363dp"
         android:layout_height="121dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:text="If you need assistance with your Smart Prosthetic Arm device, please contact us via telephone or email below. Our telephone is open 24/7 toll free with friendly agents willing to help you out."
+        android:layout_marginTop="102dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="68dp"
+        android:gravity="center"
+        android:text="@string/help_msgbox"
         android:textColor="#534F4F"
         android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/contact_phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/abouttitle" />
-
-    <TextView
-        android:id="@+id/textView16"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="16dp"
-
-        android:text="Contact Information: \nEmail: Hybridprosthetics@gmail.com\nPhone number: 905 874 6663"
-        android:textColor="#534F4F"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/aboutustext" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <ImageView
         android:id="@+id/contact_phone"
         android:layout_width="120dp"
         android:layout_height="85dp"
-        android:layout_marginEnd="216dp"
-        android:layout_marginBottom="140dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="75dp"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/supportagent"
+        app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/ic_baseline_local_phone_24"
         tools:ignore="OnClick" />
 
@@ -87,8 +68,27 @@
         android:layout_width="120dp"
         android:layout_height="85dp"
         android:layout_marginStart="20dp"
-        android:layout_marginBottom="140dp"
+        android:layout_marginTop="63dp"
+        android:layout_marginEnd="76dp"
+        android:layout_marginBottom="228dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/contact_phone"
+        app:layout_constraintTop_toBottomOf="@+id/aboutustext"
+        app:layout_constraintVertical_bias="0.764"
         app:srcCompat="@drawable/ic_baseline_mail_outline_24" />
+
+    <ImageView
+        android:id="@+id/supportagent"
+        android:layout_width="167dp"
+        android:layout_height="153dp"
+        android:layout_marginStart="122dp"
+        android:layout_marginEnd="122dp"
+        android:layout_marginBottom="52dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/customersupport" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
