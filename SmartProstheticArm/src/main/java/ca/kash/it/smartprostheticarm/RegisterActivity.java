@@ -9,7 +9,6 @@ package ca.kash.it.smartprostheticarm;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
@@ -45,7 +44,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         editTextAge = (EditText)  findViewById(R.id.age);
         editTextEmail = (EditText)  findViewById(R.id.email);
         editTextPassword = (EditText)  findViewById(R.id.password);
-        progressbar = (ProgressBar) findViewById(R.id.progressbar);
+        progressbar = (ProgressBar) findViewById(R.id.loginprogressbar);
 
     }
 
