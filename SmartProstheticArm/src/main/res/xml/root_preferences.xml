@@ -18,12 +18,17 @@
         <SwitchPreference android:title="@string/emergency_alerts" android:key="ALERTS"/>
     </PreferenceCategory>
 
-    <PreferenceCategory android:title="@string/PROFILE_TITLE" android:icon="@drawable/baseline_assignment_ind_24" >
-        <EditTextPreference
-            android:title="@string/set_username"
-            android:summary="@string/profile_summary"
-            android:key="userProfile"/>
+    <PreferenceCategory
+        android:title="@string/reset_passwordlabel"
+        android:icon="@drawable/accounticon24"
+
+        >
+        <Preference
+            android:key="resetpassword"
+            android:title="@string/Resetpassword"
+            />
     </PreferenceCategory>
+
 
     <PreferenceCategory
         android:title="@string/feedback_label"

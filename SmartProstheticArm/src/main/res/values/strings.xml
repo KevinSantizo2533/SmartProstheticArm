@@ -61,6 +61,8 @@
     <string name="screen_title">SCREEN ORIENTATION</string>
     <string name="orientation_list">Orientation</string>
     <string name="emergency_alerts">Emergency Alerts</string>
+    <string name="reset_passwordlabel">Account</string>
+    <string name="Resetpassword">Reset Password</string>
 
     <!-- Preference Titles -->
 

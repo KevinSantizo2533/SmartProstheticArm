@@ -12,6 +12,7 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.PreferenceManager;
 
+import ca.kash.it.smartprostheticarm.ForgotPasswordActivity;
 import ca.kash.it.smartprostheticarm.R;
 import ca.kash.it.smartprostheticarm.RegisterActivity;
 import ca.kash.it.smartprostheticarm.ReviewActivity;
@@ -32,6 +33,18 @@ public class SettingsFragment extends PreferenceFragmentCompat {
                 return true;
             }
         });
+        Preference p2 = (Preference) findPreference("resetpassword");
+        p2.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+            public boolean onPreferenceClick(Preference preference) {
+
+                Intent intent = new Intent(getActivity(), ForgotPasswordActivity.class);
+                startActivity(intent);
+                return true;
+            }
+        });
+
+
+
 
         Preference prefs = (Preference) findPreference("usrSelections");
         prefs.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
