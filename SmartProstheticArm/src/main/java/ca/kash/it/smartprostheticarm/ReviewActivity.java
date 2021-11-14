@@ -10,6 +10,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RatingBar;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -21,8 +22,9 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class ReviewActivity extends AppCompatActivity {
 
-    public EditText editname,editphone,editemail;
+    public EditText editname,editphone,editemail,editcomment;
     Button submit;
+    RatingBar ratingbar;
 
     FirebaseDatabase database;
     DatabaseReference ref;
@@ -37,17 +39,29 @@ public class ReviewActivity extends AppCompatActivity {
          editname = (EditText) findViewById(R.id.editName);
         editphone = (EditText) findViewById(R.id.editPhone);
         editemail = (EditText) findViewById(R.id.editEmail);
+        editcomment = (EditText) findViewById(R.id.editComment);
+        ratingbar = findViewById(R.id.ratingBar);
 
-
-        ref = FirebaseDatabase.getInstance().getReference().child("Students");
+        ref = FirebaseDatabase.getInstance().getReference().child("Feedback");
 
         submit = (Button)findViewById(R.id.reviewsubmit);
+
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String name = editname.getText().toString();
                 String email = editemail.getText().toString();
-                Review review = new Review(name,email);
+
+                String comment = editcomment.getText().toString();
+                String phone = editphone.getText().toString();
+                String stars = String.valueOf(ratingbar.getRating());
+
+
+
+
+                int phoneNum = new Integer(phone).intValue();
+
+                Review review = new Review(name,email, phoneNum, comment, stars);
 
                 ref.push().setValue(review);
 

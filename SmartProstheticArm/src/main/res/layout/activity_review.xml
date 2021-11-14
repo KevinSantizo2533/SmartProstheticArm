@@ -59,7 +59,7 @@
         android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="Phone number"
-        android:inputType="numberPassword"
+        android:inputType="numberSigned"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editName" />
 
@@ -74,4 +74,16 @@
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editPhone" />
+
+    <EditText
+        android:id="@+id/editComment"
+        android:layout_width="249dp"
+        android:layout_height="73dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="17dp"
+        android:ems="10"
+        android:hint="Comment"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editEmail" />
 </androidx.constraintlayout.widget.ConstraintLayout>
