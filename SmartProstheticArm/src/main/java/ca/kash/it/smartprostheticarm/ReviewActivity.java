@@ -22,7 +22,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class ReviewActivity extends AppCompatActivity {
 
-    public EditText editname,editphone,editemail,editcomment;
+    EditText editname,editphone,editemail,editcomment;
     Button submit;
     RatingBar ratingbar;
 
@@ -45,7 +45,6 @@ public class ReviewActivity extends AppCompatActivity {
         ref = FirebaseDatabase.getInstance().getReference().child("Feedback");
 
         submit = (Button)findViewById(R.id.reviewsubmit);
-
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -54,61 +53,24 @@ public class ReviewActivity extends AppCompatActivity {
 
                 String comment = editcomment.getText().toString();
                 String phone = editphone.getText().toString();
-                String stars = String.valueOf(ratingbar.getRating());
+                int phone2 = Integer.parseInt(phone);
+                float rating = ratingbar.getRating();
+                String model = getModel();
 
-
-
-
-                int phoneNum = new Integer(phone).intValue();
-
-                Review review = new Review(name,email, phoneNum, comment, stars);
+                Review review = new Review(name,email, phone2,comment,rating, model);
 
                 ref.push().setValue(review);
 
             }
         });
 
-
-
     }
 
-
-
-
-
-
-    public static String getDeviceName() {
-        String manufacturer = Build.MANUFACTURER;
+    public static String getModel() {
         String model = Build.MODEL;
 
-        if (model.startsWith(manufacturer)) {
-            return capitalize(model);
-        }
-        return capitalize(manufacturer) + " " + model;
-    }
+            return model;
 
-    private static String capitalize(String text) {
-        if (TextUtils.isEmpty(text)) {
-            return text;
-        }
-        char[] arr1 = text.toCharArray();
-        boolean capitalize = true;
-
-        StringBuilder phrase = new StringBuilder();
-
-        for (char c:arr1) {
-            if (capitalize && Character.isLetter(c)) {
-                phrase.append(Character.toUpperCase(c));
-                capitalize = false;
-                continue;
-            } else if (Character.isWhitespace(c)) {
-                capitalize = true;
-            }
-
-            phrase.append(c);
-        }
-
-        return phrase.toString();
     }
 
 }
