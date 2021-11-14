@@ -13,8 +13,10 @@
 
     </PreferenceCategory>
 
-    <PreferenceCategory android:title="Notifications" android:icon="@drawable/outline_notifications_24">
-        <SwitchPreference android:title="New message notifications" />
+    <PreferenceCategory
+        android:icon="@drawable/outline_notifications_24"
+        android:title="Alerts">
+        <SwitchPreference android:title="Emergency Alerts" />
     </PreferenceCategory>
 
     <PreferenceCategory android:title="USER PROFILE" android:icon="@drawable/baseline_assignment_ind_24" >
