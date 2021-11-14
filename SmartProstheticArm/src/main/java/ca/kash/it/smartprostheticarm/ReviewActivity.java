@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
@@ -60,6 +61,8 @@ public class ReviewActivity extends AppCompatActivity {
                 Review review = new Review(name,email, phone2,comment,rating, model);
 
                 ref.push().setValue(review);
+                Snackbar snackbar = Snackbar.make(findViewById(android.R.id.content), R.string.Reviewsent, Snackbar.LENGTH_LONG);
+                snackbar.show();
 
             }
         });
