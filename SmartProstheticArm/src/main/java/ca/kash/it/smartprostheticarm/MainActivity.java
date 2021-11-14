@@ -60,15 +60,7 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
 
-        if (ContextCompat.checkSelfPermission(this,
-                Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this,
-                    new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, PERMISSIONS_REQUEST_BLUETOOTH);
-        }
-        else {
-            Snackbar snackbar = Snackbar.make(findViewById(android.R.id.content), R.string.BTGranted, Snackbar.LENGTH_LONG);
-            snackbar.show();
-        }
+
     }
 
     @Override
@@ -100,23 +92,7 @@ public class MainActivity extends AppCompatActivity {
         alertDialog.setIcon(R.drawable.ic_baseline_warning_24);
         alertDialog.show();
     }
-    @Override
-    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        switch (requestCode) {
-            case PERMISSIONS_REQUEST_BLUETOOTH: {
-                // If request is cancelled, the result arrays are empty.
-                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    Snackbar snackbar = Snackbar.make(findViewById(android.R.id.content), R.string.BTGranted, Snackbar.LENGTH_LONG);
-                    snackbar.show();
-                } else {
-                    Snackbar snackbar = Snackbar.make(findViewById(android.R.id.content), R.string.BTDenied, Snackbar.LENGTH_LONG);
-                    snackbar.show();
-                }
-                return;
-            }
-        }
-    }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle item selection
@@ -148,9 +124,6 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             case R.id.help:
                 startActivity(new Intent(MainActivity.this, HelpActivity.class));
-                return true;
-            case R.id.feedback:
-                startActivity(new Intent(MainActivity.this, ReviewActivity.class));
                 return true;
         }
         return true;
