@@ -50,6 +50,17 @@
     <string name="login_forgorpass">Forgot Password</string>
     <string name="help_title">Help</string>
     <string name="help_msgbox">If you need assistance with your Smart Prosthetic Arm device, please contact us by tapping the telephone or email icon below. Our telephone is open 24/7 toll free with friendly agents willing to help you out.</string>
+    <string name="users_title">Current User Selections</string>
+    <string name="user_selections">View User Selections</string>
+    <string name="review_title">Write a review</string>
+    <string name="feedback_label">Feedback</string>
+    <string name="set_username">Set username</string>
+    <string name="profile_summary">Set profile username</string>
+    <string name="PROFILE_TITLE">USER PROFILE</string>
+    <string name="alerts_title">Alerts</string>
+    <string name="screen_title">SCREEN ORIENTATION</string>
+    <string name="orientation_list">Orientation</string>
+    <string name="emergency_alerts">Emergency Alerts</string>
 
     <!-- Preference Titles -->
 

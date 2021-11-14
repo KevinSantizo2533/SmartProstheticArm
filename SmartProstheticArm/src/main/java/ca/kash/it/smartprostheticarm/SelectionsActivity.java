@@ -34,7 +34,5 @@ public class SelectionsActivity extends AppCompatActivity {
                 settingsTxt.setText(info);
             }
         });
-
-
     }
 }

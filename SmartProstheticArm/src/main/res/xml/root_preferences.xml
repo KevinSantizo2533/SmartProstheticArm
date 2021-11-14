@@ -1,11 +1,11 @@
 <PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <PreferenceCategory app:title="SCREEN ORIENTATION" app:icon="@drawable/outline_screen_lock_portrait_black_24dp">
+    <PreferenceCategory app:title="@string/screen_title" app:icon="@drawable/outline_screen_lock_portrait_black_24dp">
 
         <ListPreference
             android:key="ORIENTATION"
-            android:title="Orientation"
+            android:title="@string/orientation_list"
             android:entries="@array/orientation_name"
             android:entryValues="@array/orientation_val"
 
@@ -14,36 +14,36 @@
     </PreferenceCategory>
 
 
-    <PreferenceCategory android:title="Alerts" android:icon="@drawable/outline_notifications_24">
-        <SwitchPreference android:title="Emergency Alerts" android:key="ALERTS"/>
+    <PreferenceCategory android:title="@string/alerts_title" android:icon="@drawable/outline_notifications_24">
+        <SwitchPreference android:title="@string/emergency_alerts" android:key="ALERTS"/>
     </PreferenceCategory>
 
-    <PreferenceCategory android:title="USER PROFILE" android:icon="@drawable/baseline_assignment_ind_24" >
+    <PreferenceCategory android:title="@string/PROFILE_TITLE" android:icon="@drawable/baseline_assignment_ind_24" >
         <EditTextPreference
-            android:title="Set username"
-            android:summary="Set profile username"
+            android:title="@string/set_username"
+            android:summary="@string/profile_summary"
             android:key="userProfile"/>
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:title="Feedback"
+        android:title="@string/feedback_label"
         android:icon="@drawable/ic_baseline_rate_review_24"
 
         >
         <Preference
             android:key="review"
-            android:title="Write a review"
+            android:title="@string/review_title"
             />
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:title="View User Selections"
+        android:title="@string/user_selections"
         android:icon="@drawable/ic_baseline_rate_review_24"
 
         >
         <Preference
             android:key="usrSelections"
-            android:title="Current User Selections"
+            android:title="@string/users_title"
             />
     </PreferenceCategory>
 
