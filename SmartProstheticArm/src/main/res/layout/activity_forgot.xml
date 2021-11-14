@@ -62,11 +62,13 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/loginEmail"
+        android:id="@+id/forgotEmail"
         android:background="@drawable/text_border"
         android:layout_width="300dp"
         android:layout_height="52dp"
         android:ems="10"
+        android:paddingLeft="8dp"
+
         android:hint="@string/email"
         android:importantForAutofill="no"
         android:inputType="textEmailAddress"
@@ -79,7 +81,7 @@
         app:layout_constraintVertical_bias="0.499" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/forgotSubmit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/companyblue"
@@ -87,10 +89,10 @@
         android:layout_marginTop="28dp"
         android:text="Submit"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/forgotEmail" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/forgotBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/companyblue"
@@ -98,8 +100,21 @@
         android:layout_marginTop="28dp"
         android:layout_marginEnd="90dp"
         android:text="Back"
-        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintEnd_toStartOf="@+id/forgotSubmit"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/forgotEmail" />
+
+    <ProgressBar
+        android:id="@+id/forgotprogressbar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminateTint="@color/companyblue"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
