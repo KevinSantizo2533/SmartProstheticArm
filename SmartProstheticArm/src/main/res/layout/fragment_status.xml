@@ -9,11 +9,11 @@
     tools:context=".ui.status.StatusFragment">
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/imageView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="416dp"
-        android:src="@drawable/mountains"
+        android:layout_marginBottom="220dp"
+        android:src="@drawable/mountains2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -22,13 +22,14 @@
     <TextView
         android:id="@+id/statusTitle"
         style="@style/SensorStyle"
-        android:layout_width="201dp"
-        android:layout_height="116dp"
+        android:layout_width="349dp"
+        android:layout_height="90dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="248dp"
+        android:layout_marginTop="260dp"
+        android:fontFamily="sans-serif"
         android:text="Status Information"
-        android:textColor="@color/white"
-        android:textSize="40sp"
+        android:textColor="@color/black"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -36,7 +37,7 @@
         android:id="@+id/greeting"
         android:layout_width="245dp"
         android:layout_height="37dp"
-        android:text="Welcome back,"
+        android:text="Welcome Back,"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -44,7 +45,7 @@
         app:layout_constraintHorizontal_bias="0.096"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.092" />
+        app:layout_constraintVertical_bias="0.113" />
 
     <ImageView
         android:id="@+id/imageView5"
@@ -87,7 +88,6 @@
         android:layout_marginStart="16dp"
         android:layout_marginBottom="268dp"
         android:gravity="center|center_vertical"
-        android:text="{USER}"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/textView13"
