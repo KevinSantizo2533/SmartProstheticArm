@@ -98,35 +98,35 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
         progressbar.setVisibility(View.VISIBLE);
         mAuth.createUserWithEmailAndPassword(email,password)
-            .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                @Override
-                public void onComplete(@NonNull Task<AuthResult> task) {
+                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
 
-                    if(task.isSuccessful()){
-                        User user = new User(name, age, email);
-                        FirebaseDatabase.getInstance().getReference("Users")
-                                .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                                .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
-                            @Override
-                            public void onComplete(@NonNull Task<Void> task) {
-                                if(task.isSuccessful()){
-                                    Toast.makeText(RegisterActivity.this, "Registered Succesfully", Toast.LENGTH_LONG).show();
-                                    progressbar.setVisibility(View.GONE);
-                                }else{
-                                    Toast.makeText(RegisterActivity.this, "Failed to Register", Toast.LENGTH_LONG).show();
-                                    progressbar.setVisibility(View.GONE);
+                        if(task.isSuccessful()){
+                            User user = new User(name, age, email);
+                            FirebaseDatabase.getInstance().getReference("Users")
+                                    .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                                    .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                @Override
+                                public void onComplete(@NonNull Task<Void> task) {
+                                    if(task.isSuccessful()){
+                                        Toast.makeText(RegisterActivity.this, "Registered Succesfully", Toast.LENGTH_LONG).show();
+                                        progressbar.setVisibility(View.GONE);
+                                    }else{
+                                        Toast.makeText(RegisterActivity.this, "Failed to Register", Toast.LENGTH_LONG).show();
+                                        progressbar.setVisibility(View.GONE);
+                                    }
+
                                 }
+                            });
 
-                            }
-                        });
+                        }else{
+                            Toast.makeText(RegisterActivity.this, "Failed to Register", Toast.LENGTH_LONG).show();
+                            progressbar.setVisibility(View.GONE);
+                        }
 
-                    }else{
-                        Toast.makeText(RegisterActivity.this, "Failed to Register", Toast.LENGTH_LONG).show();
-                        progressbar.setVisibility(View.GONE);
                     }
+                });
 
-                }
-            });
-
-        }
     }
+}
