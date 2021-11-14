@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
@@ -11,7 +13,9 @@ import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.PreferenceManager;
 
 import ca.kash.it.smartprostheticarm.R;
+import ca.kash.it.smartprostheticarm.RegisterActivity;
 import ca.kash.it.smartprostheticarm.ReviewActivity;
+import ca.kash.it.smartprostheticarm.SelectionsActivity;
 
 public class SettingsFragment extends PreferenceFragmentCompat {
 
@@ -28,6 +32,17 @@ public class SettingsFragment extends PreferenceFragmentCompat {
                 return true;
             }
         });
+
+        Preference prefs = (Preference) findPreference("usrSelections");
+        prefs.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+            public boolean onPreferenceClick(Preference preference) {
+
+                Intent in = new Intent(getActivity(), SelectionsActivity.class);
+                startActivity(in);
+                return true;
+            }
+        });
+
 
         SharedPreferences SP = PreferenceManager.getDefaultSharedPreferences(getContext());
         ListPreference LP = (ListPreference) findPreference("ORIENTATION");
@@ -48,15 +63,19 @@ public class SettingsFragment extends PreferenceFragmentCompat {
                     switch (items) {
                         case "1":
                             getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_BEHIND);
+                            Toast.makeText(getActivity(), "Screen Orientation Mode: Auto", Toast.LENGTH_LONG).show();
                             break;
                         case "2":
                             getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+                            Toast.makeText(getActivity(), "Screen Orientation Mode: Portrait", Toast.LENGTH_LONG).show();
                             break;
                     }
                 }
                 return true;
             }
         });
+
+
 
     }
 

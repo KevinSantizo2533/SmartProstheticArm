@@ -16,6 +16,7 @@
         <activity android:name=".AboutActivity"></activity>
         <activity android:name=".HelpActivity"></activity>
         <activity android:name=".ReviewActivity" />
+        <activity android:name=".SelectionsActivity" />
         <activity
             android:name=".LoginActivity"
             android:exported="true" />

@@ -15,7 +15,7 @@
 
 
     <PreferenceCategory android:title="Alerts" android:icon="@drawable/outline_notifications_24">
-        <SwitchPreference android:title="Emergency Alerts" />
+        <SwitchPreference android:title="Emergency Alerts" android:key="ALERTS"/>
     </PreferenceCategory>
 
     <PreferenceCategory android:title="USER PROFILE" android:icon="@drawable/baseline_assignment_ind_24" >
@@ -35,4 +35,16 @@
             android:title="Write a review"
             />
     </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="View User Selections"
+        android:icon="@drawable/ic_baseline_rate_review_24"
+
+        >
+        <Preference
+            android:key="usrSelections"
+            android:title="Current User Selections"
+            />
+    </PreferenceCategory>
+
 </PreferenceScreen>
