@@ -146,9 +146,10 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             case R.id.about:
                 startActivity(new Intent(MainActivity.this, AboutActivity.class));
-
-
-
+                return true;
+            case R.id.help:
+                startActivity(new Intent(MainActivity.this, HelpActivity.class));
+                return true;
         }
         return true;
     }
