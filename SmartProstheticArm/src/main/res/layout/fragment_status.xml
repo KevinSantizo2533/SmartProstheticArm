@@ -8,13 +8,24 @@
     android:foregroundTint="#D63F3F"
     tools:context=".ui.status.StatusFragment">
 
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="416dp"
+        android:src="@drawable/mountains"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <TextView
         android:id="@+id/statusTitle"
         style="@style/SensorStyle"
         android:layout_width="201dp"
         android:layout_height="116dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="248dp"
         android:text="Status Information"
         android:textColor="@color/white"
         android:textSize="40sp"
@@ -23,21 +34,24 @@
 
     <TextView
         android:id="@+id/greeting"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="29dp"
-        android:layout_marginEnd="41dp"
+        android:layout_width="245dp"
+        android:layout_height="37dp"
         android:text="Welcome back,"
+        android:textColor="#FFFFFF"
         android:textSize="30sp"
-        app:layout_constraintEnd_toStartOf="@+id/greetingName"
-        app:layout_constraintTop_toBottomOf="@+id/statusTitle" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.096"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.092" />
 
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="136dp"
+        android:layout_marginTop="304dp"
         android:src="@drawable/android"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/greeting" />
@@ -46,8 +60,8 @@
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="69dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="320dp"
         android:text="Status: "
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -57,8 +71,8 @@
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="7dp"
-        android:layout_marginTop="69dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="320dp"
         android:backgroundTint="#C61414"
         android:text="Disconnected"
         android:textColor="#F11111"
@@ -70,11 +84,13 @@
         android:id="@+id/greetingName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="42dp"
-        android:layout_marginBottom="70dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="268dp"
         android:gravity="center|center_vertical"
         android:text="{USER}"
+        android:textColor="#FFFFFF"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/textView13"
-        app:layout_constraintStart_toEndOf="@+id/greeting" />
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
