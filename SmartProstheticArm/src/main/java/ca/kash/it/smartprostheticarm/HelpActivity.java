@@ -7,6 +7,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
@@ -29,13 +30,14 @@ public class HelpActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        ImageView img = (ImageView)findViewById(R.id.contact_email);
-        img.setOnClickListener(new View.OnClickListener(){
+        ImageView img2 = (ImageView)findViewById(R.id.contact_email);
+        img2.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                Intent intent = new Intent();
-                intent.setAction(Intent.ACTION_SEND);
-                intent.setData(Uri.parse("hybridprosthetics@gmail.com"));
-                startActivity(intent);
+                Intent intent = new Intent(Intent.ACTION_SEND);
+                intent.setType("text/plain");
+                intent.putExtra(Intent.EXTRA_EMAIL,  new String[]{"hybridprosthetics@gmail.com"});
+                Toast.makeText(getApplicationContext(), "Please choose your email provider", Toast.LENGTH_SHORT).show();
+                startActivity(Intent.createChooser(intent, "Send Email"));
             }
         });
     }
