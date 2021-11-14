@@ -101,12 +101,12 @@
         android:id="@+id/textView11"
         android:layout_width="72dp"
         android:layout_height="23dp"
+        android:layout_marginStart="28dp"
         android:layout_marginTop="12dp"
-        android:layout_marginEnd="24dp"
         android:fontFamily="@font/glacialindifference_font"
         android:text="Battery:"
         android:textSize="20sp"
-        app:layout_constraintEnd_toStartOf="@+id/textView14"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
     <TextView
@@ -120,6 +120,8 @@
         android:textColor="@color/red"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/textView11"
         app:layout_constraintTop_toBottomOf="@+id/greeting" />
 
     <View

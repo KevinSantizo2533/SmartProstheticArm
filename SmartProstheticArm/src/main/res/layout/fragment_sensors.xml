@@ -53,15 +53,14 @@
         android:id="@+id/textView6"
         android:layout_width="111dp"
         android:layout_height="43dp"
+        android:layout_marginBottom="284dp"
         android:text="@string/temperature_readings"
         android:textColor="@color/black"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.524" />
+        app:layout_constraintTop_toBottomOf="@+id/tempBtn" />
 
     <ImageButton
         android:id="@+id/ultraBtn"
@@ -82,13 +81,13 @@
         android:id="@+id/textView9"
         android:layout_width="129dp"
         android:layout_height="31dp"
-        android:layout_marginEnd="140dp"
         android:layout_marginBottom="96dp"
         android:text="@string/ultrasonic_readings"
         android:textColor="@color/black"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ultraBtn"
         app:layout_constraintVertical_bias="0.687" />
 
@@ -96,12 +95,12 @@
         android:id="@+id/tempBtn"
         android:layout_width="117sp"
         android:layout_height="124sp"
-        android:layout_marginTop="224dp"
         android:backgroundTint="@color/white"
         android:src="@drawable/outline_thermostat_black_24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/text_dashboard"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.436" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
