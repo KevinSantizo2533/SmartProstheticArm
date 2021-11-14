@@ -144,6 +144,11 @@ public class MainActivity extends AppCompatActivity {
                 alertDialog.setIcon(R.drawable.ic_baseline_warning_24);
                 alertDialog.show();
                 return true;
+            case R.id.about:
+                startActivity(new Intent(MainActivity.this, AboutActivity.class));
+
+
+
         }
         return true;
     }
