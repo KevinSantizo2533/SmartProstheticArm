@@ -4,15 +4,23 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.preference.PreferenceManager;
 
+import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import static ca.kash.it.smartprostheticarm.ReviewActivity.getModel;
+
 
 public class SelectionsActivity extends AppCompatActivity {
-    Button settingsBtn;
+    Button settingsBtn,sendBtn;
     TextView settingsTxt;
+    DatabaseReference ref;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +29,8 @@ public class SelectionsActivity extends AppCompatActivity {
 
         settingsBtn = (Button) findViewById(R.id.getSettingsBtn);
         settingsTxt = findViewById(R.id.usrSettings);
+        EditText orientation,emergencyalerts;
+
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
 
         settingsBtn.setOnClickListener(new View.OnClickListener() {
@@ -29,9 +39,21 @@ public class SelectionsActivity extends AppCompatActivity {
                 StringBuilder info = new StringBuilder();
                 info.append("\nScreen Orientation Mode: " + sharedPreferences.getString("ORIENTATION", ""));
                 info.append("\nAlerts: " + sharedPreferences.getBoolean("ALERTS", false));
-                info.append("\nUser Profile: " + sharedPreferences.getString("userProfile", ""));
 
                 settingsTxt.setText(info);
+            }
+        });
+
+        ref = FirebaseDatabase.getInstance().getReference().child("Preferences");
+        sendBtn = (Button)findViewById(R.id.sendBtn);
+        sendBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String orientation = sharedPreferences.getString("ORIENTATION","");
+                Boolean emergencyalerts = sharedPreferences.getBoolean("ALERTS",false);
+                Prefs prefs = new Prefs(orientation,emergencyalerts);
+
+                ref.push().setValue(prefs);
             }
         });
     }

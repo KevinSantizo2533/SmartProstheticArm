@@ -16,6 +16,7 @@ import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -42,6 +43,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private Button loginBtn;
     private FirebaseAuth mAuth;
     private ProgressBar progressbar;
+
+    private CheckBox chkBox;
 
 //    /** google auth **/
 //    private GoogleSignInClient mGoogleSignInClient;
@@ -80,6 +83,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         loginEmail = (EditText)  findViewById(R.id.loginEmail);
         loginPass = (EditText) findViewById(R.id.loginPass);
         progressbar = (ProgressBar) findViewById(R.id.loginprogressbar);
+        chkBox = (CheckBox) findViewById(R.id.RememberMe);
 
     }
 
@@ -176,6 +180,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             loginPass.requestFocus();
             return;
         }
+
 
         progressbar.setVisibility(View.VISIBLE);
         mAuth.signInWithEmailAndPassword(logEmail, logPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
