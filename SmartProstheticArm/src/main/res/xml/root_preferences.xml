@@ -13,16 +13,6 @@
 
     </PreferenceCategory>
 
-    <PreferenceCategory app:title="APP LANGUAGE" android:icon="@drawable/outline_language_black_24dp">
-
-        <ListPreference
-            android:key="LANGUAGE"
-            android:title="Language"
-            android:entries="@array/language_name"
-            android:entryValues="@array/language_val"
-            />
-    </PreferenceCategory>
-
     <PreferenceCategory android:title="Notifications" android:icon="@drawable/outline_notifications_24">
         <SwitchPreference android:title="New message notifications" />
     </PreferenceCategory>
