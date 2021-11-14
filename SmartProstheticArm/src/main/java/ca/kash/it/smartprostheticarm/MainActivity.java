@@ -17,9 +17,13 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.auth.FirebaseAuth;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -35,10 +39,18 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     private static final int PERMISSIONS_REQUEST_BLUETOOTH = 100;
+    TextView greeting;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        greeting = findViewById(R.id.greetingName);
+        GoogleSignInAccount signInAccount = GoogleSignIn.getLastSignedInAccount(this);
+        if(signInAccount!=null) {
+            greeting.setText(signInAccount.getDisplayName());
+        }
+
         BottomNavigationView navView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
@@ -124,6 +136,7 @@ public class MainActivity extends AppCompatActivity {
                 builder2.setPositiveButton(R.string.OnBack_Close, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
+                        FirebaseAuth.getInstance().signOut();
                         startActivity(new Intent(MainActivity.this, LoginActivity.class));
                     }
                 });
@@ -131,7 +144,6 @@ public class MainActivity extends AppCompatActivity {
                 alertDialog.setIcon(R.drawable.ic_baseline_warning_24);
                 alertDialog.show();
                 return true;
-
         }
         return true;
     }
