@@ -98,6 +98,11 @@
     <string name="fragmentstatus_btdc">Disconnected</string>
     <string name="fragmentstatus_battery">Battery:</string>
     <string name="fragmentstatus_battery_disconnected">Disconnected</string>
+    <string name="loginland_reg">Register</string>
+    <string name="loginland_login">Login</string>
+    <string name="loginland_forgotpass">Forgot Password</string>
+    <string name="loginland_registerforacc">Register</string>
+    <string name="loginland_logintoaccount">Login to your Account</string>
 
     <!-- Preference Titles -->
 
