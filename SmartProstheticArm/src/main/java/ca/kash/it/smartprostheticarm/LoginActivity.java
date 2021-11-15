@@ -19,6 +19,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -241,6 +242,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         final AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
         builder.setMessage(R.string.Dialog_Exit);
         builder.setCancelable(true);
+        builder.setTitle("Warning");
+        builder.setIcon(R.drawable.ic_baseline_warning_24);
+        ImageView image = new ImageView(this);
+        image.setImageResource(R.drawable.android1);
         builder.setNegativeButton(R.string.onBack_No, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {

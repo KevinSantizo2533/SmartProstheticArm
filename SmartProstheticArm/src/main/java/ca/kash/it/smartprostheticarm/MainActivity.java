@@ -17,6 +17,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -61,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(navView, navController);
 
 
+
     }
 
     @Override
@@ -73,7 +75,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         final AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+
+        builder.setTitle("Warning");
         builder.setIcon(R.drawable.ic_baseline_warning_24);
+
         builder.setMessage(R.string.Dialog_Exit);
         builder.setCancelable(true);
         builder.setNegativeButton(R.string.onBack_No, new DialogInterface.OnClickListener() {
