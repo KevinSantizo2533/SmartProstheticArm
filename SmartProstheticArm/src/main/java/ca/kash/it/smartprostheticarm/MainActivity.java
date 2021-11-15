@@ -135,9 +135,10 @@ public class MainActivity extends AppCompatActivity {
             case R.id.feedback:
                 startActivity(new Intent(MainActivity.this, ReviewActivity.class));
                 return true;
-            case R.id.browser:
-                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/watch?v=a3Z7zEc7AXQ&ab_channel=RVE"));
-                startActivity(browserIntent);
+            case R.id.emergency:
+                Intent intent = new Intent(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse("tel:911"));
+                startActivity(intent);
                 return true;
         }
         return true;

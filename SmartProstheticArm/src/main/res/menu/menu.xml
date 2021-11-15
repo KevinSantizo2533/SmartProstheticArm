@@ -20,9 +20,9 @@
         android:title="Sign out"
         app:showAsAction="never"
         android:icon="@drawable/signout"/>
-    <item android:id="@+id/browser"
-        android:title="browser"
+    <item android:id="@+id/emergency"
+        android:title="emergency"
         app:showAsAction="ifRoom"
 
-        android:icon="@drawable/ic_baseline_open_in_browser_24"/>
+        android:icon="@drawable/ic_baseline_taxi_alert_24"/>
 </menu>

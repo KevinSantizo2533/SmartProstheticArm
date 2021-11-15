@@ -14,9 +14,7 @@
     </PreferenceCategory>
 
 
-    <PreferenceCategory android:title="@string/alerts_title" android:icon="@drawable/outline_notifications_24">
-        <SwitchPreference android:title="@string/emergency_alerts" android:key="ALERTS"/>
-    </PreferenceCategory>
+
 
     <PreferenceCategory
         android:title="@string/reset_passwordlabel"
