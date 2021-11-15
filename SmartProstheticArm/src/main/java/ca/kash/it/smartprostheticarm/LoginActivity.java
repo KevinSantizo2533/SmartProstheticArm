@@ -147,16 +147,16 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     private void getPreferences(){
         SharedPreferences p = getSharedPreferences(PREF, MODE_PRIVATE);
-        if (p.contains("prefname")){
-            String name = p.getString("prefname","notfound");
+        if (p.contains(getString(R.string.preffname))){
+            String name = p.getString(getString(R.string.preffname),getString(R.string.notfound));
             loginEmail.setText(name.toString());
         }
-        if(p.contains("prefpass")){
-            String pass = p.getString("prefpass","notfound");
+        if(p.contains(getString(R.string.preffpass))){
+            String pass = p.getString(getString(R.string.preffpass),getString(R.string.notfound));
             loginPass.setText(pass.toString());
         }
-        if(p.contains("prefremember")){
-            Boolean check = p.getBoolean("prefremember",false);
+        if(p.contains(getString(R.string.preffremember))){
+            Boolean check = p.getBoolean(getString(R.string.preffremember),false);
             remember.setChecked(check);
         }
     }
@@ -174,9 +174,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 if(remember.isChecked()){
                     Boolean isChecked = remember.isChecked();
                     SharedPreferences.Editor editor = pref.edit();
-                    editor.putString("prefname", loginEmail.getText().toString());
-                    editor.putString("prefpass", loginPass.getText().toString());
-                    editor.putBoolean("prefremember",isChecked);
+                    editor.putString(getString(R.string.preffname), loginEmail.getText().toString());
+                    editor.putString(getString(R.string.preffpass), loginPass.getText().toString());
+                    editor.putBoolean(getString(R.string.preffremember),isChecked);
                     editor.apply();
 
                 }else{
@@ -195,18 +195,18 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         String logEmail = loginEmail.getText().toString().trim();
 
         if(logEmail.isEmpty()){
-            loginEmail.setError("Email is required");
+            loginEmail.setError(getString(R.string.emailisreq));
             loginEmail.requestFocus();
             return;
         }
         if(!Patterns.EMAIL_ADDRESS.matcher(logEmail).matches()){
-            loginEmail.setError("Email invalid");
+            loginEmail.setError(getString(R.string.emailIn));
             loginEmail.requestFocus();
             return;
         }
 
         if(logPassword.isEmpty()){
-            loginPass.setError("Password is required");
+            loginPass.setError(getString(R.string.passReq));
             loginPass.requestFocus();
             return;
         }
@@ -242,7 +242,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         final AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
         builder.setMessage(R.string.Dialog_Exit);
         builder.setCancelable(true);
-        builder.setTitle("Warning");
+        builder.setTitle(R.string.warningMsg);
         builder.setIcon(R.drawable.ic_baseline_warning_24);
         ImageView image = new ImageView(this);
         image.setImageResource(R.drawable.android1);

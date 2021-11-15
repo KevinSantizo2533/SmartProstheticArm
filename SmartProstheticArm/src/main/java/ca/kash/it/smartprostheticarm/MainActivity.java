@@ -102,7 +102,11 @@ public class MainActivity extends AppCompatActivity {
         builder.setPositiveButton(R.string.OnBack_Close, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                FirebaseAuth.getInstance().signOut();
+                FirebaseAuth.getInstance().signOut();    Intent intent = new Intent();
+                intent.setAction(Intent.ACTION_MAIN);
+                intent.addCategory(Intent.CATEGORY_HOME);
+                startActivity(intent);
+
                 finish();
             }
         });

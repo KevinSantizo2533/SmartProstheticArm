@@ -26,7 +26,7 @@ public class HelpActivity extends AppCompatActivity {
             public void onClick(View v){
                 Intent intent = new Intent();
                 intent.setAction(Intent.ACTION_DIAL);
-                intent.setData(Uri.parse("tel:9058746663"));
+                intent.setData(Uri.parse(getString(R.string.dialnum)));
                 startActivity(intent);
             }
         });
@@ -34,10 +34,10 @@ public class HelpActivity extends AppCompatActivity {
         img2.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 Intent intent = new Intent(Intent.ACTION_SEND);
-                intent.setType("text/plain");
-                intent.putExtra(Intent.EXTRA_EMAIL,  new String[]{"hybridprosthetics@gmail.com"});
-                Toast.makeText(getApplicationContext(), "Please choose your email provider", Toast.LENGTH_SHORT).show();
-                startActivity(Intent.createChooser(intent, "Send Email"));
+                intent.setType(getString(R.string.plain));
+                intent.putExtra(Intent.EXTRA_EMAIL,  new String[]{getString(R.string.hybridAddress)});
+                Toast.makeText(getApplicationContext(), R.string.emailpro, Toast.LENGTH_SHORT).show();
+                startActivity(Intent.createChooser(intent, getString(R.string.sendEmail)));
             }
         });
     }

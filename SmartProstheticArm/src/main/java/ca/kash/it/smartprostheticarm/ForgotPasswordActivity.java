@@ -63,11 +63,11 @@ public class ForgotPasswordActivity extends AppCompatActivity  {
         String emailString = email.getText().toString().trim();
 
         if (emailString.isEmpty()){
-            email.setError("Email is required");
+            email.setError(getString(R.string.emailReq));
             return;
         }
         if(!Patterns.EMAIL_ADDRESS.matcher(emailString).matches()){
-            email.setError("Please provide a valid email");
+            email.setError(getString(R.string.validEmail));
             return;
         }
 

@@ -36,9 +36,7 @@
     <string name="sensor_information">Sensor Information</string>
     <string name="nameRequired">Name is required</string>
     <string name="ageReq">Age is required</string>
-    <string name="emailReq">Email is required</string>
     <string name="emailInvalid">Email is invalid</string>
-    <string name="passReq">Password is required</string>
     <string name="passMin">"Password must be more than 6 characters"</string>
     <string name="Dialog_Exit2">Are you sure you want to sign out?</string>
     <string name="phoneRequired">Phone is required</string>
@@ -63,6 +61,22 @@
     <string name="emergency_alerts">Emergency Alerts</string>
     <string name="reset_passwordlabel">Account</string>
     <string name="Resetpassword">Reset Password</string>
+    <string name="emailReq">Email is required</string>
+    <string name="validEmail">Please provide a valid email</string>
+    <string name="dialnum">tel:9058746663</string>
+    <string name="plain">text/plain</string>
+    <string name="hybridAddress">hybridprosthetics@gmail.com</string>
+    <string name="emailpro">Please choose your email provider</string>
+    <string name="sendEmail">Send Email</string>
+    <string name="prefname">preffile</string>
+    <string name="preffname">prefname</string>
+    <string name="preffpass">prefpass</string>
+    <string name="preffremember">prefremember</string>
+    <string name="notfound">notfound</string>
+    <string name="emailisreq">Email is required</string>
+    <string name="emailIn">Email invalid</string>
+    <string name="passReq">Password is required</string>
+    <string name="warningMsg">Warning</string>
 
     <!-- Preference Titles -->
 
