@@ -9,6 +9,8 @@ package ca.kash.it.smartprostheticarm;
 import android.Manifest;
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -30,6 +32,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
@@ -62,6 +66,13 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
 
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+            NotificationChannel channel = new NotificationChannel("notification", "notification", NotificationManager.IMPORTANCE_DEFAULT);
+            NotificationManager manager = getSystemService(NotificationManager.class);
+            manager.createNotificationChannel(channel);
+
+
+        }
 
 
     }
@@ -118,8 +129,20 @@ public class MainActivity extends AppCompatActivity {
                 builder2.setPositiveButton(R.string.OnBack_Close, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
+
                         FirebaseAuth.getInstance().signOut();
                         startActivity(new Intent(MainActivity.this, LoginActivity.class));
+                        NotificationCompat.Builder builder = new NotificationCompat.Builder(MainActivity.this,"notification");
+                        builder.setContentTitle("Alert");
+                        builder.setContentText("You have signed out from the app");
+                        builder.setSmallIcon(R.drawable.ic_baseline_warning_24);
+                        builder.setAutoCancel(true);
+
+                        NotificationManagerCompat manager2 = NotificationManagerCompat.from(MainActivity.this);
+                        manager2.notify(1,builder.build());
+
+
+
                     }
                 });
                 AlertDialog alertDialog = builder2.create();
