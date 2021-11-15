@@ -87,8 +87,12 @@
     <string name="forgot_leavescreen">Arrière</string>
     <string name="fragmentstatus_title">Aperçu du statut</string>
     <string name="fragmentstatus_greeting">Content de te revoir,</string>
-    <string name="fragmentstatus_bt">Bluetooth:</string>
     <string name="fragmentstatus_btdc">Débranché</string>
     <string name="fragmentstatus_battery_disconnected">Débranché</string>
     <string name="fragmentstatus_battery">Batterie:</string>
+    <string name="loginland_reg">S\'inscrire</string>
+    <string name="loginland_login">"Connexion  "</string>
+    <string name="loginland_forgotpass">Mot de passe oublié</string>
+    <string name="loginland_registerforacc">S\'inscrire</string>
+    <string name="loginland_logintoaccount">Connectez-vous à votre compte</string>
 </resources>
