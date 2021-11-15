@@ -12,6 +12,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -133,6 +134,10 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             case R.id.feedback:
                 startActivity(new Intent(MainActivity.this, ReviewActivity.class));
+                return true;
+            case R.id.browser:
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/watch?v=a3Z7zEc7AXQ&ab_channel=RVE"));
+                startActivity(browserIntent);
                 return true;
         }
         return true;

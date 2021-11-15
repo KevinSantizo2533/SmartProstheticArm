@@ -20,9 +20,9 @@
         android:title="Sign out"
         app:showAsAction="never"
         android:icon="@drawable/signout"/>
-    <item android:id="@+id/searchbar"
-        android:title="search"
+    <item android:id="@+id/browser"
+        android:title="browser"
         app:showAsAction="ifRoom"
 
-        android:icon="@drawable/searchicon"/>
+        android:icon="@drawable/ic_baseline_open_in_browser_24"/>
 </menu>
