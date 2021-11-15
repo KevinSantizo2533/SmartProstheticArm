@@ -39,15 +39,15 @@
 
     <EditText
         android:id="@+id/loginEmail"
-        android:background="@drawable/text_border"
         android:layout_width="300dp"
         android:layout_height="52dp"
-        android:paddingLeft="8dp"
+        android:background="@drawable/text_border"
         android:ems="10"
         android:hint="@string/email"
         android:importantForAutofill="no"
         android:inputType="textEmailAddress"
         android:minHeight="48dp"
+        android:paddingLeft="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
@@ -57,34 +57,21 @@
 
     <EditText
         android:id="@+id/loginPass"
-        android:background="@drawable/text_border"
         android:layout_width="300dp"
         android:layout_height="52dp"
-        android:paddingLeft="8dp"
+        android:background="@drawable/text_border"
         android:ems="10"
         android:hint="@string/password"
         android:importantForAutofill="no"
         android:inputType="textPassword"
         android:minHeight="48dp"
+        android:paddingLeft="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.551" />
-
-    <Button
-        android:id="@+id/loginBtn"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/companyblue"
-        android:text="@string/log_loginbtn"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.642" />
 
     <TextView
         android:id="@+id/textView2"
@@ -96,10 +83,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.344" />
+        app:layout_constraintVertical_bias="0.349" />
 
     <ProgressBar
         android:id="@+id/loginprogressbar"
@@ -121,19 +108,10 @@
         android:text="@string/login_register"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.76"
+        app:layout_constraintHorizontal_bias="0.844"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.81" />
-
-    <com.google.android.gms.common.SignInButton
-        android:id="@+id/alternative_google"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="56dp"
-        android:layout_marginBottom="32dp"
-        app:layout_constraintBottom_toTopOf="@+id/forgotpass"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintVertical_bias="0.841" />
 
     <TextView
         android:id="@+id/forgotpass"
@@ -142,18 +120,40 @@
         android:text="@string/login_forgorpass"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.154"
+        app:layout_constraintHorizontal_bias="0.171"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginBtn"
-        app:layout_constraintVertical_bias="0.4" />
+        app:layout_constraintVertical_bias="0.402" />
 
     <CheckBox
         android:id="@+id/rememberme"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="146dp"
-        android:layout_marginTop="62dp"
+        android:layout_width="165dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginBottom="264dp"
         android:text="Remember me"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/loginBtn"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="208dp"
+        android:backgroundTint="@color/companyblue"
+        android:text="@string/log_loginbtn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/alternative_google"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="152dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+    </com.google.android.gms.common.SignInButton>
 </androidx.constraintlayout.widget.ConstraintLayout>
