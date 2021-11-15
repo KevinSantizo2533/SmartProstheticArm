@@ -85,6 +85,7 @@ public class MainActivity extends AppCompatActivity {
         builder.setPositiveButton(R.string.OnBack_Close, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
+                FirebaseAuth.getInstance().signOut();
                 finish();
             }
         });
@@ -111,7 +112,6 @@ public class MainActivity extends AppCompatActivity {
                 builder2.setPositiveButton(R.string.OnBack_Close, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-
                         FirebaseAuth.getInstance().signOut();
                         startActivity(new Intent(MainActivity.this, LoginActivity.class));
                     }
