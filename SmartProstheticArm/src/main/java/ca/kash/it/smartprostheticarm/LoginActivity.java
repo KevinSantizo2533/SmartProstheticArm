@@ -12,13 +12,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -45,10 +42,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private Button loginBtn;
     private FirebaseAuth mAuth;
     private ProgressBar progressbar;
-    private CheckBox remember;
-    private SharedPreferences pref;
-    private static final String preffile = "PrefFile";
-
 
 //    /** google auth **/
 //    private GoogleSignInClient mGoogleSignInClient;
@@ -87,10 +80,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         loginEmail = (EditText)  findViewById(R.id.loginEmail);
         loginPass = (EditText) findViewById(R.id.loginPass);
         progressbar = (ProgressBar) findViewById(R.id.loginprogressbar);
-        pref = getSharedPreferences(preffile,MODE_PRIVATE);
-        remember = (CheckBox) findViewById(R.id.rememberme);
-        getPreferences();
-
 
     }
 
@@ -145,27 +134,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 //    }
 
 
-    public void getPreferences(){
-        SharedPreferences p1 = getSharedPreferences(preffile,MODE_PRIVATE);
-        if (p1.contains("prefname")){
-            String email = p1.getString("prefname","notfound");
-            loginEmail.setText(email.toString());
-
-        }
-        if (p1.contains("prefpass")){
-            String pass = p1.getString("prefpass","notfound");
-            loginPass.setText(pass.toString());
-
-        }
-        if(p1.contains("prefcheck")){
-            Boolean check = p1.getBoolean("prefcheck",false);
-            remember.setChecked(check);
-        }
-
-
-
-
-    }
     @Override
     public void onClick(View view) {
         switch (view.getId()){
@@ -176,17 +144,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 startActivity(new Intent(this, ForgotPasswordActivity.class));
                 break;
             case R.id.loginBtn:
-                if(remember.isChecked()){
-                    Boolean ischecked = remember.isChecked();
-                    SharedPreferences.Editor editor = pref.edit();
-                    editor.putString("prefname", loginEmail.getText().toString());
-                    editor.putString("prefpass", loginPass.getText().toString());
-                    editor.putBoolean("prefcheck",ischecked);
-                    editor.apply();
-                }else{
-                    pref.edit().clear().apply();
-
-                }
                 loginUser();
                 break;
         }
