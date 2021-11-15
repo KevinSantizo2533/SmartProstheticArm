@@ -63,20 +63,28 @@
     <string name="Resetpassword">Reset Password</string>
     <string name="emailReq">Email is required</string>
     <string name="validEmail">Please provide a valid email</string>
-    <string name="dialnum">tel:9058746663</string>
-    <string name="plain">text/plain</string>
-    <string name="hybridAddress">hybridprosthetics@gmail.com</string>
+    <string name="dialnum" translatable="false">tel:9058746663</string>
+    <string name="plain" translatable="false">text/plain</string>
+    <string name="hybridAddress" translatable="false">hybridprosthetics@gmail.com</string>
     <string name="emailpro">Please choose your email provider</string>
     <string name="sendEmail">Send Email</string>
-    <string name="prefname">preffile</string>
-    <string name="preffname">prefname</string>
-    <string name="preffpass">prefpass</string>
-    <string name="preffremember">prefremember</string>
-    <string name="notfound">notfound</string>
+    <string name="prefname" translatable="false">preffile</string>
+    <string name="preffname" translatable="false">prefname</string>
+    <string name="preffpass" translatable="false">prefpass</string>
+    <string name="preffremember" translatable="false">prefremember</string>
+    <string name="notfound" translatable="false">notfound</string>
     <string name="emailisreq">Email is required</string>
     <string name="emailIn">Email invalid</string>
     <string name="passReq">Password is required</string>
     <string name="warningMsg">Warning</string>
+    <string name="bt_title">Powered by Bluetooth</string>
+    <string name="bt_manual">Manual Controls</string>
+    <string name="bt_release">Release Object</string>
+    <string name="bt_servospeed">Servo Speed</string>
+    <string name="bt_grab">Grab</string>
+    <string name="bt_maintitle">Bluetooth</string>
+    <string name="bt_armcontrol">Arm Controller</string>
+    <string name="bt_connectbt">Connect Bluetooth</string>
 
     <!-- Preference Titles -->
 

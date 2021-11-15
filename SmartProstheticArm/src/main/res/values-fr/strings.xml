@@ -62,4 +62,23 @@
     <string name="screen_title">orientation de lécran</string>
     <string name="orientation_list">Orientation</string>
     <string name="emergency_alerts">Alertes d urgence</string>
+    <string name="reset_passwordlabel">"Compte  "</string>
+    <string name="reset_passwordlabel">"Compte  "</string>
+    <string name="Resetpassword">réinitialiser le mot de passe</string>
+    <string name="validEmail">Veuillez fournir un email valide</string>
+    <string name="validEmail">Veuillez fournir un email valide</string>
+    <string name="emailpro">Veuillez choisir votre fournisseur de messagerie</string>
+    <string name="emailisreq">"L'e-mail est requis  "</string>
+    <string name="emailIn">Courriel invalide</string>
+    <string name="emailIn">Courriel invalide</string>
+    <string name="warningMsg">Avertissement</string>
+    <string name="bt_title">Alimenté par Bluetooth</string>
+    <string name="bt_manual">Commandes manuelles</string>
+    <string name="bt_manual">Commandes manuelles</string>
+    <string name="bt_release">Libérer l\'objet</string>
+    <string name="bt_servospeed">Vitesse d\'asservissement</string>
+    <string name="bt_grab">Attraper</string>
+    <string name="bt_maintitle">Bluetooth</string>
+    <string name="bt_armcontrol">Contrôleur de bras</string>
+    <string name="bt_connectbt">Connectez Bluetooth</string>
 </resources>
