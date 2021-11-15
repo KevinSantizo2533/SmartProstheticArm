@@ -8,7 +8,7 @@
     tools:context=".ForgotPasswordActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/about_logo"
         android:layout_width="270dp"
         android:layout_height="81dp"
         android:fontFamily="@font/tripleta_font"
@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:contentDescription="@string/appicon"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintEnd_toStartOf="@+id/about_logo"
         app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -39,7 +39,7 @@
         android:id="@+id/textView3"
         android:layout_width="203dp"
         android:layout_height="27dp"
-        android:text="Please enter your email address"
+        android:text="@string/forgot_enteremail"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.182"
@@ -52,33 +52,34 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="76dp"
-        android:text="Forgot Password?"
+        android:text="@string/forgot_password"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.175"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/about_logo"
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/forgotEmail"
-        android:background="@drawable/text_border"
         android:layout_width="300dp"
         android:layout_height="52dp"
+        android:background="@drawable/text_border"
         android:ems="10"
-        android:paddingLeft="8dp"
-
         android:hint="@string/email"
+
         android:importantForAutofill="no"
         android:inputType="textEmailAddress"
         android:minHeight="48dp"
+        android:paddingLeft="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.342"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499" />
+        app:layout_constraintVertical_bias="0.499"
+        tools:ignore="TextContrastCheck" />
 
     <Button
         android:id="@+id/forgotSubmit"
@@ -87,7 +88,7 @@
         android:backgroundTint="@color/companyblue"
         android:layout_marginStart="236dp"
         android:layout_marginTop="28dp"
-        android:text="Submit"
+        android:text="@string/forgot_submit"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/forgotEmail" />
 
@@ -99,7 +100,7 @@
         android:layout_marginStart="65dp"
         android:layout_marginTop="28dp"
         android:layout_marginEnd="90dp"
-        android:text="Back"
+        android:text="@string/forgot_leavescreen"
         app:layout_constraintEnd_toStartOf="@+id/forgotSubmit"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/forgotEmail" />

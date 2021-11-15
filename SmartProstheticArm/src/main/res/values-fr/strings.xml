@@ -63,17 +63,13 @@
     <string name="orientation_list">Orientation</string>
     <string name="emergency_alerts">Alertes d urgence</string>
     <string name="reset_passwordlabel">"Compte  "</string>
-    <string name="reset_passwordlabel">"Compte  "</string>
     <string name="Resetpassword">réinitialiser le mot de passe</string>
-    <string name="validEmail">Veuillez fournir un email valide</string>
     <string name="validEmail">Veuillez fournir un email valide</string>
     <string name="emailpro">Veuillez choisir votre fournisseur de messagerie</string>
     <string name="emailisreq">"L'e-mail est requis  "</string>
     <string name="emailIn">Courriel invalide</string>
-    <string name="emailIn">Courriel invalide</string>
     <string name="warningMsg">Avertissement</string>
     <string name="bt_title">Alimenté par Bluetooth</string>
-    <string name="bt_manual">Commandes manuelles</string>
     <string name="bt_manual">Commandes manuelles</string>
     <string name="bt_release">Libérer l\'objet</string>
     <string name="bt_servospeed">Vitesse d\'asservissement</string>
@@ -81,4 +77,18 @@
     <string name="bt_maintitle">Bluetooth</string>
     <string name="bt_armcontrol">Contrôleur de bras</string>
     <string name="bt_connectbt">Connectez Bluetooth</string>
+    <string name="sendEmail">Envoyer un e-mail</string>
+    <string name="aboutscreen_title">À propos de nous</string>
+    <string name="aboutus_msg">L\'objectif de la prothèse hybride est de fournir des bras synthétiques destinés aux personnes handicapées. Ce bras aura de nombreuses fonctions, notamment la mesure de la température, la détection d\'objets, les axes de rotation (servos) et prend en charge la connexion Bluetooth/sans fil. Ces fonctionnalités seront toutes affichées dans une application pour que l\'utilisateur obtienne toutes les informations nécessaires pour l\'aider dans sa vie quotidienne.</string>
+    <string name="aboutus_msg2">"Coordonnées : Courriel : Hybridprosthetics@gmail.com Numéro de téléphone : 905 874 6663  "</string>
+    <string name="forgot_enteremail">"Veuillez saisir votre adresse e-mail "</string>
+    <string name="forgot_password">"Mot de passe oublié?  "</string>
+    <string name="forgot_submit">"French  Soumettre  "</string>
+    <string name="forgot_leavescreen">Arrière</string>
+    <string name="fragmentstatus_title">Aperçu du statut</string>
+    <string name="fragmentstatus_greeting">Content de te revoir,</string>
+    <string name="fragmentstatus_bt">Bluetooth:</string>
+    <string name="fragmentstatus_btdc">Débranché</string>
+    <string name="fragmentstatus_battery_disconnected">Débranché</string>
+    <string name="fragmentstatus_battery">Batterie:</string>
 </resources>
