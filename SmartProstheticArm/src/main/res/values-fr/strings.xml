@@ -95,4 +95,10 @@
     <string name="loginland_forgotpass">Mot de passe oublié</string>
     <string name="loginland_registerforacc">S\'inscrire</string>
     <string name="loginland_logintoaccount">Connectez-vous à votre compte</string>
+    <string name="remember_me">souviens-toi de moi</string>
+    <string name="temperatureicon">Température</string>
+    <string name="sensoricon">capteur</string>
+    <string name="mountains">montagnes</string>
+    <string name="send_user_preferences">Envoyer les préférences utilisateur</string>
+    <string name="get_users_preferences">Obtenir les préférences des utilisateurs</string>
 </resources>

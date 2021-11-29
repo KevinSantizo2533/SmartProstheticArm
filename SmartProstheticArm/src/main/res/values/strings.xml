@@ -103,6 +103,12 @@
     <string name="loginland_forgotpass">Forgot Password</string>
     <string name="loginland_registerforacc">Register</string>
     <string name="loginland_logintoaccount">Login to your Account</string>
+    <string name="remember_me">Remember me</string>
+    <string name="temperatureicon">temperatureicon</string>
+    <string name="sensoricon">sensoricon</string>
+    <string name="mountains">mountains</string>
+    <string name="send_user_preferences">Send User Preferences</string>
+    <string name="get_users_preferences">Get Users Preferences</string>
 
     <!-- Preference Titles -->
 

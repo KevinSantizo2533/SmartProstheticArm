@@ -17,7 +17,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:contentDescription="@string/mountains" />
 
     <TextView
         android:id="@+id/sensorsTitle"
@@ -75,7 +76,9 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView6"
-        app:layout_constraintVertical_bias="0.967" />
+        app:layout_constraintVertical_bias="0.967"
+        tools:ignore="SpeakableTextPresentCheck"
+        android:contentDescription="@string/sensoricon" />
 
     <TextView
         android:id="@+id/textView9"
@@ -101,6 +104,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.436" />
+        app:layout_constraintVertical_bias="0.436"
+        tools:ignore="SpeakableTextPresentCheck"
+        android:contentDescription="@string/temperatureicon" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
