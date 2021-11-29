@@ -26,6 +26,7 @@ import android.widget.TextView;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -46,11 +47,14 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
     private static final int PERMISSIONS_REQUEST_BLUETOOTH = 100;
     TextView greeting;
+    FloatingActionButton kashFab;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         greeting = findViewById(R.id.greetingName);
+        kashFab = findViewById(R.id.myFab);
+
         GoogleSignInAccount signInAccount = GoogleSignIn.getLastSignedInAccount(this);
         if(signInAccount!=null) {
             greeting.setText(signInAccount.getDisplayName());
@@ -73,6 +77,13 @@ public class MainActivity extends AppCompatActivity {
 
 
         }
+
+        kashFab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Snackbar.make(v, "Test", Snackbar.LENGTH_LONG).setAction("Action",null).show();
+            }
+        });
 
 
     }
