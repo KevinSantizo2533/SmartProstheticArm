@@ -16,8 +16,8 @@
     <string name="ultrasonic_readings">Object Distance</string>
     <string name="servos_information">Servos Information</string>
     <string name="temperature_readings">Temperature</string>
-    <string name="BTGranted">Bluetooth granted!</string>
-    <string name="BTDenied">Bluetooth denied!</string>
+    <string name="BTGranted">Bluetooth access granted!</string>
+    <string name="BTDenied">Bluetooth access denied!</string>
     <string name="smart_prosthetic_arm">Smart Prosthetic Arm</string>
     <string name="full_name"> Full Name</string>
     <string name="age"> Age</string>
@@ -74,7 +74,7 @@
     <string name="preffremember" translatable="false">prefremember</string>
     <string name="notfound" translatable="false">notfound</string>
     <string name="emailisreq">Email is required</string>
-    <string name="emailIn">Email invalid</string>
+    <string name="emailIn">Email is invalid</string>
     <string name="passReq">Password is required</string>
     <string name="warningMsg">Warning</string>
     <string name="bt_title">Powered by Bluetooth</string>
@@ -93,7 +93,7 @@
     <string name="forgot_submit">Submit</string>
     <string name="forgot_leavescreen">Back</string>
     <string name="fragmentstatus_title">Status Overview</string>
-    <string name="fragmentstatus_greeting">Welcome Back,</string>
+    <string name="fragmentstatus_greeting">Welcome back,</string>
     <string name="fragmentstatus_bt" translatable="false">Bluetooth:</string>
     <string name="fragmentstatus_btdc">Disconnected</string>
     <string name="fragmentstatus_battery">Battery:</string>
