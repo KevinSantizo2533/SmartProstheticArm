@@ -109,6 +109,7 @@
     <string name="mountains">mountains</string>
     <string name="send_user_preferences">Send User Preferences</string>
     <string name="get_users_preferences">Get Users Preferences</string>
+    <string name="bt_fingerslider">Fingers</string>
 
     <!-- Preference Titles -->
 
