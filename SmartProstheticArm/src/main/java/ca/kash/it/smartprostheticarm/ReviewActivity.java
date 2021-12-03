@@ -57,6 +57,7 @@ public class ReviewActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 submit.setEnabled(false);
+                progbar.setVisibility(View.VISIBLE);
 
                 submit.postDelayed(new Runnable() {
 
@@ -75,6 +76,7 @@ public class ReviewActivity extends AppCompatActivity {
 
                         Snackbar snackbar = Snackbar.make(findViewById(android.R.id.content), R.string.Reviewsent, Snackbar.LENGTH_LONG);
                         snackbar.show();
+                        progbar.setVisibility(View.INVISIBLE);
 
                         submit.setEnabled(true);
                     }
