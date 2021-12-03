@@ -30,15 +30,25 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:layout_width="168dp"
-        android:layout_height="190dp"
-        android:layout_marginEnd="80dp"
-        android:layout_marginBottom="292dp"
-        android:text="@string/temp_reading"
-        android:textColor="@color/black"
-        android:textSize="150sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:id="@+id/temperaturereading"
+        android:layout_width="128dp"
+        android:layout_height="126dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="164dp"
+        android:textSize="36sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tempTitle" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="64dp"
+        android:text="Temperature reading in celsius:"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tempTitle" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
