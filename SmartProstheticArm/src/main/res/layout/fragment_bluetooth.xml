@@ -13,7 +13,6 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="220dp"
         android:src="@drawable/mountains2"
-        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -23,7 +22,7 @@
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="208dp"
+        android:layout_marginTop="280dp"
         android:text="@string/bt_manual"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -61,16 +60,22 @@
         android:layout_width="164dp"
         android:layout_height="23dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="272dp"
+        android:layout_marginTop="324dp"
+        app:layout_constraintBottom_toTopOf="@+id/seekBar3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.241"
         app:layout_constraintStart_toEndOf="@+id/textView8"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.034" />
 
     <SeekBar
         android:id="@+id/seekBar3"
         android:layout_width="164dp"
         android:layout_height="23dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="308dp"
+        android:layout_marginTop="376dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.241"
         app:layout_constraintStart_toEndOf="@+id/textView8"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -78,32 +83,37 @@
         android:id="@+id/bluetoothbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="128dp"
-        android:layout_marginBottom="84dp"
+        android:layout_marginBottom="48dp"
         android:backgroundTint="#03A9F4"
         android:text="@string/bt_connectbt"
         android:textColor="#4A148C"
         app:layout_constraintBottom_toTopOf="@+id/text_notifications"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar3"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Switch
         android:id="@+id/switch1"
         android:layout_width="82dp"
         android:layout_height="48dp"
-        android:layout_marginStart="20dp"
         android:layout_marginTop="52dp"
         android:minHeight="48dp"
         android:text="@string/bt_grab"
         android:textColor="#7C7C7C"
+        app:layout_constraintBottom_toTopOf="@+id/bluetoothbtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.06"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        app:layout_constraintVertical_bias="0.711" />
 
     <TextView
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="12dp"
         android:text="@string/bt_servospeed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
