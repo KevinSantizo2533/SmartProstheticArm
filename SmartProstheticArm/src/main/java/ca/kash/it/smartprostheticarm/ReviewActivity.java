@@ -16,6 +16,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.RatingBar;
 import android.widget.Toast;
 
@@ -35,13 +36,14 @@ public class ReviewActivity extends AppCompatActivity {
 
     FirebaseDatabase database;
     DatabaseReference ref;
-
+    ProgressBar progbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_review);
         //getDeviceName()
         submit = (Button) findViewById(R.id.reviewsubmit);
+        progbar = (ProgressBar) findViewById(R.id.progressBar);
 
         editname = (EditText) findViewById(R.id.editName);
         editphone = (EditText) findViewById(R.id.editPhone);
@@ -53,18 +55,32 @@ public class ReviewActivity extends AppCompatActivity {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String name = editname.getText().toString();
-                String email = editemail.getText().toString();
-                String comment = editcomment.getText().toString();
-                String phone = editphone.getText().toString();
-                int phone2 = Integer.parseInt(phone);
-                float rating = ratingbar.getRating();
-                String model = getModel();
-                Review review = new Review(name,email, phone2,comment,rating, model);
 
-                ref.push().setValue(review);
-                Snackbar snackbar = Snackbar.make(findViewById(android.R.id.content), R.string.Reviewsent, Snackbar.LENGTH_LONG);
-                snackbar.show();
+                submit.setEnabled(false);
+
+                submit.postDelayed(new Runnable() {
+
+                    @Override
+                    public void run() {
+                        String name = editname.getText().toString();
+                        String email = editemail.getText().toString();
+                        String comment = editcomment.getText().toString();
+                        String phone = editphone.getText().toString();
+                        int phone2 = Integer.parseInt(phone);
+                        float rating = ratingbar.getRating();
+                        String model = getModel();
+                        Review review = new Review(name,email, phone2,comment,rating, model);
+
+                        ref.push().setValue(review);
+
+                        Snackbar snackbar = Snackbar.make(findViewById(android.R.id.content), R.string.Reviewsent, Snackbar.LENGTH_LONG);
+                        snackbar.show();
+
+                        submit.setEnabled(true);
+                    }
+
+                }, 2000);
+
 
             }
         });
