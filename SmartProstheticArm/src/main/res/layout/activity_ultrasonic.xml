@@ -21,12 +21,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
+        style="@style/kevBtnStyle"
         android:layout_width="349dp"
         android:layout_height="55dp"
         android:layout_marginEnd="28dp"
         android:layout_marginBottom="96dp"
-        android:onclick="onDataChange"
-        style="@style/kevBtnStyle"
         android:text="@string/get_distance_of_object"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -44,12 +43,13 @@
 
     <TextView
         android:id="@+id/getUltrasonicReading"
-        android:layout_width="57dp"
-        android:layout_height="116dp"
-        android:layout_marginTop="304dp"
-        android:text="0"
+        android:layout_width="141dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="288dp"
+        android:text=""
         android:textSize="100sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

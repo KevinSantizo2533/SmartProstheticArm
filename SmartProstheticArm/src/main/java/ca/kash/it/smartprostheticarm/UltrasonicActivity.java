@@ -29,6 +29,19 @@ public class UltrasonicActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ultrasonic);
         UltrasonicReading = findViewById(R.id.getUltrasonicReading);
-
+        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
+        Query lastQuery = databaseReference.child("sensor").child("readings").orderByKey().limitToLast(1);
+        lastQuery.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                for (DataSnapshot data : dataSnapshot.getChildren()) {
+                    String nm = data.child("distance").getValue().toString();
+                    UltrasonicReading.setText(nm);
+                }
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+            }
+        });
     }
 }
