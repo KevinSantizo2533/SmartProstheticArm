@@ -114,6 +114,7 @@
     <string name="ls_forgot_pass">Forgot Password?</string>
     <string name="ls_forgot_submit">Submit</string>
     <string name="ls_forgot_back">Back</string>
+    <string name="userspath">Users</string>
 
     <!-- Preference Titles -->
 
