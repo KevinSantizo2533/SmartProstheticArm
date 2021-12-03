@@ -101,4 +101,11 @@
     <string name="mountains">montagnes</string>
     <string name="send_user_preferences">Envoyer les préférences utilisateur</string>
     <string name="get_users_preferences">Obtenir les préférences des utilisateurs</string>
+    <string name="bt_fingerslider">les doigts</string>
+    <string name="ls_forgot_email">Veuillez saisir votre adresse e-mail</string>
+    <string name="ls_forgot_pass">Mot de passe oublié?</string>
+    <string name="ls_forgot_submit">nous faire parvenir</string>
+    <string name="ls_forgot_back">Arrière</string>
+    <string name="userspath">Utilisateurs</string>
+    <string name="save_preferences">Enregistrer les préférences</string>
 </resources>
