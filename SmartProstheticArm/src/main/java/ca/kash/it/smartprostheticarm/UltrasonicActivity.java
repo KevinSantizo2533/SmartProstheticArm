@@ -30,7 +30,7 @@ public class UltrasonicActivity extends AppCompatActivity {
         setContentView(R.layout.activity_ultrasonic);
         UltrasonicReading = findViewById(R.id.getUltrasonicReading);
         DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
-        Query lastQuery = databaseReference.child("sensor").child("readings").orderByKey().limitToLast(1);
+        Query lastQuery = databaseReference.child("sensor").child("ultrasonic").orderByKey().limitToLast(1);
         lastQuery.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
