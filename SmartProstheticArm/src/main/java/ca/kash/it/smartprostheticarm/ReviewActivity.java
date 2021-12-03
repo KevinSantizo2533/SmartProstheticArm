@@ -56,36 +56,68 @@ public class ReviewActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                submit.setEnabled(false);
-                progbar.setVisibility(View.VISIBLE);
 
-                submit.postDelayed(new Runnable() {
+                if (editname.getText().toString().matches("^[A-Za-z]+$+")) {
+                } else {
+                    editname.setError("Invalid name format");
 
-                    @Override
-                    public void run() {
-                        String name = editname.getText().toString();
-                        String email = editemail.getText().toString();
-                        String comment = editcomment.getText().toString();
-                        String phone = editphone.getText().toString();
-                        int phone2 = Integer.parseInt(phone);
-                        float rating = ratingbar.getRating();
-                        String model = getModel();
-                        Review review = new Review(name,email, phone2,comment,rating, model);
+                }
 
-                        ref.push().setValue(review);
+                if (editemail.getText().toString().matches("[a-zA-Z0-9]+@[a-z].+[a-z]+")) {
+                } else {
+                    editemail.setError("Invalid email format");
+                }
 
-                        Snackbar snackbar = Snackbar.make(findViewById(android.R.id.content), R.string.Reviewsent, Snackbar.LENGTH_LONG);
-                        snackbar.show();
-                        progbar.setVisibility(View.INVISIBLE);
+                if (editphone.length() != 10) {
 
-                        submit.setEnabled(true);
-                    }
+                    editphone.setError("Phone number must be 10 digits");
+                }
 
-                }, 2000);
+                if (editcomment.length() < 1) {
+                    editcomment.setError("Please add a comment");
 
+                }
+                if (ratingbar.getRating() == 0)
+
+                {
+                    Toast toast = Toast.makeText(ReviewActivity.this, "Enter a rating", Toast.LENGTH_SHORT);
+                    toast.show();
+                }
+
+                if (editname.getText().toString().matches("^[A-Za-z]+$+")
+                        && editemail.getText().toString().matches("[a-zA-Z0-9]+@[a-z].+[a-z]+") && editphone.length() == 10 && editcomment.length() > 0 && ratingbar.getRating() != 0) {
+                    submit.setEnabled(false);
+                    progbar.setVisibility(View.VISIBLE);
+
+                    submit.postDelayed(new Runnable() {
+
+                        @Override
+                        public void run() {
+                            String name = editname.getText().toString();
+                            String email = editemail.getText().toString();
+                            String comment = editcomment.getText().toString();
+                            String phone = editphone.getText().toString();
+
+                            long phone2 = Long.parseLong(phone);
+                            float rating = ratingbar.getRating();
+                            String model = getModel();
+                            Review review = new Review(name, email, phone2, comment, rating, model);
+
+                            ref.push().setValue(review);
+
+                            Snackbar snackbar = Snackbar.make(findViewById(android.R.id.content), R.string.Reviewsent, Snackbar.LENGTH_LONG);
+                            snackbar.show();
+                            progbar.setVisibility(View.INVISIBLE);
+
+                            submit.setEnabled(true);
+                        }
+
+                    }, 2000);
+                }
 
             }
         });
+
     }
     public static String getModel() {
         String model = Build.MODEL;

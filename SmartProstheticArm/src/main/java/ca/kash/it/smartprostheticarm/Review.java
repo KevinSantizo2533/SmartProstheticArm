@@ -11,11 +11,11 @@ public class Review {
 String name;
 String email;
 String comment;
-int phone;
+long phone;
 float rating;
 String model;
 
-    public Review(String name,String email,int phone, String comment,float rating, String model){
+    public Review(String name,String email,long phone, String comment,float rating, String model){
 
         this.name = name;
         this.email=email;
@@ -42,7 +42,7 @@ String model;
         return comment;
 
     }
-    public int getPhone(){
+    public long getPhone(){
         return phone;
 
     }
