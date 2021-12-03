@@ -7,16 +7,31 @@
     android:background="#C1D0DD"
     android:layout_height="match_parent">
 
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="220dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/mountains2"
+        android:contentDescription="@string/string_mountians" />
+
+
     <TextView
         android:id="@+id/tempTitle"
-        android:layout_width="235dp"
-        android:layout_height="84dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="52dp"
-        android:fontFamily="@font/tripleta_font"
+        android:layout_width="209dp"
+        android:layout_height="92dp"
+        android:layout_marginTop="72dp"
+        android:fontFamily="@font/glacialindifference_font"
         android:text="@string/temp_readings"
-        android:textColor="@color/black"
-        android:textSize="34sp"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.133"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -47,8 +62,8 @@
         android:id="@+id/textView18"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="104dp"
         android:text="Temperature reading in celsius:"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"

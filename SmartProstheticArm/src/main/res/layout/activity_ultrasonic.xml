@@ -7,27 +7,41 @@
     android:background="#ffff"
     tools:context=".UltrasonicActivity">
 
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="220dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/mountains2"
+        android:contentDescription="@string/string_mountians" />
+
+
     <TextView
         android:id="@+id/ultraTitle"
-        android:layout_width="181dp"
-        android:layout_height="86dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="52dp"
-        android:fontFamily="@font/tripleta_font"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:fontFamily="@font/glacialindifference_font"
         android:text="@string/object_distance"
-        android:textColor="@color/black"
-        android:textSize="34sp"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.08"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:layout_width="241dp"
         android:layout_height="42dp"
-        android:layout_marginTop="176dp"
+        android:layout_marginTop="260dp"
         android:text="@string/measurements"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.153"
+        app:layout_constraintHorizontal_bias="0.152"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -45,10 +59,10 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:layout_width="168dp"
-        android:layout_height="131dp"
-        android:layout_marginStart="224dp"
-        android:layout_marginBottom="560dp"
+        android:layout_width="118dp"
+        android:layout_height="107dp"
+        android:layout_marginStart="252dp"
+        android:layout_marginBottom="512dp"
         android:src="@drawable/distance_icon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
