@@ -115,6 +115,9 @@
     <string name="ls_forgot_submit">Submit</string>
     <string name="ls_forgot_back">Back</string>
     <string name="userspath">Users</string>
+    <string name="mountians">TODO</string>
+    <string name="string_mountians">mountains</string>
+    <string name="save_preferences">Save Preferences</string>
 
     <!-- Preference Titles -->
 
