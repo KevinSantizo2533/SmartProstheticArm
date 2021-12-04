@@ -29,13 +29,13 @@ public class TemperatureActivity extends AppCompatActivity {
 
         TemperatureReading = findViewById(R.id.temperaturereading);
         DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
-        Query lastQuery = databaseReference.child("sensor").child("temperature").orderByKey().limitToLast(1);
+        Query lastQuery = databaseReference.child(getString(R.string.sensorchild)).child(getString(R.string.temperaturechild)).orderByKey().limitToLast(1);
         lastQuery.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for (DataSnapshot data : dataSnapshot.getChildren()) {
-                    String reading = data.child("reading").getValue().toString();
-                    TemperatureReading.setText(reading+"°C");
+                    String reading = data.child(getString(R.string.readingchild)).getValue().toString();
+                    TemperatureReading.setText(reading+getString(R.string.celsiussymbol));
                 }
             }
             @Override
