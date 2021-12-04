@@ -123,6 +123,7 @@
     <string name="temperaturechild">temperature</string>
     <string name="celsiussymbol">°C</string>
     <string name="readingchild">reading</string>
+    <string name="unit_cm">cm</string>
 
     <!-- Preference Titles -->
 

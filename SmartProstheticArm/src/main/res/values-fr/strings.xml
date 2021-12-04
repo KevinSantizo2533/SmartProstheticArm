@@ -117,4 +117,5 @@
     <string name="celsiussymbol">°C</string>
     <string name="readingchild">statut
 </string>
+    <string name="unit_cm">cm</string>
 </resources>
