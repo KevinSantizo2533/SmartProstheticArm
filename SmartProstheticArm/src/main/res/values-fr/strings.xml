@@ -112,5 +112,9 @@
     <string name="string_mountians">mountaines</string>
     <string name="title_Armcontroller">contrôleur de bras
 </string>
-    <string name="unit_cm">\" cm\"</string>
+    <string name="sensorchild">capteur</string>
+    <string name="temperaturechild">Température</string>
+    <string name="celsiussymbol">°C</string>
+    <string name="readingchild">statut
+</string>
 </resources>
