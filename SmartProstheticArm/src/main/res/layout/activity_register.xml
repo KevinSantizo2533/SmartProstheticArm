@@ -56,13 +56,13 @@
 
 
     <EditText
-        android:id="@+id/age"
+        android:id="@+id/phoneNum"
         android:layout_width="300dp"
         android:layout_height="52dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/text_border"
         android:ems="10"
-        android:hint="@string/age"
+        android:hint="Phone Number"
         android:importantForAutofill="no"
         android:inputType="number"
         android:minHeight="48dp"
@@ -87,7 +87,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/age" />
+        app:layout_constraintTop_toBottomOf="@+id/phoneNum" />
 
     <EditText
         android:id="@+id/password"

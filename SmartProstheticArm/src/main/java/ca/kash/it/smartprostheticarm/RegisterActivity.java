@@ -24,7 +24,6 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener {
@@ -34,15 +33,16 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                     "(?=.*[0-9])" +         //at least 1 digit
                     "(?=.*[a-z])" +         //at least 1 lower case letter
                     "(?=.*[A-Z])" +         //at least 1 upper case letter
-                    "(?=.*[a-zA-Z])" +      //any letter
-                    "(?=.*[@#$%^&+=])" +    //at least 1 special character
+                    //"(?=.*[a-zA-Z])" +      //any letter
+                    "(?=.*[@#$%^&=])" +    //at least 1 special character
+                    "(?=.*[^~+])" +         //Disabled special character
                     "(?=\\S+$)" +           //no white spaces
                     ".{8,}" +               //at least 4 characters
                     "$");
 
     private FirebaseAuth mAuth;
     private TextView registerUser;
-    private EditText editTextFullName, editTextAge, editTextEmail, editTextPassword, editConfirmTextPassword;
+    private EditText editTextFullName, editTextPhone, editTextEmail, editTextPassword, editConfirmTextPassword;
     private ProgressBar progressbar;
 
     @Override
@@ -55,7 +55,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         registerUser = (Button) findViewById(R.id.registerUser);
         registerUser.setOnClickListener(this);
         editTextFullName = (EditText)  findViewById(R.id.name);
-        editTextAge = (EditText)  findViewById(R.id.age);
+        editTextPhone = (EditText)  findViewById(R.id.phoneNum);
         editTextEmail = (EditText)  findViewById(R.id.email);
         editTextPassword = (EditText)  findViewById(R.id.password);
         editConfirmTextPassword = (EditText)  findViewById(R.id.password2);
@@ -81,14 +81,14 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         String password = editTextPassword.getText().toString();
         String confirmpassword = editConfirmTextPassword.getText().toString();
 
-        String age = editTextAge.getText().toString();
+        String age = editTextPhone.getText().toString();
 
         if (name.isEmpty()){
             editTextFullName.setError(getString(R.string.nameRequired));
         }
 
         if (age.isEmpty()){
-            editTextAge.setError(getString(R.string.ageReq));
+            editTextPhone.setError(getString(R.string.ageReq));
         }
 
         if (email.isEmpty()){
