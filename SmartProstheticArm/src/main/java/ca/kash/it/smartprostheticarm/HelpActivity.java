@@ -17,7 +17,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class HelpActivity extends AppCompatActivity {
 
-    public ImageView call;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

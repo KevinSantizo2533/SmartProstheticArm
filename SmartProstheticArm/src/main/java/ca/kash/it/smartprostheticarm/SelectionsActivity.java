@@ -33,7 +33,6 @@ public class SelectionsActivity extends AppCompatActivity {
 
         settingsBtn = (Button) findViewById(R.id.getSettingsBtn);
         settingsTxt = findViewById(R.id.usrSettings);
-        EditText orientation,emergencyalerts;
 
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
 

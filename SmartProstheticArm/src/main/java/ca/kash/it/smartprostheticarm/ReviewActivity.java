@@ -29,7 +29,6 @@ public class ReviewActivity extends AppCompatActivity {
     Button submit;
     RatingBar ratingbar;
 
-    FirebaseDatabase database;
     DatabaseReference ref;
     ProgressBar progbar;
     @Override
