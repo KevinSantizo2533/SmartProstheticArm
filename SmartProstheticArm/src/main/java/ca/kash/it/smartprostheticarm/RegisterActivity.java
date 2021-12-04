@@ -28,7 +28,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
     private FirebaseAuth mAuth;
     private TextView registerUser;
-    private EditText editTextFullName, editTextAge, editTextEmail, editTextPassword;
+    private EditText editTextFullName, editTextAge, editTextEmail, editTextPassword, editConfirmTextPassword;
     private ProgressBar progressbar;
 
     @Override
@@ -44,6 +44,8 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         editTextAge = (EditText)  findViewById(R.id.age);
         editTextEmail = (EditText)  findViewById(R.id.email);
         editTextPassword = (EditText)  findViewById(R.id.password);
+        editConfirmTextPassword = (EditText)  findViewById(R.id.password2);
+
         progressbar = (ProgressBar) findViewById(R.id.loginprogressbar);
 
     }
@@ -64,6 +66,8 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         String name = editTextFullName.getText().toString();
         String email = editTextEmail.getText().toString();
         String password = editTextPassword.getText().toString();
+        String confirmpassword = editConfirmTextPassword.getText().toString();
+
         String age = editTextAge.getText().toString();
 
         if (name.isEmpty()){
@@ -94,6 +98,12 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             editTextPassword.requestFocus();
             return;
         }
+        if(!confirmpassword.equals(password))
+        {
+            editConfirmTextPassword.setError("Password not the same");
+            return;
+        }
+
 
         progressbar.setVisibility(View.VISIBLE);
         mAuth.createUserWithEmailAndPassword(email,password)
