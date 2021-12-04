@@ -35,7 +35,7 @@ public class TemperatureActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for (DataSnapshot data : dataSnapshot.getChildren()) {
                     String reading = data.child("reading").getValue().toString();
-                    TemperatureReading.setText(reading);
+                    TemperatureReading.setText(reading+"°C");
                 }
             }
             @Override
