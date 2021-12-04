@@ -29,6 +29,17 @@ import java.util.regex.Pattern;
 
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener {
 
+    private static final Pattern PASSWORD_PATTERN =
+            Pattern.compile("^" +
+                    "(?=.*[0-9])" +         //at least 1 digit
+                    "(?=.*[a-z])" +         //at least 1 lower case letter
+                    "(?=.*[A-Z])" +         //at least 1 upper case letter
+                    "(?=.*[a-zA-Z])" +      //any letter
+                    "(?=.*[@#$%^&+=])" +    //at least 1 special character
+                    "(?=\\S+$)" +           //no white spaces
+                    ".{8,}" +               //at least 4 characters
+                    "$");
+
     private FirebaseAuth mAuth;
     private TextView registerUser;
     private EditText editTextFullName, editTextAge, editTextEmail, editTextPassword, editConfirmTextPassword;
@@ -52,20 +63,6 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         progressbar = (ProgressBar) findViewById(R.id.loginprogressbar);
 
     }
-
-    public static boolean isValidPassword(final String password) {
-
-        Pattern pattern;
-        Matcher matcher;
-        final String PASSWORD_PATTERN = "^(?=.*[0-9])(?=.*[A-Z])(?=.*[@#$%^&+=!])(?=\\S+$).{4,}$";
-        pattern = Pattern.compile(PASSWORD_PATTERN);
-        matcher = pattern.matcher(password);
-
-        return matcher.matches();
-
-    }
-
-
 
     @Override
     public void onClick(View view) {
@@ -109,28 +106,23 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             return;
         }
 
-        if (password.length()<8){
-            editTextPassword.setError(getString(R.string.passMin));
-            editTextPassword.requestFocus();
+        String passwordInput = editTextPassword.getText().toString().trim();
+        if (!PASSWORD_PATTERN.matcher(passwordInput).matches()) {
+            editTextPassword.setError("Password too weak:\n" +
+                    "# a digit must occur at least once\n" +
+                    "# a lower case letter must occur at least once\n" +
+                    "# an upper case letter must occur at least once\n" +
+                    "# a special character must occur at least once\n" +
+                    "# at least eight places though");
             return;
         }
+
         if(!confirmpassword.equals(password))
         {
             editConfirmTextPassword.setError("Password not the same");
             return;
         }
 
-
-        if(password.length()<8 &&!isValidPassword(password)){
-            editTextPassword.setError(getString(R.string.passMin));
-
-//       # a digit must occur at least once
-//       # a lower case letter must occur at least once
-//       # an upper case letter must occur at least once
-//       # a special character must occur at least once you can replace with your special characters
-//       # no whitespace allowed in the entire string
-//       # anything, at least eight places though
-        }
 
         progressbar.setVisibility(View.VISIBLE);
         mAuth.createUserWithEmailAndPassword(email,password)
