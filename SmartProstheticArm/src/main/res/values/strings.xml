@@ -7,7 +7,7 @@
     <string name="app_name">SmartProstheticArm</string>
     <string name="title_home">Status</string>
     <string name="title_sensors">Sensors</string>
-    <string name="title_bt">Bluetooth</string>
+    <string name="title_bt">Arm Controller</string>
     <string name="Dialog_Exit">Are you sure you want to exit?</string>
     <string name="OnBack_Close">Yes</string>
     <string name="onBack_No">No</string>
@@ -82,7 +82,7 @@
     <string name="bt_release">Release Object</string>
     <string name="bt_servospeed">Servo Speed</string>
     <string name="bt_grab">Grab</string>
-    <string name="bt_maintitle">Bluetooth</string>
+    <string name="bt_maintitle">Arm Controller</string>
     <string name="bt_armcontrol">Arm Controller</string>
     <string name="bt_connectbt">Connect Bluetooth</string>
     <string name="aboutscreen_title">About Us</string>

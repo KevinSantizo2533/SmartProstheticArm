@@ -108,4 +108,8 @@
     <string name="ls_forgot_back">Arrière</string>
     <string name="userspath">Utilisateurs</string>
     <string name="save_preferences">Enregistrer les préférences</string>
+    <string name="mountians">TODO</string>
+    <string name="string_mountians">mountaines</string>
+    <string name="title_Armcontroller">contrôleur de bras
+</string>
 </resources>
