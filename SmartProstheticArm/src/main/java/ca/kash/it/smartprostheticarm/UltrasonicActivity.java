@@ -36,7 +36,7 @@ public class UltrasonicActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for (DataSnapshot data : dataSnapshot.getChildren()) {
                     String nm = data.child("distance").getValue().toString();
-                    UltrasonicReading.setText(nm);
+                    UltrasonicReading.setText(nm + getString(R.string.unit_cm));
                 }
             }
             @Override
