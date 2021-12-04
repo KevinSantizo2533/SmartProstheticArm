@@ -24,6 +24,9 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener {
 
     private FirebaseAuth mAuth;
@@ -47,6 +50,19 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         progressbar = (ProgressBar) findViewById(R.id.loginprogressbar);
 
     }
+
+    public static boolean isValidPassword(final String password) {
+
+        Pattern pattern;
+        Matcher matcher;
+        final String PASSWORD_PATTERN = "^(?=.*[0-9])(?=.*[A-Z])(?=.*[@#$%^&+=!])(?=\\S+$).{4,}$";
+        pattern = Pattern.compile(PASSWORD_PATTERN);
+        matcher = pattern.matcher(password);
+
+        return matcher.matches();
+
+    }
+
 
 
     @Override
@@ -89,10 +105,21 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             return;
         }
 
-        if (password.length()<6){
+        if (password.length()<8){
             editTextPassword.setError(getString(R.string.passMin));
             editTextPassword.requestFocus();
             return;
+        }
+
+        if(password.length()<8 &&!isValidPassword(password)){
+            editTextPassword.setError(getString(R.string.passMin));
+
+//       # a digit must occur at least once
+//       # a lower case letter must occur at least once
+//       # an upper case letter must occur at least once
+//       # a special character must occur at least once you can replace with your special characters
+//       # no whitespace allowed in the entire string
+//       # anything, at least eight places though
         }
 
         progressbar.setVisibility(View.VISIBLE);
