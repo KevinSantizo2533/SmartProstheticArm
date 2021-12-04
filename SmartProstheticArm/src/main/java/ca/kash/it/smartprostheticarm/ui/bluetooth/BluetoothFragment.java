@@ -34,7 +34,6 @@ public class BluetoothFragment extends Fragment {
     private static final int PERMISSIONS_REQUEST_BLUETOOTH = 100;
     Button btbutton;
 
-
     private BluetoothViewModel bluetoothViewModel;
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_bluetooth, container, false);
