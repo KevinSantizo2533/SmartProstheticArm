@@ -61,9 +61,9 @@
     <ImageView
         android:layout_width="118dp"
         android:layout_height="107dp"
-        android:layout_marginStart="252dp"
-        android:layout_marginBottom="512dp"
-        android:src="@drawable/distance_icon"
+        android:layout_marginStart="276dp"
+        android:layout_marginBottom="400dp"
+        android:src="@drawable/distance_transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
