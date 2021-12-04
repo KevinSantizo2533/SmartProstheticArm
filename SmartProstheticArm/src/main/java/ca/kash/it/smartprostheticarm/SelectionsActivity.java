@@ -16,11 +16,9 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.preference.PreferenceManager;
 
-import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import static ca.kash.it.smartprostheticarm.ReviewActivity.getModel;
 
 
 public class SelectionsActivity extends AppCompatActivity {
