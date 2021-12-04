@@ -53,6 +53,17 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
     }
 
+    public static boolean isValidPassword(final String password) {
+
+        Pattern pattern;
+        Matcher matcher;
+        final String PASSWORD_PATTERN = "^(?=.*[0-9])(?=.*[A-Z])(?=.*[@#$%^&+=!])(?=\\S+$).{4,}$";
+        pattern = Pattern.compile(PASSWORD_PATTERN);
+        matcher = pattern.matcher(password);
+
+        return matcher.matches();
+
+    }
 
 
 
@@ -110,6 +121,16 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         }
 
 
+        if(password.length()<8 &&!isValidPassword(password)){
+            editTextPassword.setError(getString(R.string.passMin));
+
+//       # a digit must occur at least once
+//       # a lower case letter must occur at least once
+//       # an upper case letter must occur at least once
+//       # a special character must occur at least once you can replace with your special characters
+//       # no whitespace allowed in the entire string
+//       # anything, at least eight places though
+        }
 
         progressbar.setVisibility(View.VISIBLE);
         mAuth.createUserWithEmailAndPassword(email,password)
