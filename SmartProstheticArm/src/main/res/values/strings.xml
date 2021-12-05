@@ -80,7 +80,7 @@
     <string name="bt_release">Release Object</string>
     <string name="bt_servospeed">Servo Speed</string>
     <string name="bt_grab">Grab</string>
-    <string name="bt_connectbt">Connect Bluetooth</string>
+    <string name="bt_connectbt">Connect</string>
     <string name="aboutscreen_title">About Us</string>
     <string name="aboutus_msg">The focus of Hybrid Prosthetics is to provide synthetic arms meant to benefit disabled individuals. This arm will have many functions, including temperature measurement, object detection, rotational axes (servos) and supports bluetooth/wireless connection. These functionalities will all be displayed to an app for the user to get all the information necessary to help with their everyday lives.</string>
     <string name="aboutus_msg2">Contact Information:  Email: Hybridprosthetics@gmail.com \nPhone number: 905 874 6663</string>
@@ -130,7 +130,7 @@
     <string name="servo_land_subtext">Manual Controls</string>
     <string name="bluetooth_land_title">Bluetooth</string>
     <string name="servo_land_grab">Grab</string>
-    <string name="splash_maintext">Smart Prosthetic Arm</string>
+    <string name="splash_maintext" translatable="false">Smart Prosthetic Arm</string>
     <string name="splash_subtext">Making your life smarter.</string>
 
     <!-- Preference Titles -->

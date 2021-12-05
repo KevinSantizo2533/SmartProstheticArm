@@ -10,15 +10,20 @@
 
     <Button
         android:id="@+id/bluetoothbtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="232dp"
+        android:layout_width="174dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="244dp"
         android:backgroundTint="#03A9F4"
+        android:backgroundTintMode="screen"
+        android:drawableLeft="@android:drawable/stat_sys_data_bluetooth"
         android:text="@string/bt_connectbt"
-        android:textColor="#4A148C"
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#930000"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.132"
+        app:layout_constraintHorizontal_bias="0.118"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
