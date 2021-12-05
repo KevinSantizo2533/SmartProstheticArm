@@ -21,6 +21,5 @@ public class RegisterActivityTest {
     public void clickingButton_shouldChangeResultsViewText() throws Exception {
         Activity activity = Robolectric.setupActivity(RegisterActivity.class);
 
-
     }
 }
