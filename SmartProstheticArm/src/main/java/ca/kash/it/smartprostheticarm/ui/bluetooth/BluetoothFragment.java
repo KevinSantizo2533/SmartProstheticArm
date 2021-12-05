@@ -26,6 +26,12 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 
 import ca.kash.it.smartprostheticarm.R;
 
@@ -33,12 +39,32 @@ public class BluetoothFragment extends Fragment {
 
     private static final int PERMISSIONS_REQUEST_BLUETOOTH = 100;
     Button btbutton;
+    TextView Servo;
 
     private BluetoothViewModel bluetoothViewModel;
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_bluetooth, container, false);
+
+        Servo = root.findViewById(R.id.servoreading);
+        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
+        Query lastQuery = databaseReference.child(getString(R.string.sensorchild)).child(getString(R.string.servo)).orderByKey().limitToLast(1);
+        lastQuery.addValueEventListener(new ValueEventListener() {
+                                            @Override
+                                            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                                for (DataSnapshot data : dataSnapshot.getChildren()) {
+                                                    String reading = data.child(getString(R.string.readingchild)).getValue().toString();
+                                                    Servo.setText(reading + R.string.direction);
+                                                }
+                                            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+            }
+                                        });
+
+
         btbutton = root.findViewById(R.id.bluetoothbtn);
         btbutton.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
                 if (ActivityCompat.checkSelfPermission(getContext(), Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
@@ -49,12 +75,16 @@ public class BluetoothFragment extends Fragment {
                     snackBar.show();
                 }
 
+
             }
+
         });
         return root;
 
 
+
     }
+
 
     @Override
     public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
