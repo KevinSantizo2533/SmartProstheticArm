@@ -55,10 +55,8 @@
     <string name="set_username">Set username</string>
     <string name="profile_summary">Set profile username</string>
     <string name="PROFILE_TITLE">USER PROFILE</string>
-    <string name="alerts_title">Alerts</string>
     <string name="screen_title">SCREEN ORIENTATION</string>
     <string name="orientation_list">Orientation</string>
-    <string name="emergency_alerts">Emergency Alerts</string>
     <string name="reset_passwordlabel">Account</string>
     <string name="Resetpassword">Reset Password</string>
     <string name="emailReq">Email is required</string>
@@ -82,8 +80,6 @@
     <string name="bt_release">Release Object</string>
     <string name="bt_servospeed">Servo Speed</string>
     <string name="bt_grab">Grab</string>
-    <string name="bt_maintitle">Arm Controller</string>
-    <string name="bt_armcontrol">Bluetooth</string>
     <string name="bt_connectbt">Connect Bluetooth</string>
     <string name="aboutscreen_title">About Us</string>
     <string name="aboutus_msg">The focus of Hybrid Prosthetics is to provide synthetic arms meant to benefit disabled individuals. This arm will have many functions, including temperature measurement, object detection, rotational axes (servos) and supports bluetooth/wireless connection. These functionalities will all be displayed to an app for the user to get all the information necessary to help with their everyday lives.</string>
@@ -129,11 +125,11 @@
     <string name="register_confirmpass">Confirm password</string>
     <string name="register_phone">Phone Number</string>
     <string name="temp_celsius">Temperature reading in celsius:</string>
-    <string name="bt_land_release">Release Object</string>
-    <string name="bt_land_servspeed">Servo Speed</string>
-    <string name="bt_land_subtext">Manual Controls</string>
-    <string name="bt_land_title">Bluetooth</string>
-    <string name="bt_land_grab">Grab</string>
+    <string name="servo_land_release">Release Object</string>
+    <string name="servo_land_servspeed">Servo Speed</string>
+    <string name="servo_land_subtext">Manual Controls</string>
+    <string name="bluetooth_land_title">Bluetooth</string>
+    <string name="servo_land_grab">Grab</string>
 
     <!-- Preference Titles -->
 

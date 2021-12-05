@@ -58,10 +58,8 @@
     <string name="set_username">Définir le nom d utilisateur</string>
     <string name="profile_summary">Définir le nom dutilisateur du profil</string>
     <string name="PROFILE_TITLE">Définir le nom dutilisateur du profil</string>
-    <string name="alerts_title">Alertes</string>
     <string name="screen_title">orientation de lécran</string>
     <string name="orientation_list">Orientation</string>
-    <string name="emergency_alerts">Alertes d urgence</string>
     <string name="reset_passwordlabel">"Compte  "</string>
     <string name="Resetpassword">réinitialiser le mot de passe</string>
     <string name="validEmail">Veuillez fournir un email valide</string>
@@ -74,8 +72,6 @@
     <string name="bt_release">Libérer l\'objet</string>
     <string name="bt_servospeed">Vitesse d\'asservissement</string>
     <string name="bt_grab">Attraper</string>
-    <string name="bt_maintitle">Bluetooth</string>
-    <string name="bt_armcontrol">Contrôleur de bras</string>
     <string name="bt_connectbt">Connectez Bluetooth</string>
     <string name="sendEmail">Envoyer un e-mail</string>
     <string name="aboutscreen_title">À propos de nous</string>
@@ -121,10 +117,10 @@
     <string name="register_confirmpass">Confirmez le mot de passe</string>
     <string name="register_phone">Numéro de téléphone</string>
     <string name="temp_celsius">Lecture de la température en Celsius :</string>
-    <string name="bt_land_release">Libérer lobjet</string>
-    <string name="bt_land_servspeed">Vitesse dasservissement</string>
-    <string name="bt_land_subtext">Commandes manuelles</string>
-    <string name="bt_land_title">Bluetooth</string>
-    <string name="bt_land_grab">attraper</string>
+    <string name="servo_land_release">Libérer lobjet</string>
+    <string name="servo_land_servspeed">Vitesse dasservissement</string>
+    <string name="servo_land_subtext">Commandes manuelles</string>
+    <string name="bluetooth_land_title">Bluetooth</string>
+    <string name="servo_land_grab">attraper</string>
 
 </resources>
