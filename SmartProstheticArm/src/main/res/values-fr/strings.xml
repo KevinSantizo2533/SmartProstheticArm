@@ -118,4 +118,13 @@
     <string name="celsiussymbol">°C</string>
     <string name="readingchild">statut</string>
     <string name="unit_cm">cm</string>
+    <string name="register_confirmpass">Confirmez le mot de passe</string>
+    <string name="register_phone">Numéro de téléphone</string>
+    <string name="temp_celsius">Lecture de la température en Celsius :</string>
+    <string name="bt_land_release">Libérer lobjet</string>
+    <string name="bt_land_servspeed">Vitesse dasservissement</string>
+    <string name="bt_land_subtext">Commandes manuelles</string>
+    <string name="bt_land_title">Bluetooth</string>
+    <string name="bt_land_grab">attraper</string>
+
 </resources>
