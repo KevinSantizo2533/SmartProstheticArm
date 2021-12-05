@@ -122,5 +122,6 @@
     <string name="servo_land_subtext">Commandes manuelles</string>
     <string name="bluetooth_land_title">Bluetooth</string>
     <string name="servo_land_grab">attraper</string>
+    <string name="splash_subtext">"Rendre votre vie plus intelligente. "</string>
 
 </resources>

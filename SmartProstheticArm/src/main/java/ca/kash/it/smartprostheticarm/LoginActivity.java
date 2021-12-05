@@ -39,8 +39,7 @@ import com.google.firebase.auth.GoogleAuthProvider;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private TextView register1;
-    private TextView forgotpass;
+    private TextView register1, forgotpass;
     private EditText loginEmail, loginPass;
     private Button loginBtn;
     private FirebaseAuth mAuth;
@@ -77,16 +76,16 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             }
         });
         mAuth = FirebaseAuth.getInstance();
-        register1 = (TextView) findViewById(R.id.register);
+        register1 = findViewById(R.id.register);
         register1.setOnClickListener(this);
-        forgotpass = (TextView) findViewById(R.id.forgotpass);
+        forgotpass = findViewById(R.id.forgotpass);
         forgotpass.setOnClickListener(this);
-        loginBtn = (Button)findViewById(R.id.loginBtn);
+        loginBtn = findViewById(R.id.loginBtn);
         loginBtn.setOnClickListener(this);
-        loginEmail = (EditText)  findViewById(R.id.loginEmail);
-        loginPass = (EditText) findViewById(R.id.loginPass);
-        progressbar = (ProgressBar) findViewById(R.id.loginprogressbar);
-        remember = (CheckBox) findViewById(R.id.rememberme);
+        loginEmail = findViewById(R.id.loginEmail);
+        loginPass = findViewById(R.id.loginPass);
+        progressbar = findViewById(R.id.loginprogressbar);
+        remember = findViewById(R.id.rememberme);
 
         pref = getSharedPreferences(PREF,MODE_PRIVATE);
 
