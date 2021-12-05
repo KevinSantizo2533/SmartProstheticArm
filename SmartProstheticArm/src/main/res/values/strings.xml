@@ -126,6 +126,7 @@
     <string name="unit_cm">cm</string>
     <string name="register_confirmpass">Confirm password</string>
     <string name="register_phone">Phone Number</string>
+    <string name="temp_celsius">Temperature reading in celsius:</string>
 
     <!-- Preference Titles -->
 
