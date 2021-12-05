@@ -8,6 +8,19 @@
     android:foregroundTint="#D63F3F"
     tools:context=".ui.status.StatusFragment">
 
+    <Button
+        android:id="@+id/bluetoothbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="232dp"
+        android:backgroundTint="#03A9F4"
+        android:text="@string/bt_connectbt"
+        android:textColor="#4A148C"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.132"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <ImageView
         android:id="@+id/imageView9"
         android:layout_width="wrap_content"

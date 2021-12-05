@@ -16,9 +16,6 @@ public class BluetoothViewModel extends ViewModel {
 
     public BluetoothViewModel() {
         mText = new MutableLiveData<>();
-
-
-
     }
 
     public LiveData<String> getText() {

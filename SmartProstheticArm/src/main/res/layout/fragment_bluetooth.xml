@@ -92,19 +92,6 @@
         app:layout_constraintStart_toEndOf="@+id/textView8"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/bluetoothbtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="72dp"
-        android:backgroundTint="#03A9F4"
-        android:text="@string/bt_connectbt"
-        android:textColor="#4A148C"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <Switch
         android:id="@+id/switch1"
         android:layout_width="82dp"
