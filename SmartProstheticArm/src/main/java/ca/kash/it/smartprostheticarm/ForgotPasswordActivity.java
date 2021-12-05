@@ -60,10 +60,12 @@ public class ForgotPasswordActivity extends AppCompatActivity {
 
         if (emailString.isEmpty()) {
             email.setError(getString(R.string.emailReq));
+            email.requestFocus();
             return;
         }
         if (!Patterns.EMAIL_ADDRESS.matcher(emailString).matches()) {
             email.setError(getString(R.string.validEmail));
+            email.requestFocus();
             return;
         }
 

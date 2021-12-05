@@ -52,26 +52,26 @@ public class ReviewActivity extends AppCompatActivity {
                 if (editname.getText().toString().matches("^[A-Za-z]+$+")) {
                 } else {
                     editname.setError("Invalid name format");
-
+                    editname.requestFocus();
                 }
 
                 if (editemail.getText().toString().matches("[a-zA-Z0-9]+@[a-z].+[a-z]+")) {
                 } else {
                     editemail.setError("Invalid email format");
+                    editemail.requestFocus();
                 }
 
                 if (editphone.length() != 10) {
-
                     editphone.setError("Phone number must be 10 digits");
+                    editphone.requestFocus();
                 }
 
                 if (editcomment.length() < 1) {
                     editcomment.setError("Please add a comment");
+                    editcomment.requestFocus();
 
                 }
-                if (ratingbar.getRating() == 0)
-
-                {
+                if (ratingbar.getRating() == 0)  {
                     Toast toast = Toast.makeText(ReviewActivity.this, "Enter a rating", Toast.LENGTH_SHORT);
                     toast.show();
                 }
@@ -80,7 +80,6 @@ public class ReviewActivity extends AppCompatActivity {
                         && editemail.getText().toString().matches("[a-zA-Z0-9]+@[a-z].+[a-z]+") && editphone.length() == 10 && editcomment.length() > 0 && ratingbar.getRating() != 0) {
                     submit.setEnabled(false);
                     progbar.setVisibility(View.VISIBLE);
-
                     submit.postDelayed(new Runnable() {
 
                         @Override
