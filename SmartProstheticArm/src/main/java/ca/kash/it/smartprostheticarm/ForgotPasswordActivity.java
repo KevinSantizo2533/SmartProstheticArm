@@ -14,16 +14,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
-
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class ForgotPasswordActivity extends AppCompatActivity  {
+public class ForgotPasswordActivity extends AppCompatActivity {
 
     private EditText email;
     private Button submit;
@@ -35,9 +32,9 @@ public class ForgotPasswordActivity extends AppCompatActivity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forgot);
 
-        email = (EditText) findViewById(R.id.forgotEmail);
-        submit = (Button) findViewById(R.id.forgotSubmit);
-        progressbar = (ProgressBar) findViewById(R.id.forgotprogressbar);
+        email =  findViewById(R.id.forgotEmail);
+        submit = findViewById(R.id.forgotSubmit);
+        progressbar = findViewById(R.id.forgotprogressbar);
 
         auth = FirebaseAuth.getInstance();
 
@@ -49,10 +46,10 @@ public class ForgotPasswordActivity extends AppCompatActivity  {
         });
 
 
-        Button back = (Button) findViewById(R.id.forgotBack);
+        Button back = findViewById(R.id.forgotBack);
         back.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent= new Intent(ForgotPasswordActivity.this, LoginActivity.class);
+                Intent intent = new Intent(ForgotPasswordActivity.this, LoginActivity.class);
                 startActivity(intent);
             }
         });
@@ -61,11 +58,11 @@ public class ForgotPasswordActivity extends AppCompatActivity  {
     private void resetPassword() {
         String emailString = email.getText().toString().trim();
 
-        if (emailString.isEmpty()){
+        if (emailString.isEmpty()) {
             email.setError(getString(R.string.emailReq));
             return;
         }
-        if(!Patterns.EMAIL_ADDRESS.matcher(emailString).matches()){
+        if (!Patterns.EMAIL_ADDRESS.matcher(emailString).matches()) {
             email.setError(getString(R.string.validEmail));
             return;
         }
@@ -74,11 +71,11 @@ public class ForgotPasswordActivity extends AppCompatActivity  {
         auth.sendPasswordResetEmail(emailString).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
-                if(task.isSuccessful()){
-                    Toast.makeText(ForgotPasswordActivity.this,"An email has been sent for password reset",Toast.LENGTH_LONG).show();
+                if (task.isSuccessful()) {
+                    Toast.makeText(ForgotPasswordActivity.this, "An email has been sent for password reset", Toast.LENGTH_LONG).show();
                     progressbar.setVisibility(View.GONE);
-                }else{
-                    Toast.makeText(ForgotPasswordActivity.this,"Please Try Again",Toast.LENGTH_LONG).show();
+                } else {
+                    Toast.makeText(ForgotPasswordActivity.this, "Please Try Again", Toast.LENGTH_LONG).show();
                 }
             }
         });

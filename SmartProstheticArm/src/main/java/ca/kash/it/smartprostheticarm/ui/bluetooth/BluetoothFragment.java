@@ -42,6 +42,7 @@ public class BluetoothFragment extends Fragment {
     TextView Servo;
 
     private BluetoothViewModel bluetoothViewModel;
+
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_bluetooth, container, false);
 
@@ -49,17 +50,18 @@ public class BluetoothFragment extends Fragment {
         DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
         Query lastQuery = databaseReference.child(getString(R.string.sensorchild)).child(getString(R.string.servo)).orderByKey().limitToLast(1);
         lastQuery.addValueEventListener(new ValueEventListener() {
-                                            @Override
-                                            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                                                for (DataSnapshot data : dataSnapshot.getChildren()) {
-                                                    String reading = data.child(getString(R.string.readingchild)).getValue().toString();
-                                                    Servo.setText(getString(R.string.direction) + reading);
-                                                }
-                                            }
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                for (DataSnapshot data : dataSnapshot.getChildren()) {
+                    String reading = data.child(getString(R.string.readingchild)).getValue().toString();
+                    Servo.setText(getString(R.string.direction) + reading);
+                }
+            }
+
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
             }
-                                        });
+        });
 
 
         btbutton = root.findViewById(R.id.bluetoothbtn);
@@ -80,7 +82,6 @@ public class BluetoothFragment extends Fragment {
 
         });
         return root;
-
 
 
     }
@@ -105,5 +106,4 @@ public class BluetoothFragment extends Fragment {
     }
 
 
-
-    }
+}
