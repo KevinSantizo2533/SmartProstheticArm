@@ -57,13 +57,14 @@
 
     <TextView
         android:id="@+id/servoreading"
-        android:layout_width="199dp"
-        android:layout_height="105dp"
-        android:layout_marginTop="428dp"
+        android:layout_width="312dp"
+        android:layout_height="134dp"
+        android:layout_marginTop="448dp"
         android:gravity="center"
         android:text=""
-        android:textSize="100sp"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -95,7 +96,7 @@
         android:id="@+id/bluetoothbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="96dp"
+        android:layout_marginBottom="72dp"
         android:backgroundTint="#03A9F4"
         android:text="@string/bt_connectbt"
         android:textColor="#4A148C"
@@ -131,13 +132,13 @@
         android:id="@+id/textView15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="108dp"
+        android:layout_marginTop="116dp"
         android:fontFamily="@font/glacialindifference_font"
-        android:text="@string/bt_armcontrol"
+        android:text="@string/title_Armcontroller"
         android:textColor="@color/white"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.089"
+        app:layout_constraintHorizontal_bias="0.086"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

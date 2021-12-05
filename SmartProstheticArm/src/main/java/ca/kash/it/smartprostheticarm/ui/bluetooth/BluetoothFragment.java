@@ -53,7 +53,7 @@ public class BluetoothFragment extends Fragment {
                                             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                                                 for (DataSnapshot data : dataSnapshot.getChildren()) {
                                                     String reading = data.child(getString(R.string.readingchild)).getValue().toString();
-                                                    Servo.setText(reading + R.string.direction);
+                                                    Servo.setText(getString(R.string.direction) + reading);
                                                 }
                                             }
             @Override
