@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="160dp"
         android:layout_marginTop="32dp"
-        android:text="@string/bt_land_release"
+        android:text="@string/servo_land_release"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
@@ -22,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="108dp"
-        android:text="@string/bt_land_subtext"
+        android:text="@string/servo_land_subtext"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.036"
@@ -35,7 +35,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="32dp"
-        android:text="@string/bt_land_servspeed"
+        android:text="@string/servo_land_servspeed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
@@ -45,7 +45,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="32dp"
-        android:text="@string/bt_land_grab"
+        android:text="@string/servo_land_grab"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
@@ -63,7 +63,7 @@
         android:layout_width="171dp"
         android:layout_height="40dp"
         android:layout_marginTop="52dp"
-        android:text="@string/bt_land_title"
+        android:text="@string/bluetooth_land_title"
         android:textSize="36sp"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="20dp" />
