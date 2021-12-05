@@ -35,16 +35,15 @@ public class ReviewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_review);
         //getDeviceName()
-        submit = (Button) findViewById(R.id.reviewsubmit);
-        progbar = (ProgressBar) findViewById(R.id.progressBar);
-
-        editname = (EditText) findViewById(R.id.editName);
-        editphone = (EditText) findViewById(R.id.editPhone);
-        editemail = (EditText) findViewById(R.id.editEmail);
-        editcomment = (EditText) findViewById(R.id.editComment);
+        submit = findViewById(R.id.reviewsubmit);
+        progbar = findViewById(R.id.progressBar);
+        editname = findViewById(R.id.editName);
+        editphone = findViewById(R.id.editPhone);
+        editemail = findViewById(R.id.editEmail);
+        editcomment = findViewById(R.id.editComment);
         ratingbar = findViewById(R.id.ratingBar);
         ref = FirebaseDatabase.getInstance().getReference().child("Feedback");
-        submit = (Button)findViewById(R.id.reviewsubmit);
+        submit = findViewById(R.id.reviewsubmit);
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
