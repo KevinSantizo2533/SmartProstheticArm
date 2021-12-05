@@ -43,12 +43,9 @@ public class StatusFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
         statusViewModel = new ViewModelProvider(this).get(StatusViewModel.class);
         View root = inflater.inflate(R.layout.fragment_status, container, false);
-
-
         user = FirebaseAuth.getInstance().getCurrentUser();
         reference = FirebaseDatabase.getInstance().getReference("Users");
         userID = user.getUid();
-
         final TextView name = root.findViewById(R.id.greetingName);
 
         reference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
@@ -58,14 +55,12 @@ public class StatusFragment extends Fragment {
 
                 if (userProfile != null) {
                     String fullName = userProfile.fullName;
-
                     name.setText(fullName);
                 }
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-
             }
         });
         Button btbutton;
@@ -81,10 +76,7 @@ public class StatusFragment extends Fragment {
                     Snackbar snackBar = Snackbar.make(getActivity().findViewById(android.R.id.content), R.string.BTGranted, Snackbar.LENGTH_LONG);
                     snackBar.show();
                 }
-
-
             }
-
         });
         return root;
     }
@@ -94,8 +86,7 @@ public class StatusFragment extends Fragment {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         switch (requestCode) {
             case PERMISSIONS_REQUEST_BLUETOOTH: {
-                // If request is cancelled, the result arrays are empty.
-                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) { // If request is cancelled, the result arrays are empty.
                     Snackbar snackBar = Snackbar.make(getActivity().findViewById(android.R.id.content), R.string.BTGranted, Snackbar.LENGTH_LONG);
                     snackBar.show();
                 } else {

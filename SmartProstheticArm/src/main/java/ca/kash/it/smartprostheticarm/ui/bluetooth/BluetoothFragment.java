@@ -45,7 +45,6 @@ public class BluetoothFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_bluetooth, container, false);
-
         Servo = root.findViewById(R.id.servoreading);
         DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
         Query lastQuery = databaseReference.child(getString(R.string.sensorchild)).child(getString(R.string.servo)).orderByKey().limitToLast(1);
@@ -57,7 +56,6 @@ public class BluetoothFragment extends Fragment {
                     Servo.setText(getString(R.string.direction) + reading);
                 }
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
             }
@@ -76,16 +74,10 @@ public class BluetoothFragment extends Fragment {
                     Snackbar snackBar = Snackbar.make(getActivity().findViewById(android.R.id.content), R.string.BTGranted, Snackbar.LENGTH_LONG);
                     snackBar.show();
                 }
-
-
             }
-
         });
         return root;
-
-
     }
-
 
     @Override
     public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
