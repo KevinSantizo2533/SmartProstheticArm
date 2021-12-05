@@ -35,8 +35,8 @@
     <string name="get_temperature_measurements">Get Temperature Measurements</string>
     <string name="sensor_information">Sensor Information</string>
     <string name="nameRequired">Name is required</string>
-    <string name="phoneReq">Phone is required</string>
     <string name="emailInvalid">Email is invalid</string>
+    <string name="phoneReq">Phone is required</string>
     <string name="passMin">"Password must be more than 6 characters"</string>
     <string name="Dialog_Exit2">Are you sure you want to sign out?</string>
     <string name="phoneRequired">Phone is required</string>
@@ -126,6 +126,14 @@
     <string name="unit_cm">cm</string>
     <string name="servo">servo</string>
     <string name="direction">Direction: </string>
+    <string name="register_confirmpass">Confirm password</string>
+    <string name="register_phone">Phone Number</string>
+    <string name="temp_celsius">Temperature reading in celsius:</string>
+    <string name="bt_land_release">Release Object</string>
+    <string name="bt_land_servspeed">Servo Speed</string>
+    <string name="bt_land_subtext">Manual Controls</string>
+    <string name="bt_land_title">Bluetooth</string>
+    <string name="bt_land_grab">Grab</string>
 
     <!-- Preference Titles -->
 
