@@ -8,6 +8,8 @@ package ca.kash.it.smartprostheticarm;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.widget.TextView;
 
@@ -26,23 +28,43 @@ public class TemperatureActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_temp);
+        new UpdateTemperature().execute();
 
-        TemperatureReading = findViewById(R.id.temperaturereading);
-        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
-        Query lastQuery = databaseReference.child(getString(R.string.sensorchild)).child(getString(R.string.temperaturechild)).orderByKey().limitToLast(1);
-        lastQuery.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                for (DataSnapshot data : dataSnapshot.getChildren()) {
-                    String reading = data.child(getString(R.string.readingchild)).getValue().toString();
-                    TemperatureReading.setText(reading+getString(R.string.celsiussymbol));
-                }
-            }
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-            }
-        });
+
     }
+    class UpdateTemperature extends AsyncTask<Void, Void, Void> {
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+        }
+
+        @Override
+        protected Void doInBackground(Void... params) {
+            TemperatureReading = findViewById(R.id.temperaturereading);
+            DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
+            Query lastQuery = databaseReference.child(getString(R.string.sensorchild)).child(getString(R.string.temperaturechild)).orderByKey().limitToLast(1);
+            lastQuery.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    for (DataSnapshot data : dataSnapshot.getChildren()) {
+                        String reading = data.child(getString(R.string.readingchild)).getValue().toString();
+                        TemperatureReading.setText(reading+getString(R.string.celsiussymbol));
+                    }
+                }
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+                }
+            });
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void result) {
+            super.onPostExecute(result);
+
+        }
+    }
+
 
 
 }
