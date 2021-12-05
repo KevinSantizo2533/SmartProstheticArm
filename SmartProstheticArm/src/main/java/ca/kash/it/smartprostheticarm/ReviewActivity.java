@@ -28,7 +28,6 @@ public class ReviewActivity extends AppCompatActivity {
     EditText editname,editphone,editemail,editcomment;
     Button submit;
     RatingBar ratingbar;
-
     DatabaseReference ref;
     ProgressBar progbar;
     @Override

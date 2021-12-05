@@ -130,6 +130,8 @@
     <string name="servo_land_subtext">Manual Controls</string>
     <string name="bluetooth_land_title">Bluetooth</string>
     <string name="servo_land_grab">Grab</string>
+    <string name="splash_maintext">Smart Prosthetic Arm</string>
+    <string name="splash_subtext">Making your life smarter.</string>
 
     <!-- Preference Titles -->
 
