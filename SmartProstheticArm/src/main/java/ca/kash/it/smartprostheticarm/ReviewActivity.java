@@ -36,7 +36,7 @@ public class ReviewActivity extends AppCompatActivity {
         setContentView(R.layout.activity_review);
         //getDeviceName()
         submit = findViewById(R.id.reviewsubmit);
-        progbar = findViewById(R.id.progressBar);
+        progbar = findViewById(R.id.progressBarDegree);
         editname = findViewById(R.id.editName);
         editphone = findViewById(R.id.editPhone);
         editemail = findViewById(R.id.editEmail);

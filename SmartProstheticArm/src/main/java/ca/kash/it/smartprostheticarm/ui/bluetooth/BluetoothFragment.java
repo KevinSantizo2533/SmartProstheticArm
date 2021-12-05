@@ -11,6 +11,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
+import android.widget.SeekBar;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -28,12 +30,37 @@ import com.google.firebase.database.ValueEventListener;
 import ca.kash.it.smartprostheticarm.R;
 
 public class BluetoothFragment extends Fragment {
-
+    private TextView textView;
+    private ProgressBar progressBar;
+    private SeekBar seekBar;
     TextView Servo;
 
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_bluetooth, container, false);
+        textView = (TextView) root.findViewById(R.id.textviewdegrees);
+        progressBar = (ProgressBar) root.findViewById(R.id.progressBarDegree);
+        seekBar = (SeekBar) root.findViewById(R.id.seekBarDegrees);
+        seekBar.setMax(180);
+
+        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                progressBar.setMax(180);
+                progressBar.setProgress(progress);
+                textView.setText("" + progress + "°");
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
 
         Servo = root.findViewById(R.id.servoreading);
         DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
