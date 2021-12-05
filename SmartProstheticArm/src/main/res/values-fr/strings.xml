@@ -35,7 +35,7 @@
     <string name="get_temperature_measurements">Obtenir des mesures de température</string>
     <string name="sensor_information">Informations sur le capteur</string>
     <string name="nameRequired">Le nom est requis</string>
-    <string name="ageReq">Lâge est requis</string>
+    <string name="phoneReq">Lâge est requis</string>
     <string name="emailReq">Le-mail est requis</string>
     <string name="passReq">Mot de passe requis</string>
     <string name="passMin">"Le mot de passe doit comporter plus de 6 caractères "</string>
@@ -110,12 +110,12 @@
     <string name="save_preferences">Enregistrer les préférences</string>
     <string name="mountians">TODO</string>
     <string name="string_mountians">mountaines</string>
-    <string name="title_Armcontroller">contrôleur de bras
-</string>
+    <string name="title_Armcontroller">contrôleur de bras</string>
+    <string name="servo">servo</string>
+    <string name="direction">Direction: </string>
     <string name="sensorchild">capteur</string>
     <string name="temperaturechild">Température</string>
     <string name="celsiussymbol">°C</string>
-    <string name="readingchild">statut
-</string>
+    <string name="readingchild">statut</string>
     <string name="unit_cm">cm</string>
 </resources>

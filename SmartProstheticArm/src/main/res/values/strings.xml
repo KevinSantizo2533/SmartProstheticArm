@@ -35,7 +35,7 @@
     <string name="get_temperature_measurements">Get Temperature Measurements</string>
     <string name="sensor_information">Sensor Information</string>
     <string name="nameRequired">Name is required</string>
-    <string name="ageReq">Age is required</string>
+    <string name="phoneReq">Phone is required</string>
     <string name="emailInvalid">Email is invalid</string>
     <string name="passMin">"Password must be more than 6 characters"</string>
     <string name="Dialog_Exit2">Are you sure you want to sign out?</string>
@@ -124,6 +124,8 @@
     <string name="celsiussymbol">°C</string>
     <string name="readingchild">reading</string>
     <string name="unit_cm">cm</string>
+    <string name="servo">servo</string>
+    <string name="direction">Direction: </string>
 
     <!-- Preference Titles -->
 

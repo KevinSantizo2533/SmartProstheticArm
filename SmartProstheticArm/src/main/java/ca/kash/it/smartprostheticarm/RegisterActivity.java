@@ -33,7 +33,6 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                     "(?=.*[0-9])" +         //at least 1 digit
                     "(?=.*[a-z])" +         //at least 1 lower case letter
                     "(?=.*[A-Z])" +         //at least 1 upper case letter
-                    //"(?=.*[a-zA-Z])" +      //any letter
                     "(?=.*[@#$%^&=])" +    //at least 1 special character
                     "(?=.*[^~+])" +         //Disabled special character
                     "(?=\\S+$)" +           //no white spaces
@@ -88,7 +87,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         }
 
         if (age.isEmpty()){
-            editTextPhone.setError(getString(R.string.ageReq));
+            editTextPhone.setError(getString(R.string.phoneReq));
         }
 
         if (email.isEmpty()){
