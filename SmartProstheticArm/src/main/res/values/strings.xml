@@ -127,6 +127,11 @@
     <string name="register_confirmpass">Confirm password</string>
     <string name="register_phone">Phone Number</string>
     <string name="temp_celsius">Temperature reading in celsius:</string>
+    <string name="bt_land_release">Release Object</string>
+    <string name="bt_land_servspeed">Servo Speed</string>
+    <string name="bt_land_subtext">Manual Controls</string>
+    <string name="bt_land_title">Bluetooth</string>
+    <string name="bt_land_grab">Grab</string>
 
     <!-- Preference Titles -->
 
