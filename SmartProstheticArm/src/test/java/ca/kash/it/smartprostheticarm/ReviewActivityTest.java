@@ -6,45 +6,45 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class MainActivityTest {
-    private MainActivity mActivity;
+public class ReviewActivityTest {
+    private ReviewActivity rActivity;
 
     @Before
     public void setup() throws Exception {
-        mActivity = new MainActivity();
+        rActivity = new ReviewActivity();
     }
 
     @Test
     public  void testCase1(){
-        mActivity = new MainActivity();
+        rActivity = new ReviewActivity();
 
 
     }
 
     @Test
     public void testCase2(){
-        mActivity = new MainActivity();
+        rActivity = new ReviewActivity();
 
 
     }
 
     @Test
     public void testCase3(){
-        mActivity = new MainActivity();
+        rActivity = new ReviewActivity();
 
 
     }
 
     @Test
     public void testCase4(){
-        mActivity = new MainActivity();
+        rActivity = new ReviewActivity();
 
 
     }
 
     @Test
     public void testCase5(){
-        mActivity = new MainActivity();
+        rActivity = new ReviewActivity();
 
 
     }

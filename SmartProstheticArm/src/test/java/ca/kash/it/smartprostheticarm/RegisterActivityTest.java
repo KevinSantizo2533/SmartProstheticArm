@@ -21,10 +21,6 @@ public class RegisterActivityTest {
     public void clickingButton_shouldChangeResultsViewText() throws Exception {
         Activity activity = Robolectric.setupActivity(RegisterActivity.class);
 
-        //Button button = (Button) activity.findViewById(R.id.btnUpdateText);
-        //TextView results = (TextView) activity.findViewById(R.id.tvField);
 
-        //button.performClick();
-        //assertEquals("Testing Android Rocks1!", results.getText().toString());
     }
 }
