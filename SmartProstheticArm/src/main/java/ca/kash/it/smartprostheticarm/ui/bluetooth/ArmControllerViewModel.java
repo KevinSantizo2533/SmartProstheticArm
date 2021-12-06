@@ -10,11 +10,11 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class BluetoothViewModel extends ViewModel {
+public class ArmControllerViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public BluetoothViewModel() {
+    public ArmControllerViewModel() {
         mText = new MutableLiveData<>();
     }
 

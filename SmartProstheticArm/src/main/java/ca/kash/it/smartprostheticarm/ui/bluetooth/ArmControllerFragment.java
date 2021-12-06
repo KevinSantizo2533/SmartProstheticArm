@@ -31,7 +31,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import ca.kash.it.smartprostheticarm.R;
 
-public class BluetoothFragment extends Fragment {
+public class ArmControllerFragment extends Fragment {
     private TextView textView;
     private ProgressBar progressBar;
     private SeekBar seekBar;

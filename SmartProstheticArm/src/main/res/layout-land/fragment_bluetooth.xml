@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/sensors_backgry"
-    tools:context=".ui.bluetooth.BluetoothFragment">
+    tools:context=".ui.bluetooth.ArmControllerFragment">
 
     <Switch
         android:id="@+id/switch2"
