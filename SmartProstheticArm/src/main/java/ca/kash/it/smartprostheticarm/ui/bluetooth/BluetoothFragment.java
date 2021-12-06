@@ -98,7 +98,20 @@ public class BluetoothFragment extends Fragment {
             }
         });
 
+        grabswitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(grabswitch.isChecked()){
 
+                    refgrab.push().setValue("Firmly Grasp");
+
+                }
+                else{
+                    refgrab.push().setValue("No Grab");
+
+                }
+            }
+
+        });
 
         return root;
     }
