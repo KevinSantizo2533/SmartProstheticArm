@@ -49,7 +49,9 @@ public class BluetoothFragment extends Fragment {
         seekBar = (SeekBar) root.findViewById(R.id.seekBarDegrees);
         seekBar.setMax(180);
         DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
-
+        refmotion = FirebaseDatabase.getInstance().getReference().child("Manual Controls").child("Servo Motion");
+        refspeed = FirebaseDatabase.getInstance().getReference().child("Manual Controls").child("Servo speed");
+        refgrab = FirebaseDatabase.getInstance().getReference().child("Manual Controls").child("Mode");
         grabswitch = root.findViewById(R.id.switch1);
         textViewpercent = (TextView) root.findViewById(R.id.textviewpercent);
         progressBarpercent = (ProgressBar) root.findViewById(R.id.progressBarpercent);
@@ -95,6 +97,8 @@ public class BluetoothFragment extends Fragment {
 
             }
         });
+
+
 
         return root;
     }
