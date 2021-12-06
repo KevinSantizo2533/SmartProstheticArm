@@ -33,6 +33,9 @@ public class BluetoothFragment extends Fragment {
     private TextView textView;
     private ProgressBar progressBar;
     private SeekBar seekBar;
+    private TextView textViewpercent;
+    private ProgressBar progressBarpercent;
+    private SeekBar seekBarpercent;
     TextView Servo;
 
 
@@ -42,6 +45,29 @@ public class BluetoothFragment extends Fragment {
         progressBar = (ProgressBar) root.findViewById(R.id.progressBarDegree);
         seekBar = (SeekBar) root.findViewById(R.id.seekBarDegrees);
         seekBar.setMax(180);
+
+        textViewpercent = (TextView) root.findViewById(R.id.textviewpercent);
+        progressBarpercent = (ProgressBar) root.findViewById(R.id.progressBarpercent);
+        seekBarpercent = (SeekBar) root.findViewById(R.id.seekBarpercent);
+        seekBarpercent.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                progressBarpercent.setMax(100);
+                progressBarpercent.setProgress(progress);
+                textViewpercent.setText("" + progress + "%");
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+
 
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
