@@ -11,8 +11,10 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CompoundButton;
 import android.widget.ProgressBar;
 import android.widget.SeekBar;
+import android.widget.Switch;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -37,7 +39,8 @@ public class BluetoothFragment extends Fragment {
     private ProgressBar progressBarpercent;
     private SeekBar seekBarpercent;
     TextView Servo;
-
+    DatabaseReference refspeed,refmotion,refgrab;
+    Switch grabswitch;
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_bluetooth, container, false);
@@ -45,7 +48,9 @@ public class BluetoothFragment extends Fragment {
         progressBar = (ProgressBar) root.findViewById(R.id.progressBarDegree);
         seekBar = (SeekBar) root.findViewById(R.id.seekBarDegrees);
         seekBar.setMax(180);
+        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
 
+        grabswitch = root.findViewById(R.id.switch1);
         textViewpercent = (TextView) root.findViewById(R.id.textviewpercent);
         progressBarpercent = (ProgressBar) root.findViewById(R.id.progressBarpercent);
         seekBarpercent = (SeekBar) root.findViewById(R.id.seekBarpercent);
@@ -55,6 +60,7 @@ public class BluetoothFragment extends Fragment {
                 progressBarpercent.setMax(100);
                 progressBarpercent.setProgress(progress);
                 textViewpercent.setText("" + progress + "%");
+                refspeed.push().setValue("Percentage: "+progress +"%");
             }
 
             @Override
@@ -74,7 +80,9 @@ public class BluetoothFragment extends Fragment {
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 progressBar.setMax(180);
                 progressBar.setProgress(progress);
-                textView.setText("" + progress + "°");
+                textView.setText("" + progress + " °");
+                refmotion.push().setValue("Degrees: "+progress+"°");
+
             }
 
             @Override
@@ -88,22 +96,6 @@ public class BluetoothFragment extends Fragment {
             }
         });
 
-        Servo = root.findViewById(R.id.servoreading);
-        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
-        Query lastQuery = databaseReference.child(getString(R.string.sensorchild)).child(getString(R.string.servo)).orderByKey().limitToLast(1);
-        lastQuery.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                for (DataSnapshot data : dataSnapshot.getChildren()) {
-                    String reading = data.child(getString(R.string.readingchild)).getValue().toString();
-                    Servo.setText(getString(R.string.direction) + reading);
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-            }
-        });
         return root;
     }
 }
