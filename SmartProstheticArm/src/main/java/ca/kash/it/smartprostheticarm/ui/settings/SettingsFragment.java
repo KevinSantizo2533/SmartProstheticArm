@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.preference.ListPreference;
@@ -14,7 +13,6 @@ import androidx.preference.PreferenceManager;
 
 import ca.kash.it.smartprostheticarm.ForgotPasswordActivity;
 import ca.kash.it.smartprostheticarm.R;
-import ca.kash.it.smartprostheticarm.RegisterActivity;
 import ca.kash.it.smartprostheticarm.ReviewActivity;
 import ca.kash.it.smartprostheticarm.SelectionsActivity;
 
