@@ -21,33 +21,4 @@ public class ReviewActivityTest {
 
     }
 
-    @Test
-    public void testCase2(){
-        rActivity = new ReviewActivity();
-
-
-    }
-
-    @Test
-    public void testCase3(){
-        rActivity = new ReviewActivity();
-
-
-    }
-
-    @Test
-    public void testCase4(){
-        rActivity = new ReviewActivity();
-
-
-    }
-
-    @Test
-    public void testCase5(){
-        rActivity = new ReviewActivity();
-
-
-    }
-
-
 }
