@@ -15,11 +15,12 @@ import static org.hamcrest.CoreMatchers.equalTo;
 import static org.junit.Assert.*;
 
 @RunWith(RobolectricTestRunner.class)
-public class RegisterActivityTest {
+public class LoginActivityTest {
+    private LoginActivity activity;
 
     @Test
-    public void clickingButton_shouldChangeResultsViewText() throws Exception {
-        Activity activity = Robolectric.setupActivity(RegisterActivity.class);
+    public void testActivityBtn() throws Exception {
+
 
     }
 }
