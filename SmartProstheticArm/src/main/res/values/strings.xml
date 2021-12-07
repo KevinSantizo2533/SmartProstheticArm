@@ -132,6 +132,13 @@
     <string name="servo_land_grab">Grab</string>
     <string name="splash_maintext" translatable="false">Smart Prosthetic Arm</string>
     <string name="splash_subtext">Making your life smarter.</string>
+    <string name="compose_email">Compose Email</string>
+    <string name="email_to"> To:</string>
+    <string name="email_subject">Subject:</string>
+    <string name="email_message">Message:</string>
+    <string name="email_send">send</string>
+    <string name="mountains_desc">Mountains</string>
+    <string name="enter_your_email_s_message_here">Enter your email\'s message here</string>
 
     <!-- Preference Titles -->
 

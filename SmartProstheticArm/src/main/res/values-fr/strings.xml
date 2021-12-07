@@ -123,5 +123,12 @@
     <string name="bluetooth_land_title">Bluetooth</string>
     <string name="servo_land_grab">attraper</string>
     <string name="splash_subtext">"Rendre votre vie plus intelligente. "</string>
+    <string name="compose_email">Écrire un email</string>
+    <string name="email_to">À:</string>
+    <string name="email_subject">Sujet:</string>
+    <string name="email_message">Un message:</string>
+    <string name="email_send">envoyer</string>
+    <string name="mountains_desc">Montagnes</string>
+    <string name="enter_your_email_s_message_here">Enter your email\'s message here</string>
 
 </resources>

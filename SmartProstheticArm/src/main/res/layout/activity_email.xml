@@ -13,6 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="220dp"
+        android:contentDescription="@string/mountains_desc"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -21,13 +22,13 @@
 
 
     <TextView
-        android:id="@+id/Reviewtext"
+        android:id="@+id/ComposeText"
         android:layout_width="140dp"
         android:layout_height="68dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="36dp"
         android:fontFamily="@font/glacialindifference_font"
-        android:text="Compose Email"
+        android:text="@string/compose_email"
         android:textColor="@color/white"
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,21 +36,22 @@
 
     <TextView
         android:id="@+id/textView19"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="376dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="16dp"
         android:fontFamily="@font/tripleta_font"
-        android:text="To:"
+        android:text="@string/email_to"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.334" />
+        app:layout_constraintVertical_bias="0.342" />
 
     <EditText
         android:id="@+id/et_to"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="244dp"
+        android:layout_marginTop="240dp"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -60,7 +62,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="288dp"
         android:fontFamily="@font/tripleta_font"
-        android:text="Subject:"
+        android:text="@string/email_subject"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -80,18 +82,19 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="280dp"
         android:fontFamily="@font/tripleta_font"
-        android:text="Message:"
+        android:text="@string/email_message"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
         android:id="@+id/et_message"
-        android:layout_width="388dp"
-        android:layout_height="176dp"
+        android:layout_width="391dp"
+        android:layout_height="169dp"
         android:layout_marginEnd="4dp"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="108dp"
         android:gravity="start|top"
+        android:hint="@string/enter_your_email_s_message_here"
         android:lines="10"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -102,7 +105,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
         android:backgroundTint="@color/companyblue"
-        android:text="send"
+        android:text="@string/email_send"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
