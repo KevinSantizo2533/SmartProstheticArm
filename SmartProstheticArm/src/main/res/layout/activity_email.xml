@@ -53,8 +53,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="240dp"
         android:inputType="textEmailAddress"
+        android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/textView20"
@@ -63,6 +65,7 @@
         android:layout_marginTop="288dp"
         android:fontFamily="@font/tripleta_font"
         android:text="@string/email_subject"
+        android:padding="16dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -73,16 +76,20 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="312dp"
         android:inputType="textEmailSubject"
+        android:minHeight="48dp"
+
         app:layout_constraintEnd_toEndOf="@+id/et_to"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/textView21"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="280dp"
+        android:layout_marginBottom="276dp"
         android:fontFamily="@font/tripleta_font"
         android:text="@string/email_message"
+        android:padding="16dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

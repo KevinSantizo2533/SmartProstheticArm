@@ -130,5 +130,7 @@
     <string name="email_send">envoyer</string>
     <string name="mountains_desc">Montagnes</string>
     <string name="enter_your_email_s_message_here">Enter your email\'s message here</string>
+    <string name="defaultpercent">0%</string>
+    <string name="defaultdegree">0°</string>
 
 </resources>
