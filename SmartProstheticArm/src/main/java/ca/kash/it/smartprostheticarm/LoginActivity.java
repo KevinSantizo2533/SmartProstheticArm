@@ -39,7 +39,7 @@ import com.google.firebase.auth.GoogleAuthProvider;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private TextView register1, forgotpass;
+    public TextView register1, forgotpass;
     private EditText loginEmail, loginPass;
     private Button loginBtn;
     private FirebaseAuth mAuth;

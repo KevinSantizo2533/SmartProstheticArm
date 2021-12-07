@@ -7,6 +7,7 @@
 package ca.kash.it.smartprostheticarm.ui.status;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -30,7 +31,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import ca.kash.it.smartprostheticarm.EmailActivity;
 import ca.kash.it.smartprostheticarm.R;
+import ca.kash.it.smartprostheticarm.TemperatureActivity;
 import ca.kash.it.smartprostheticarm.User;
 
 public class StatusFragment extends Fragment {
@@ -87,9 +90,8 @@ public class StatusFragment extends Fragment {
         kashFab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-
-                Snackbar.make(v, "Test", Snackbar.LENGTH_LONG).setAction("Action",null).show();
+                Intent myIntent = new Intent(getActivity(), EmailActivity.class);
+                startActivity(myIntent);
             }
         });
 
