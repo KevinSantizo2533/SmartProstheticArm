@@ -32,16 +32,6 @@
         app:layout_constraintVertical_bias="0.285"
         app:navGraph="@navigation/mobile_navigation" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/myFab"
-        android:layout_width="56dp"
-        android:layout_height="75dp"
-        android:layout_marginTop="580dp"
-        android:layout_marginEnd="16dp"
-        android:src="@drawable/fui_ic_check_circle_black_128dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
 
-        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

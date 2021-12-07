@@ -39,13 +39,12 @@ import androidx.navigation.ui.NavigationUI;
 public class MainActivity extends AppCompatActivity {
     private static final int PERMISSIONS_REQUEST_BLUETOOTH = 100;
     TextView greeting;
-    FloatingActionButton kashFab;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         greeting = findViewById(R.id.greetingName);
-        kashFab = findViewById(R.id.myFab);
 
         GoogleSignInAccount signInAccount = GoogleSignIn.getLastSignedInAccount(this);
         if(signInAccount!=null) {
@@ -70,12 +69,7 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
-        kashFab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Snackbar.make(v, "Test", Snackbar.LENGTH_LONG).setAction("Action",null).show();
-            }
-        });
+
 
 
     }

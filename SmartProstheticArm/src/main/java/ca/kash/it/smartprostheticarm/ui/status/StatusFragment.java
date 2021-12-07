@@ -20,6 +20,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -39,6 +40,8 @@ public class StatusFragment extends Fragment {
     private static final int PERMISSIONS_REQUEST_BLUETOOTH = 100;
     private StatusViewModel statusViewModel;
 
+
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         statusViewModel = new ViewModelProvider(this).get(StatusViewModel.class);
@@ -47,6 +50,7 @@ public class StatusFragment extends Fragment {
         reference = FirebaseDatabase.getInstance().getReference("Users");
         userID = user.getUid();
         final TextView name = root.findViewById(R.id.greetingName);
+
 
         reference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -78,6 +82,17 @@ public class StatusFragment extends Fragment {
                 }
             }
         });
+        FloatingActionButton kashFab;
+        kashFab = root.findViewById(R.id.myFab);
+        kashFab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                Snackbar.make(v, "Test", Snackbar.LENGTH_LONG).setAction("Action",null).show();
+            }
+        });
+
         return root;
     }
 
