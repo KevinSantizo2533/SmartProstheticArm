@@ -129,6 +129,9 @@
     <string name="email_message">Un message:</string>
     <string name="email_send">envoyer</string>
     <string name="mountains_desc">Montagnes</string>
-    <string name="enter_your_email_s_message_here">Enter your email\'s message here</string>
+    <string name="enter_your_email_s_message_here">Entrez le message de votre e-mail ici</string>
+    <string name="Help_Menu">Aider</string>
+    <string name="menu_feedback">Retour d information</string>
+    <string name="menu_sign_out">Déconnexion</string>
 
 </resources>

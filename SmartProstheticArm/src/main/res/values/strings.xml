@@ -139,6 +139,9 @@
     <string name="email_send">send</string>
     <string name="mountains_desc">Mountains</string>
     <string name="enter_your_email_s_message_here">Enter your email\'s message here</string>
+    <string name="Help_Menu">Help</string>
+    <string name="menu_feedback">Feedback</string>
+    <string name="menu_sign_out">Sign out</string>
 
     <!-- Preference Titles -->
 
