@@ -40,6 +40,7 @@
         android:layout_width="203dp"
         android:layout_height="27dp"
         android:text="@string/forgot_enteremail"
+        android:textColor="@color/hintgrey"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.182"
@@ -54,6 +55,7 @@
         android:layout_marginTop="76dp"
         android:text="@string/forgot_password"
         android:textSize="24sp"
+        android:textColor="@color/darkgrey"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.175"
@@ -68,7 +70,8 @@
         android:background="@drawable/text_border"
         android:ems="10"
         android:hint="@string/email"
-
+        android:textColor="@color/black"
+        android:textColorHint="@color/hintgrey"
         android:importantForAutofill="no"
         android:inputType="textEmailAddress"
         android:minHeight="48dp"
@@ -89,6 +92,7 @@
         android:layout_marginStart="236dp"
         android:layout_marginTop="28dp"
         android:text="@string/forgot_submit"
+        android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/forgotEmail" />
 
@@ -101,6 +105,7 @@
         android:layout_marginTop="28dp"
         android:layout_marginEnd="90dp"
         android:text="@string/forgot_leavescreen"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toStartOf="@+id/forgotSubmit"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/forgotEmail" />

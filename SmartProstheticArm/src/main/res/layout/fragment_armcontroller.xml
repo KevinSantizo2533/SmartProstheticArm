@@ -26,6 +26,7 @@
         android:layout_marginTop="248dp"
         android:text="@string/bt_manual"
         android:textSize="24sp"
+        android:textColor="@color/darkgrey"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.089"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,6 +41,8 @@
         android:layout_marginEnd="8dp"
         android:textAlignment="center"
         android:textSize="20sp"
+        android:textColorHint="@color/hintgrey"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -53,6 +56,8 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="92dp"
         android:text="@string/bt_fingerslider"
+        android:textColorHint="@color/hintgrey"
+        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
@@ -64,6 +69,8 @@
         android:gravity="center"
         android:text=""
         android:textSize="30sp"
+        android:textColorHint="@color/hintgrey"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
@@ -78,6 +85,8 @@
         android:layout_marginTop="288dp"
         android:text="@string/defaultpercent"
         android:textSize="30sp"
+        android:textColorHint="@color/hintgrey"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -114,6 +123,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="364dp"
         android:text="@string/defaultdegree"
+        android:textColorHint="@color/hintgrey"
+        android:textColor="@color/black"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -168,6 +179,8 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="16dp"
         android:text="@string/bt_servospeed"
+        android:textColorHint="@color/hintgrey"
+        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 

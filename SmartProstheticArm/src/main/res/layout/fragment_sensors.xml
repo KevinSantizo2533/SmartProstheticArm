@@ -53,15 +53,16 @@
     <TextView
         android:id="@+id/textView6"
         android:layout_width="111dp"
-        android:layout_height="43dp"
-        android:layout_marginBottom="284dp"
+        android:layout_height="23dp"
+        android:layout_marginBottom="280dp"
         android:text="@string/temperature_readings"
         android:textColor="@color/black"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tempBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/tempBtn"
+        app:layout_constraintVertical_bias="0.487" />
 
     <ImageButton
         android:id="@+id/ultraBtn"

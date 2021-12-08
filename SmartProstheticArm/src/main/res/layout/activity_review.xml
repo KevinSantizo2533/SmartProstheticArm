@@ -15,6 +15,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="220dp"
+        android:contentDescription="@string/mountains"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -52,7 +53,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="88dp"
         android:fontFamily="@font/glacialindifference_font"
-        android:text="Feedback Form"
+        android:text="@string/feedback_title"
         android:textColor="@color/white"
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -64,7 +65,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:backgroundTint="@color/companyblue"
-        android:text="Submit"
+        android:text="@string/ls_forgot_submit"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -78,6 +80,8 @@
         android:background="@drawable/text_border"
         android:ems="10"
         android:hint=" Full name"
+        android:textColorHint="@color/hintgrey"
+        android:textColor="@color/black"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -92,6 +96,8 @@
         android:ems="10"
         android:hint=" Phone number"
         android:inputType="number"
+        android:textColorHint="@color/hintgrey"
+        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editName" />
 
@@ -105,6 +111,8 @@
         android:ems="10"
         android:hint=" Email"
         android:inputType="textPersonName"
+        android:textColorHint="@color/hintgrey"
+        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editPhone" />
 
@@ -119,6 +127,8 @@
         android:hint="@string/feedback_comment"
         android:inputType="textPersonName"
         android:paddingLeft="5dp"
+        android:textColorHint="@color/hintgrey"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.467"
         app:layout_constraintStart_toStartOf="parent"
