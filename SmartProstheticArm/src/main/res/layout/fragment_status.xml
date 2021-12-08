@@ -163,4 +163,14 @@
         android:src="@drawable/fui_ic_mail_white_24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/instructionbutton"
+        android:layout_width="178dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="216dp"
+        android:layout_marginBottom="244dp"
+        android:text="Instruction Manual"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

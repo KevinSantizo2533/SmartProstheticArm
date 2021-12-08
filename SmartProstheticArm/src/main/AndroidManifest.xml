@@ -13,8 +13,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SmartProstheticArm"
         android:usesCleartextTraffic="true">
-        <activity android:name=".AboutActivity"></activity>
-        <activity android:name=".HelpActivity"></activity>
+        <activity
+            android:name=".InstructionActivity"
+            android:exported="false" />
+        <activity android:name=".AboutActivity" />
+        <activity android:name=".HelpActivity" />
         <activity android:name=".ReviewActivity" />
         <activity android:name=".SelectionsActivity" />
         <activity

@@ -33,6 +33,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import ca.kash.it.smartprostheticarm.EmailActivity;
+import ca.kash.it.smartprostheticarm.InstructionActivity;
 import ca.kash.it.smartprostheticarm.R;
 import ca.kash.it.smartprostheticarm.User;
 
@@ -71,6 +72,7 @@ public class StatusFragment extends Fragment {
             }
         });
         Button btbutton;
+        Button instructbtn;
          TextView textBattery;
          TextView textBluetooth;
         textBattery = (TextView) root.findViewById(R.id.textviewbattery);
@@ -100,6 +102,15 @@ public class StatusFragment extends Fragment {
             public void onClick(View v) {
                 Intent myIntent = new Intent(getActivity(), EmailActivity.class);
                 startActivity(myIntent);
+            }
+        });
+
+        instructbtn = root.findViewById(R.id.instructionbutton);
+        instructbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent2 = new Intent(getActivity(), InstructionActivity.class);
+                startActivity(myIntent2);
             }
         });
 
