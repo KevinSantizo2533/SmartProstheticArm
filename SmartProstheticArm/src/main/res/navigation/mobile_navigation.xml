@@ -19,9 +19,9 @@
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="ca.kash.it.smartprostheticarm.ui.bluetooth.ArmControllerFragment"
+        android:name="ca.kash.it.smartprostheticarm.ui.armcontroller.ArmControllerFragment"
         android:label="@string/title_bt"
-        tools:layout="@layout/fragment_bluetooth"/>
+        tools:layout="@layout/fragment_armcontroller"/>
     <fragment
         android:id="@+id/navigation_settings"
         android:name="ca.kash.it.smartprostheticarm.ui.settings.SettingsFragment"
