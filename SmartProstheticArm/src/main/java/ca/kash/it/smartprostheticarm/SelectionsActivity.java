@@ -46,17 +46,5 @@ public class SelectionsActivity extends AppCompatActivity {
             }
         });
 
-        ref = FirebaseDatabase.getInstance().getReference().child("Preferences");
-        sendBtn = (Button)findViewById(R.id.sendBtn);
-        sendBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String orientation = sharedPreferences.getString("ORIENTATION","");
-                Boolean emergencyalerts = sharedPreferences.getBoolean("ALERTS",false);
-                Prefs prefs = new Prefs(orientation,emergencyalerts);
-
-                ref.push().setValue(prefs);
-            }
-        });
     }
 }
