@@ -157,6 +157,11 @@
     <string name="instruction_bt">Bluetooth not connecting</string>
     <string name="instruction_bt_text">1. Turn the device off, wait 5 seconds and put it back on. The status LED will be blinking.</string>
     <string name="instruction_bt_Text2">2. Reopen the app and connect to bluetooth. When it connects, the LED will stay solid, indicating the connection was complete.</string>
+    <string name="instruction_attach_step1">1. Attach the arm to your shoulder. Make sure the velcro is fit and snug, adjust accordingly.</string>
+    <string name="instruction_attach_step2">2. Make sure not to touch any of the electronic components, as they are delicate and may result in the device failing.</string>
+    <string name="instruction_attach_title">Attaching the arm properly</string>
+    <string name="instruction_disclaimer">DISCLAIMER</string>
+    <string name="instruction_disclaimer_warning">Smart Arm Prosthetics does not make any warranties about the completeness, reliability and accuracy of this information. Any action you take upon the information you find on this app (Smart Arm Prosthetics), is strictly at your own risk. Smart Arm Prosthetics will not be liable for any losses and/or damages in connection with the use of our app.</string>
 
     <!-- Preference Titles -->
 
