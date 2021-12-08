@@ -160,8 +160,7 @@
         android:layout_marginTop="532dp"
         android:layout_marginEnd="28dp"
         android:contentDescription="@string/fab_transformation_scrim_behavior"
-        android:src="@drawable/fui_ic_check_circle_black_128dp"
+        android:src="@drawable/fui_ic_mail_white_24dp"
         app:layout_constraintEnd_toEndOf="parent"
-
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
