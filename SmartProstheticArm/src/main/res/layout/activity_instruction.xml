@@ -17,28 +17,4 @@
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/instruction_subtext"
-        android:layout_width="394dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="21dp"
-        android:gravity="center"
-        android:text="If you are having trouble connecting to your Smart Prosthetic Arm device or using it, please follow the steps below."
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/instructionmanualtitle" />
-
-    <TextView
-        android:id="@+id/instruction_subtext2"
-        android:layout_width="394dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="84dp"
-        android:gravity="center"
-        android:text="Bluetooth not connecting"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/instructionmanualtitle" />
 </androidx.constraintlayout.widget.ConstraintLayout>
