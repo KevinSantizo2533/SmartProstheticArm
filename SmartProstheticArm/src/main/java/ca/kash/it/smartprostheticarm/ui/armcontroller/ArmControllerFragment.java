@@ -43,7 +43,7 @@ public class ArmControllerFragment extends Fragment {
     Switch grabswitch;
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.fragment_bluetooth, container, false);
+        View root = inflater.inflate(R.layout.fragment_armcontroller, container, false);
         textView = (TextView) root.findViewById(R.id.textviewdegrees);
         progressBar = (ProgressBar) root.findViewById(R.id.progressBarDegree);
         seekBar = (SeekBar) root.findViewById(R.id.seekBarDegrees);
