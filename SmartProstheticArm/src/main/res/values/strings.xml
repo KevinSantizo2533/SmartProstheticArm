@@ -92,8 +92,10 @@
     <string name="fragmentstatus_greeting">Welcome back,</string>
     <string name="fragmentstatus_bt" translatable="false">Bluetooth:</string>
     <string name="fragmentstatus_btdc">Disconnected</string>
+    <string name="fragmentstatus_btcd">Connected</string>
     <string name="fragmentstatus_battery">Battery:</string>
     <string name="fragmentstatus_battery_disconnected">Disconnected</string>
+    <string name="fragmentstatus_battery_connected">Connected</string>
     <string name="loginland_reg">Register</string>
     <string name="loginland_login">Login</string>
     <string name="loginland_forgotpass">Forgot Password</string>

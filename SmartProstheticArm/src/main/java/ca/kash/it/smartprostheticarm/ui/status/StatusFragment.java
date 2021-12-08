@@ -9,6 +9,7 @@ package ca.kash.it.smartprostheticarm.ui.status;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -33,7 +34,6 @@ import com.google.firebase.database.ValueEventListener;
 
 import ca.kash.it.smartprostheticarm.EmailActivity;
 import ca.kash.it.smartprostheticarm.R;
-import ca.kash.it.smartprostheticarm.TemperatureActivity;
 import ca.kash.it.smartprostheticarm.User;
 
 public class StatusFragment extends Fragment {
@@ -71,11 +71,19 @@ public class StatusFragment extends Fragment {
             }
         });
         Button btbutton;
+         TextView textBattery;
+         TextView textBluetooth;
+        textBattery = (TextView) root.findViewById(R.id.textviewbattery);
+        textBluetooth = (TextView) root.findViewById(R.id.textviewbt);
         btbutton = root.findViewById(R.id.bluetoothbtn);
         btbutton.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
+                textBattery.setText(R.string.fragmentstatus_battery_connected);
+                textBluetooth.setText(R.string.fragmentstatus_battery_connected);
+                textBluetooth.setTextColor(Color.GREEN);
+                textBattery.setTextColor(Color.GREEN);
                 if (ActivityCompat.checkSelfPermission(getContext(), Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
                     requestPermissions(new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, PERMISSIONS_REQUEST_BLUETOOTH
                     );
