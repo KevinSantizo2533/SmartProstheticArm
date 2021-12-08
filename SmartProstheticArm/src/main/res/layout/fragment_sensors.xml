@@ -9,7 +9,7 @@
 
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/backgroundimg_sensor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="220dp"
@@ -51,7 +51,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/txtview_temp"
         android:layout_width="111dp"
         android:layout_height="23dp"
         android:layout_marginBottom="280dp"
@@ -76,13 +76,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView6"
+        app:layout_constraintTop_toTopOf="@+id/txtview_temp"
         app:layout_constraintVertical_bias="0.967"
         tools:ignore="SpeakableTextPresentCheck"
         android:contentDescription="@string/sensoricon" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/txtview_objdis"
         android:layout_width="129dp"
         android:layout_height="31dp"
         android:layout_marginBottom="96dp"

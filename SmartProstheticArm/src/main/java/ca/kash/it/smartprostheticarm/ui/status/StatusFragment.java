@@ -74,7 +74,7 @@ public class StatusFragment extends Fragment {
          TextView textBattery;
          TextView textBluetooth;
         textBattery = (TextView) root.findViewById(R.id.textviewbattery);
-        textBluetooth = (TextView) root.findViewById(R.id.textviewbt);
+        textBluetooth = (TextView) root.findViewById(R.id.txtview_bt);
         btbutton = root.findViewById(R.id.bluetoothbtn);
         btbutton.setOnClickListener(new View.OnClickListener() {
 

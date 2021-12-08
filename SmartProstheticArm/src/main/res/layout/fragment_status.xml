@@ -27,7 +27,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView9"
+        android:id="@+id/backgroundimg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="220dp"
@@ -68,7 +68,7 @@
         app:layout_constraintVertical_bias="0.113" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/androidGuy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
@@ -79,7 +79,7 @@
         app:layout_constraintTop_toBottomOf="@+id/greeting" />
 
     <TextView
-        android:id="@+id/textView12"
+        android:id="@+id/txtview_status_bluetooth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
@@ -91,7 +91,7 @@
         app:layout_constraintTop_toBottomOf="@+id/greeting" />
 
     <TextView
-        android:id="@+id/textviewbt"
+        android:id="@+id/txtview_bt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -101,7 +101,7 @@
         android:text="@string/fragmentstatus_btdc"
         android:textColor="@color/red"
         android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/textView12"
+        app:layout_constraintStart_toEndOf="@+id/txtview_status_bluetooth"
         app:layout_constraintTop_toBottomOf="@+id/greeting" />
 
     <TextView
@@ -114,11 +114,11 @@
         android:gravity="center|center_vertical"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/textviewbt"
+        app:layout_constraintBottom_toTopOf="@+id/txtview_bt"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/txtview_status_battery"
         android:layout_width="72dp"
         android:layout_height="23dp"
         android:layout_marginStart="28dp"
@@ -127,7 +127,7 @@
         android:text="@string/fragmentstatus_battery"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+        app:layout_constraintTop_toBottomOf="@+id/txtview_status_bluetooth" />
 
     <TextView
         android:id="@+id/textviewbattery"
@@ -141,7 +141,7 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.96"
-        app:layout_constraintStart_toEndOf="@+id/textView11"
+        app:layout_constraintStart_toEndOf="@+id/txtview_status_battery"
         app:layout_constraintTop_toBottomOf="@+id/greeting" />
 
     <View

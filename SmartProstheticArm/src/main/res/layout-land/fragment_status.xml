@@ -34,7 +34,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/androidGuy"
         android:layout_width="153dp"
         android:layout_height="102dp"
         android:layout_marginTop="120dp"
@@ -44,7 +44,7 @@
         app:layout_constraintTop_toBottomOf="@+id/statusTitle" />
 
     <TextView
-        android:id="@+id/textView12"
+        android:id="@+id/txtview_status_bluetooth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="268dp"
@@ -55,7 +55,7 @@
         app:layout_constraintTop_toBottomOf="@+id/greeting" />
 
     <TextView
-        android:id="@+id/textviewbt"
+        android:id="@+id/txtview_bt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -64,6 +64,6 @@
         android:text="@string/fragmentstatus_battery_disconnected"
         android:textColor="#F11111"
         android:textSize="24sp"
-        app:layout_constraintStart_toEndOf="@+id/textView12"
+        app:layout_constraintStart_toEndOf="@+id/txtview_status_bluetooth"
         app:layout_constraintTop_toBottomOf="@+id/greeting" />
 </androidx.constraintlayout.widget.ConstraintLayout>
