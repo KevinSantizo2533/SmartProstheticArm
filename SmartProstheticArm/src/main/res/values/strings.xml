@@ -92,8 +92,10 @@
     <string name="fragmentstatus_greeting">Welcome back,</string>
     <string name="fragmentstatus_bt" translatable="false">Bluetooth:</string>
     <string name="fragmentstatus_btdc">Disconnected</string>
+    <string name="fragmentstatus_btcd">Connected</string>
     <string name="fragmentstatus_battery">Battery:</string>
     <string name="fragmentstatus_battery_disconnected">Disconnected</string>
+    <string name="fragmentstatus_battery_connected">Connected</string>
     <string name="loginland_reg">Register</string>
     <string name="loginland_login">Login</string>
     <string name="loginland_forgotpass">Forgot Password</string>
@@ -139,9 +141,8 @@
     <string name="email_send">send</string>
     <string name="mountains_desc">Mountains</string>
     <string name="enter_your_email_s_message_here">Enter your email\'s message here</string>
-    <string name="Help_Menu">Help</string>
-    <string name="menu_feedback">Feedback</string>
-    <string name="menu_sign_out">Sign out</string>
+    <string name="defaultpercent">0%</string>
+    <string name="defaultdegree">0°</string>
 
     <!-- Preference Titles -->
 

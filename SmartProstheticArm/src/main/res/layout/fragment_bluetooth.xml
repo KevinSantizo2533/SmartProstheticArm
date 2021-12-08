@@ -76,7 +76,7 @@
         android:layout_above="@id/progressBarpercent"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="288dp"
-        android:text="0%"
+        android:text="@string/defaultpercent"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -113,7 +113,7 @@
         android:layout_above="@id/progressBarDegree"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="364dp"
-        android:text="0°"
+        android:text="@string/defaultdegree"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -170,10 +170,10 @@
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <TextView
-        android:id="@+id/textView15"
+        android:id="@+id/textArmController"
         android:layout_width="136dp"
         android:layout_height="71dp"
-        android:layout_marginTop="108dp"
+        android:layout_marginTop="92dp"
         android:fontFamily="@font/glacialindifference_font"
         android:text="@string/title_Armcontroller"
         android:textColor="@color/white"
