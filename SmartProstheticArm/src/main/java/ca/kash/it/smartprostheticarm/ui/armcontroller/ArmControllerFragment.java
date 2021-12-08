@@ -4,7 +4,7 @@
     Samad Agha n01364908 Section B
     Henry To n01365792 Section B
 */
-package ca.kash.it.smartprostheticarm.ui.bluetooth;
+package ca.kash.it.smartprostheticarm.ui.armcontroller;
 
 
 import android.os.Bundle;
