@@ -113,12 +113,12 @@ public class ArmControllerFragment extends Fragment {
 
         });
         Servo = root.findViewById(R.id.servoreading);
-        Query lastQuery = databaseReference.child(getString(R.string.sensorchild)).child(getString(R.string.servo)).orderByKey().limitToLast(1);
+        Query lastQuery = databaseReference.child("sensor").child("servo").orderByKey().limitToLast(1);
         lastQuery.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for (DataSnapshot data : dataSnapshot.getChildren()) {
-                    String reading = data.child(getString(R.string.readingchild)).getValue().toString();
+                    String reading = data.child("direction").getValue().toString();
                     Servo.setText(getString(R.string.direction) + reading);
                 }
             }
