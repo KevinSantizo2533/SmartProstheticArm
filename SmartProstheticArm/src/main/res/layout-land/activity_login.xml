@@ -8,6 +8,18 @@
     tools:context=".LoginActivity">
 
 
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/alternative_google"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </com.google.android.gms.common.SignInButton>
+
     <TextView
         android:id="@+id/register2"
         android:layout_width="wrap_content"
@@ -32,7 +44,7 @@
         android:text="@string/smart_prosthetic_arm"
         android:textColor="#FFFFFF"
         android:textSize="34sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintBottom_toTopOf="@+id/login_btntexet"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent" />
@@ -99,7 +111,7 @@
         app:layout_constraintVertical_bias="0.801" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/login_btntexet"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/tripleta_font"
