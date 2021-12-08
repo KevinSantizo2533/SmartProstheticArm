@@ -146,6 +146,11 @@
     <string name="Help_Menu">Help</string>
     <string name="menu_feedback">Feedback</string>
     <string name="menu_sign_out">Sign out</string>
+    <string name="land_feedback_form">Feedback Form</string>
+    <string name="land_feedback_email">Email</string>
+    <string name="land_feedback_phonenumber">Phone number</string>
+    <string name="land_review_fullname">Full name</string>
+    <string name="land_review_submitbtn">Submit</string>
 
     <!-- Preference Titles -->
 

@@ -35,7 +35,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView19"
+        android:id="@+id/email_compose"
         android:layout_width="376dp"
         android:layout_height="30dp"
         android:layout_marginEnd="16dp"
@@ -59,7 +59,7 @@
         tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
-        android:id="@+id/textView20"
+        android:id="@+id/email_subject"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="288dp"
@@ -83,7 +83,7 @@
         tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
-        android:id="@+id/textView21"
+        android:id="@+id/email_msg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="276dp"
