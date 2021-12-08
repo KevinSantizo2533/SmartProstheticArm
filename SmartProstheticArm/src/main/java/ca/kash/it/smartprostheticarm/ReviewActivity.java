@@ -77,36 +77,40 @@ public class ReviewActivity extends AppCompatActivity {
 
                 if (editname.getText().toString().matches("^[A-Za-z]+$+")
                         && editemail.getText().toString().matches("[a-zA-Z0-9]+@[a-z].+[a-z]+") && editphone.length() == 10 && editcomment.length() > 0 && ratingbar.getRating() != 0) {
-                    submit.setEnabled(false);
-                    progbar.setVisibility(View.VISIBLE);
-                    submit.postDelayed(new Runnable() {
-
-                        @Override
-                        public void run() {
-                            String name = editname.getText().toString();
-                            String email = editemail.getText().toString();
-                            String comment = editcomment.getText().toString();
-                            String phone = editphone.getText().toString();
-
-                            long phone2 = Long.parseLong(phone);
-                            float rating = ratingbar.getRating();
-                            String model = getModel();
-                            Review review = new Review(name, email, phone2, comment, rating, model);
-
-                            ref.push().setValue(review);
-
-                            Snackbar snackbar = Snackbar.make(findViewById(android.R.id.content), R.string.Reviewsent, Snackbar.LENGTH_LONG);
-                            snackbar.show();
-                            progbar.setVisibility(View.INVISIBLE);
-
-                            submit.setEnabled(true);
-                        }
-
-                    }, 2000);
+                sendFeedback();
                 }
 
             }
         });
+
+    }
+    public void sendFeedback(){ //Refactored ReviewActivity to call a method to send feedback to firebase
+        submit.setEnabled(false);
+        progbar.setVisibility(View.VISIBLE);
+        submit.postDelayed(new Runnable() {
+
+            @Override
+            public void run() {
+                String name = editname.getText().toString();
+                String email = editemail.getText().toString();
+                String comment = editcomment.getText().toString();
+                String phone = editphone.getText().toString();
+
+                long phone2 = Long.parseLong(phone);
+                float rating = ratingbar.getRating();
+                String model = getModel();
+                Review review = new Review(name, email, phone2, comment, rating, model);
+
+                ref.push().setValue(review);
+
+                Snackbar snackbar = Snackbar.make(findViewById(android.R.id.content), R.string.Reviewsent, Snackbar.LENGTH_LONG);
+                snackbar.show();
+                progbar.setVisibility(View.INVISIBLE);
+
+                submit.setEnabled(true);
+            }
+
+        }, 2000);
 
     }
     public static String getModel() {
