@@ -83,6 +83,11 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
+        exitWarning();
+
+    }
+    public void exitWarning(){
+
         final AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
 
         builder.setTitle("Warning");
@@ -110,6 +115,7 @@ public class MainActivity extends AppCompatActivity {
         AlertDialog alertDialog = builder.create();
         alertDialog.setIcon(R.drawable.ic_baseline_warning_24);
         alertDialog.show();
+
     }
 
     @Override
