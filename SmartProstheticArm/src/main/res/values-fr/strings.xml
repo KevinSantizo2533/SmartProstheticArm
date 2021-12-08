@@ -134,6 +134,9 @@
     <string name="defaultdegree">0°</string>
     <string name="fragmentstatus_btcd">Connecté</string>
     <string name="fragmentstatus_battery_connected">Connecté</string>
+    <string name="Help_Menu">Aider</string>
+    <string name="menu_feedback">Retour dinformation</string>
+    <string name="menu_sign_out">Déconnexion</string>
 
 
 </resources>
