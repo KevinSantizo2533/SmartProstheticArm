@@ -137,6 +137,20 @@
     <string name="Help_Menu">Aider</string>
     <string name="menu_feedback">Retour dinformation</string>
     <string name="menu_sign_out">Déconnexion</string>
-
+    <string name="land_feedback_form">Formulaire de commentaires</string>
+    <string name="land_feedback_email">Courriel</string>
+    <string name="land_feedback_phonenumber">Numéro de téléphone</string>
+    <string name="land_review_fullname">Nom complet</string>
+    <string name="land_review_submitbtn">Soumettre</string>
+    <string name="instruction_title">Manuel d\'instruction</string>
+    <string name="instruction_subtext">Si vous avez des difficultés à vous connecter à votre dispositif Smart Prosthetic Arm ou à l\'utiliser, veuillez suivre les étapes ci-dessous.</string>
+    <string name="instruction_bt">Le Bluetooth ne se connecte pas</string>
+    <string name="instruction_bt_text">1. Mettez l\'appareil hors tension, attendez 5 secondes et remettez-le sous tension. Le voyant d\'état clignote.</string>
+    <string name="instruction_bt_Text2">2. Rouvrez l\'application et connectez-vous en bluetooth. Lorsque la connexion est établie, le voyant reste allumé, indiquant que la connexion est terminée.</string>
+    <string name="instruction_attach_step1">1. Fixez le bras à votre épaule. Assurez-vous que le velcro est bien ajusté et ajustez-le en conséquence.</string>
+    <string name="instruction_attach_step2">2. Veillez à ne toucher aucun des composants électroniques, car ils sont délicats et peuvent entraîner une défaillance de l\'appareil.</string>
+    <string name="instruction_attach_title">Fixer le bras correctement</string>
+    <string name="instruction_disclaimer">CLAUSE DE NON-RESPONSABILITÉ</string>
+    <string name="instruction_disclaimer_warning">Smart Arm Prosthetics ne donne aucune garantie quant à l\'exhaustivité, la fiabilité et l\'exactitude de ces informations. Toute action que vous entreprenez sur la base des informations que vous trouvez sur cette application (Smart Arm Prosthetics), est strictement à vos propres risques. Smart Arm Prosthetics ne sera pas responsable des pertes et/ou dommages liés à l\'utilisation de notre application.  Traduit avec www.DeepL.com/Translator (version gratuite)</string>
 
 </resources>
