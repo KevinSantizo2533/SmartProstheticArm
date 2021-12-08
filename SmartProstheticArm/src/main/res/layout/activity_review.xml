@@ -62,7 +62,7 @@
         android:id="@+id/reviewsubmit"
         android:layout_width="135dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="28dp"
+        android:layout_marginBottom="16dp"
         android:backgroundTint="@color/companyblue"
         android:text="Submit"
         app:layout_constraintBottom_toBottomOf="parent"
