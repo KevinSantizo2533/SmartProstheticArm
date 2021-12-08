@@ -12,9 +12,55 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="104dp"
         android:layout_marginTop="48dp"
-        android:text="Instruction Manual"
+        android:text="@string/instruction_title"
         android:textColor="#070707"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/instruction_subtext"
+        android:layout_width="394dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="21dp"
+        android:gravity="center"
+        android:text="@string/instruction_subtext"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/instructionmanualtitle" />
+
+    <TextView
+        android:id="@+id/instruction_subtext3"
+        android:layout_width="394dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="136dp"
+        android:gravity="left"
+        android:text="@string/instruction_bt_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/instructionmanualtitle" />
+
+    <TextView
+        android:id="@+id/instruction_subtext4"
+        android:layout_width="394dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="176dp"
+        android:gravity="left"
+        android:text="@string/instruction_bt_Text2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/instructionmanualtitle" />
+
+    <TextView
+        android:id="@+id/instruction_subtext2"
+        android:layout_width="394dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="84dp"
+        android:gravity="center"
+        android:text="@string/instruction_bt"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/instructionmanualtitle" />
 </androidx.constraintlayout.widget.ConstraintLayout>

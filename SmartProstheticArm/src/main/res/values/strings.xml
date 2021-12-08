@@ -152,6 +152,11 @@
     <string name="land_feedback_phonenumber">Phone number</string>
     <string name="land_review_fullname">Full name</string>
     <string name="land_review_submitbtn">Submit</string>
+    <string name="instruction_title">Instruction Manual</string>
+    <string name="instruction_subtext">If you are having trouble connecting to your Smart Prosthetic Arm device or using it, please follow the steps below.</string>
+    <string name="instruction_bt">Bluetooth not connecting</string>
+    <string name="instruction_bt_text">1. Turn the device off, wait 5 seconds and put it back on. The status LED will be blinking.</string>
+    <string name="instruction_bt_Text2">2. Reopen the app and connect to bluetooth. When it connects, the LED will stay solid, indicating the connection was complete.</string>
 
     <!-- Preference Titles -->
 
