@@ -187,7 +187,6 @@ public class BluetoothActivity extends AppCompatActivity {
     /**
      * Searches for paired devices. Doesn't do a scan! Only devices which are paired through Settings->Bluetooth
      * will show up with this. I didn't see any need to re-build the wheel over here
-     * @author ryder
      *
      */
     private class SearchDevices extends AsyncTask<Void, Void, List<BluetoothDevice>> {
@@ -220,7 +219,6 @@ public class BluetoothActivity extends AppCompatActivity {
      * Custom adapter to show the current devices in the list. This is a bit of an overkill for this
      * project, but I figured it would be good learning
      * Most of the code is lifted from somewhere but I can't find the link anymore
-     * @author ryder
      *
      */
     private class MyAdapter extends ArrayAdapter<BluetoothDevice> {
