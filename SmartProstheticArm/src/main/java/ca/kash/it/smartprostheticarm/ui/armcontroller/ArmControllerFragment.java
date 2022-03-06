@@ -122,7 +122,6 @@ public class ArmControllerFragment extends Fragment {
                     Servo.setText(getString(R.string.direction) + reading);
                 }
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
             }

@@ -5,6 +5,10 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- needed for bluetooth -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -20,6 +24,8 @@
         <activity android:name=".HelpActivity" />
         <activity android:name=".ReviewActivity" />
         <activity android:name=".SelectionsActivity" />
+        <activity android:name=".BluetoothActivity" />
+        <activity android:name=".Controlling" />
         <activity
             android:name=".LoginActivity"
             android:exported="true" />

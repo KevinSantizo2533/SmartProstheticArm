@@ -20,6 +20,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import ca.kash.it.smartprostheticarm.BluetoothActivity;
 import ca.kash.it.smartprostheticarm.R;
 import ca.kash.it.smartprostheticarm.TemperatureActivity;
 import ca.kash.it.smartprostheticarm.UltrasonicActivity;
@@ -27,7 +28,6 @@ import ca.kash.it.smartprostheticarm.UltrasonicActivity;
 public class SensorFragment extends Fragment {
 
     private SensorViewModel sensorViewModel;
-
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         sensorViewModel =
@@ -47,6 +47,14 @@ public class SensorFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent in = new Intent(getActivity(), TemperatureActivity.class);
+                startActivity(in);
+            }
+        });
+        ImageButton bluetoothBtn = (ImageButton) root.findViewById(R.id.bluetoothBtn);
+        bluetoothBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(getActivity(), BluetoothActivity.class);
                 startActivity(in);
             }
         });

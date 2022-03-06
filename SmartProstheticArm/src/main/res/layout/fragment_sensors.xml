@@ -45,10 +45,57 @@
         android:textSize="0sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
+
+    <ImageButton
+        android:id="@+id/ultraBtn"
+        android:layout_width="117sp"
+        android:layout_height="124dp"
+        android:layout_marginBottom="140dp"
+        android:backgroundTint="@color/white"
+        android:contentDescription="@string/sensoricon"
+        android:src="@drawable/outline_sensors_black_24dp"
+        android:tooltipText="@string/ultrasonic_readings"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.197"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtview_temp"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/tempBtn"
+        android:layout_width="117sp"
+        android:layout_height="124sp"
+        android:backgroundTint="@color/white"
+        android:contentDescription="@string/temperatureicon"
+        android:src="@drawable/outline_thermostat_black_24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/text_dashboard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.454"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/bluetoothBtn"
+        android:layout_width="117sp"
+        android:layout_height="124sp"
+        android:backgroundTint="@color/white"
+        android:contentDescription="@string/temperatureicon"
+        android:src="@android:drawable/btn_star"
+        app:layout_constraintBottom_toBottomOf="@+id/text_dashboard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.833"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.637"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/txtview_temp"
@@ -60,26 +107,10 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.206"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tempBtn"
-        app:layout_constraintVertical_bias="0.487" />
-
-    <ImageButton
-        android:id="@+id/ultraBtn"
-        android:layout_width="117sp"
-        android:layout_height="124dp"
-        android:layout_marginBottom="140dp"
-        android:backgroundTint="@color/white"
-        android:src="@drawable/outline_sensors_black_24dp"
-        android:tooltipText="@string/ultrasonic_readings"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/txtview_temp"
-        app:layout_constraintVertical_bias="0.967"
-        tools:ignore="SpeakableTextPresentCheck"
-        android:contentDescription="@string/sensoricon" />
+        app:layout_constraintVertical_bias="0.678" />
 
     <TextView
         android:id="@+id/txtview_objdis"
@@ -91,22 +122,9 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.187"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ultraBtn"
-        app:layout_constraintVertical_bias="0.687" />
-
-    <ImageButton
-        android:id="@+id/tempBtn"
-        android:layout_width="117sp"
-        android:layout_height="124sp"
-        android:backgroundTint="@color/white"
-        android:src="@drawable/outline_thermostat_black_24dp"
-        app:layout_constraintBottom_toBottomOf="@+id/text_dashboard"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.436"
-        tools:ignore="SpeakableTextPresentCheck"
-        android:contentDescription="@string/temperatureicon" />
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
