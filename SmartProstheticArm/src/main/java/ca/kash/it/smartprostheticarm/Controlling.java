@@ -39,10 +39,13 @@ public class Controlling extends Activity {
 
     final static String on="92";//on
     final static String off="79";//off
+    final static String close="69"; // close
+    final static String open="70"; // open
+
 
 
     private ProgressDialog progressDialog;
-    Button btnOn,btnOff;
+    Button btnOn,btnOff,btnOpen,btnClose;
 
 
     @Override
@@ -52,6 +55,8 @@ public class Controlling extends Activity {
         // mBtnDisconnect = (Button) findViewById(R.id.btnDisconnect);
         btnOn=(Button)findViewById(R.id.on);
         btnOff=(Button)findViewById(R.id.off);
+        btnOpen=(Button)findViewById(R.id.BtOpen);
+        btnClose=(Button)findViewById(R.id.BtClose);
 
 
 
@@ -73,9 +78,6 @@ public class Controlling extends Activity {
 
             @Override
             public void onClick(View v) {
-
-
-
                 try {
                     mBTSocket.getOutputStream().write(on.getBytes());
 
@@ -86,14 +88,32 @@ public class Controlling extends Activity {
 
         btnOff.setOnClickListener(new View.OnClickListener()
         {
-
             @Override
             public void onClick(View v) {
-
-
-
                 try {
                     mBTSocket.getOutputStream().write(off.getBytes());
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }});
+
+        btnOpen.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v) {
+                try {
+                    mBTSocket.getOutputStream().write(open.getBytes());
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }});
+
+        btnClose.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v) {
+                try {
+                    mBTSocket.getOutputStream().write(close.getBytes());
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
