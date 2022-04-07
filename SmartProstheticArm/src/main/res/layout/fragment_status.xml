@@ -12,7 +12,8 @@
         android:id="@+id/bluetoothbtn"
         android:layout_width="174dp"
         android:layout_height="48dp"
-        android:layout_marginBottom="244dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="16dp"
         android:backgroundTint="#03A9F4"
         android:backgroundTintMode="screen"
         android:drawableLeft="@android:drawable/stat_sys_data_bluetooth"
@@ -21,22 +22,25 @@
         android:textColor="#FFFFFF"
         android:textColorHint="#930000"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.118"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline4" />
 
     <ImageView
         android:id="@+id/backgroundimg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="220dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="304dp"
+        android:adjustViewBounds="true"
         android:contentDescription="@string/mountains"
+        android:scaleType="fitCenter"
         android:src="@drawable/mountains2"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.133"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/statusTitle"
@@ -44,13 +48,15 @@
         android:layout_width="326dp"
         android:layout_height="28dp"
         android:layout_marginStart="28dp"
-        android:layout_marginTop="268dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="57dp"
         android:fontFamily="@font/glacialindifference_font"
         android:text="@string/fragmentstatus_title"
         android:textColor="@color/darkgrey"
         android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/backgroundimg" />
 
     <TextView
         android:id="@+id/greeting"
@@ -75,6 +81,7 @@
         android:layout_marginTop="336dp"
         android:contentDescription="@string/bt_title"
         android:src="@drawable/android"
+        android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/greeting" />
 
@@ -82,27 +89,29 @@
         android:id="@+id/txtview_status_bluetooth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="204dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/glacialindifference_font"
         android:text="@string/fragmentstatus_bt"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/greeting" />
+        app:layout_constraintTop_toBottomOf="@+id/view" />
 
     <TextView
         android:id="@+id/txtview_bt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="204dp"
+        android:layout_marginTop="28dp"
         android:backgroundTint="#C61414"
         android:fontFamily="@font/glacialindifference_font"
         android:text="@string/fragmentstatus_btdc"
         android:textColor="@color/red"
         android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.378"
         app:layout_constraintStart_toEndOf="@+id/txtview_status_bluetooth"
-        app:layout_constraintTop_toBottomOf="@+id/greeting" />
+        app:layout_constraintTop_toBottomOf="@+id/statusTitle" />
 
     <TextView
         android:id="@+id/greetingName"
@@ -121,30 +130,31 @@
         android:id="@+id/txtview_status_battery"
         android:layout_width="72dp"
         android:layout_height="23dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/glacialindifference_font"
         android:text="@string/fragmentstatus_battery"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtview_status_bluetooth" />
+        app:layout_constraintTop_toTopOf="@+id/guideline3" />
 
     <TextView
         android:id="@+id/textviewbattery"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="240dp"
-        android:layout_marginEnd="168dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="105dp"
         android:fontFamily="@font/glacialindifference_font"
         android:text="@string/fragmentstatus_battery_disconnected"
         android:textColor="@color/red"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.96"
         app:layout_constraintStart_toEndOf="@+id/txtview_status_battery"
-        app:layout_constraintTop_toBottomOf="@+id/greeting" />
+        app:layout_constraintTop_toTopOf="@+id/guideline3" />
 
     <View
+        android:id="@+id/view"
         android:layout_width="wrap_content"
         android:layout_height="1dp"
         android:layout_marginTop="5dp"
@@ -168,9 +178,30 @@
         android:id="@+id/instructionbutton"
         android:layout_width="178dp"
         android:layout_height="68dp"
-        android:layout_marginStart="216dp"
-        android:layout_marginBottom="244dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
         android:text="Instruction Manual"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bluetoothbtn" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="308dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="342dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="374dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
