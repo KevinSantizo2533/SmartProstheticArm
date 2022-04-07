@@ -13,8 +13,9 @@
         android:layout_marginStart="96dp"
         android:layout_marginTop="27dp"
         android:text="@string/instruction_title"
-        android:textColor="#070707"
+        android:textColor="@color/hintgrey"
         android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
