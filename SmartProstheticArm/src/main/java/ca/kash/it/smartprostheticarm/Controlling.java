@@ -7,6 +7,8 @@ import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;
 import android.content.Intent;
 import android.os.AsyncTask;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -16,7 +18,15 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -46,6 +56,7 @@ public class Controlling extends Activity {
 
     private ProgressDialog progressDialog;
     Button btnOn,btnOff,btnOpen,btnClose;
+    TextView Servo;
 
 
     @Override
@@ -68,6 +79,22 @@ public class Controlling extends Activity {
         mMaxChars = b.getInt(BluetoothActivity.BUFFER_SIZE);
 
         Log.d(TAG, "Ready");
+
+        Servo = findViewById(R.id.servoreading);
+        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
+        Query lastQuery = databaseReference.child("sensor").child("servo").orderByKey().limitToLast(1);
+        lastQuery.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                for (DataSnapshot data : dataSnapshot.getChildren()) {
+                    String reading = data.child("direction").getValue().toString();
+                    Servo.setText(getString(R.string.direction) + reading);
+                }
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+            }
+        });
 
 
 
@@ -179,6 +206,7 @@ public class Controlling extends Activity {
         }
 
     }
+
 
     private class DisConnectBT extends AsyncTask<Void, Void, Void> {
 
@@ -296,7 +324,10 @@ public class Controlling extends Activity {
             progressDialog.dismiss();
         }
 
+
+
     }
+
     @Override
     protected void onDestroy() {
         super.onDestroy();

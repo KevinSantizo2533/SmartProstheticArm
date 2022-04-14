@@ -38,6 +38,18 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView7" />
 
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="210dp"
+        android:text="Servo Reading"
+        android:textColor="@color/darkgrey"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.085"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+
+    <TextView
         android:id="@+id/text_notifications"
         android:layout_width="249dp"
         android:layout_height="36dp"
@@ -45,9 +57,9 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:textAlignment="center"
-        android:textSize="20sp"
-        android:textColorHint="@color/hintgrey"
         android:textColor="@color/black"
+        android:textColorHint="@color/hintgrey"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -61,8 +73,9 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="92dp"
         android:text="@string/bt_fingerslider"
-        android:textColorHint="@color/hintgrey"
         android:textColor="@color/black"
+        android:textColorHint="@color/hintgrey"
+        android:visibility="invisible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtview_servo_title" />
 
@@ -73,9 +86,9 @@
         android:layout_marginTop="476dp"
         android:gravity="center"
         android:text=""
-        android:textSize="30sp"
-        android:textColorHint="@color/hintgrey"
         android:textColor="@color/black"
+        android:textColorHint="@color/hintgrey"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
@@ -89,9 +102,10 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="288dp"
         android:text="@string/defaultpercent"
-        android:textSize="30sp"
-        android:textColorHint="@color/hintgrey"
         android:textColor="@color/black"
+        android:textColorHint="@color/hintgrey"
+        android:textSize="30sp"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -105,6 +119,7 @@
         android:layout_alignParentStart="true"
         android:layout_marginTop="28dp"
         android:padding="16dp"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textviewpercent" />
@@ -116,6 +131,7 @@
         android:layout_alignParentStart="true"
         android:layout_centerVertical="true"
         android:layout_marginTop="32dp"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/progressBarpercent" />
@@ -128,9 +144,10 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="364dp"
         android:text="@string/defaultdegree"
-        android:textColorHint="@color/hintgrey"
         android:textColor="@color/black"
+        android:textColorHint="@color/hintgrey"
         android:textSize="30sp"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -145,6 +162,7 @@
         android:layout_alignParentStart="true"
         android:padding="16dp"
 
+        android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/seekBarDegrees"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -159,6 +177,7 @@
         android:layout_alignParentStart="true"
         android:layout_centerVertical="true"
         android:layout_marginTop="20dp"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -172,6 +191,7 @@
         android:minHeight="48dp"
         android:text="@string/bt_grab"
         android:textColor="#7C7C7C"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.063"
         app:layout_constraintStart_toStartOf="parent"
@@ -184,8 +204,9 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="16dp"
         android:text="@string/bt_servospeed"
-        android:textColorHint="@color/hintgrey"
         android:textColor="@color/black"
+        android:textColorHint="@color/hintgrey"
+        android:visibility="invisible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtview_servo_title" />
 
@@ -203,4 +224,43 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/on"
+        android:layout_width="140dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="308dp"
+        android:text="LED ON"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/off"
+        android:layout_width="140dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="244dp"
+        android:layout_marginTop="308dp"
+        android:text="LED OFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/BtOpen"
+        android:layout_width="140dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="384dp"
+        android:text="OPEN HAND"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/BtClose"
+        android:layout_width="140dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="384dp"
+        android:layout_marginEnd="24dp"
+        android:text="Close HAND"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

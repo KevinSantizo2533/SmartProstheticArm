@@ -32,6 +32,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import ca.kash.it.smartprostheticarm.BluetoothActivity;
 import ca.kash.it.smartprostheticarm.EmailActivity;
 import ca.kash.it.smartprostheticarm.InstructionActivity;
 import ca.kash.it.smartprostheticarm.R;
@@ -86,6 +87,8 @@ public class StatusFragment extends Fragment {
                 textBluetooth.setText(R.string.fragmentstatus_battery_connected);
                 textBluetooth.setTextColor(Color.GREEN);
                 textBattery.setTextColor(Color.GREEN);
+                Intent in = new Intent(getActivity(), BluetoothActivity.class);
+                startActivity(in);
                 if (ActivityCompat.checkSelfPermission(getContext(), Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
                     requestPermissions(new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, PERMISSIONS_REQUEST_BLUETOOTH
                     );

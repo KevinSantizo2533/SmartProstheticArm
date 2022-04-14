@@ -8,20 +8,20 @@
 
 
     <ImageView
-        android:id="@+id/imageView10"
+        android:id="@+id/backgroundimg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginStart="47dp"
-        android:layout_marginBottom="476dp"
+        android:layout_marginEnd="304dp"
         android:adjustViewBounds="true"
         android:contentDescription="@string/mountains"
         android:scaleType="fitCenter"
         android:src="@drawable/mountains2"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.133"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tempTitle"
@@ -66,11 +66,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
+        android:layout_marginBottom="15dp"
         android:text="@string/temp_celsius"
         android:textColor="@color/hintgrey"
         android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView10" />
+        app:layout_constraintBottom_toTopOf="@+id/temperaturereading"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
