@@ -36,24 +36,25 @@
 
     <TextView
         android:id="@+id/email_compose"
-        android:layout_width="376dp"
-        android:layout_height="30dp"
-        android:layout_marginEnd="16dp"
+        android:layout_width="366dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="12dp"
         android:fontFamily="@font/tripleta_font"
         android:text="@string/email_to"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.342" />
+        app:layout_constraintVertical_bias="0.343" />
 
     <EditText
         android:id="@+id/et_to"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="240dp"
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="248dp"
         android:inputType="textEmailAddress"
         android:minHeight="48dp"
+        android:paddingLeft="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="SpeakableTextPresentCheck" />
@@ -62,49 +63,49 @@
         android:id="@+id/email_subject"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="288dp"
+        android:layout_marginTop="276dp"
         android:fontFamily="@font/tripleta_font"
-        android:text="@string/email_subject"
         android:padding="16dp"
+        android:text="@string/email_subject"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/et_subject"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="399dp"
+        android:layout_height="48dp"
         android:layout_marginTop="312dp"
         android:inputType="textEmailSubject"
+        android:paddingLeft="8dp"
         android:minHeight="48dp"
-
         app:layout_constraintEnd_toEndOf="@+id/et_to"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/email_msg"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="276dp"
+        android:layout_width="396dp"
+        android:layout_height="59dp"
+        android:layout_marginBottom="4dp"
         android:fontFamily="@font/tripleta_font"
-        android:text="@string/email_message"
         android:padding="16dp"
+        android:text="@string/email_message"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/guideline9"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
         android:id="@+id/et_message"
-        android:layout_width="391dp"
-        android:layout_height="169dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginBottom="108dp"
+        android:layout_width="378dp"
+        android:layout_height="167dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
         android:gravity="start|top"
         android:hint="@string/enter_your_email_s_message_here"
         android:lines="10"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline9" />
 
     <Button
         android:id="@+id/sendBtn"
@@ -115,4 +116,11 @@
         android:text="@string/email_send"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="445dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

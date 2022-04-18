@@ -38,18 +38,6 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView7" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="210dp"
-        android:text="Servo Reading"
-        android:textColor="@color/darkgrey"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.085"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView7" />
-
-    <TextView
         android:id="@+id/text_notifications"
         android:layout_width="249dp"
         android:layout_height="36dp"
@@ -105,7 +93,6 @@
         android:textColor="@color/black"
         android:textColorHint="@color/hintgrey"
         android:textSize="30sp"
-        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -119,7 +106,6 @@
         android:layout_alignParentStart="true"
         android:layout_marginTop="28dp"
         android:padding="16dp"
-        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textviewpercent" />
@@ -131,7 +117,6 @@
         android:layout_alignParentStart="true"
         android:layout_centerVertical="true"
         android:layout_marginTop="32dp"
-        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/progressBarpercent" />
@@ -206,7 +191,6 @@
         android:text="@string/bt_servospeed"
         android:textColor="@color/black"
         android:textColorHint="@color/hintgrey"
-        android:visibility="invisible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtview_servo_title" />
 
@@ -228,8 +212,8 @@
         android:id="@+id/on"
         android:layout_width="140dp"
         android:layout_height="60dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="308dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="388dp"
         android:text="LED ON"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -239,7 +223,7 @@
         android:layout_width="140dp"
         android:layout_height="60dp"
         android:layout_marginStart="244dp"
-        android:layout_marginTop="308dp"
+        android:layout_marginTop="388dp"
         android:text="LED OFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -248,8 +232,8 @@
         android:id="@+id/BtOpen"
         android:layout_width="140dp"
         android:layout_height="60dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="384dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="460dp"
         android:text="OPEN HAND"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -258,7 +242,7 @@
         android:id="@+id/BtClose"
         android:layout_width="140dp"
         android:layout_height="60dp"
-        android:layout_marginTop="384dp"
+        android:layout_marginTop="460dp"
         android:layout_marginEnd="24dp"
         android:text="Close HAND"
         app:layout_constraintEnd_toEndOf="parent"
